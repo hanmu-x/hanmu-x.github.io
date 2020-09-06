@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java语法笔记（一） | 塔台</title>
+  <title>Java函数 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="相较于C语言的一些细节异同">
+  <meta name="description" content="一，Random函数——产生你随机数①导包： import java.util.Random;导包必须出现在类定义上面 ②创建对象 Random r&#x3D;new Random();其中只有r可以变化，其余为固定格式。③获取随机数int number&#x3D;r.nectInt(10);定义了一个int类型的number变量来接收随机数，10是指数据范围，[0,10),不包括10。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java语法笔记（一）">
-<meta property="og:url" content="http://yoursite.com/2020/08/02/java%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="Java函数">
+<meta property="og:url" content="http://yoursite.com/2020/09/06/Java%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="塔台">
-<meta property="og:description" content="相较于C语言的一些细节异同">
+<meta property="og:description" content="一，Random函数——产生你随机数①导包： import java.util.Random;导包必须出现在类定义上面 ②创建对象 Random r&#x3D;new Random();其中只有r可以变化，其余为固定格式。③获取随机数int number&#x3D;r.nectInt(10);定义了一个int类型的number变量来接收随机数，10是指数据范围，[0,10),不包括10。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-02T05:54:59.000Z">
-<meta property="article:modified_time" content="2020-08-04T07:05:14.102Z">
+<meta property="article:published_time" content="2020-09-06T02:04:11.000Z">
+<meta property="article:modified_time" content="2020-09-06T04:41:14.850Z">
 <meta property="article:author" content="韩牧">
+<meta property="article:tag" content="Random函数">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="塔台" type="application/atom+xml">
@@ -68,7 +69,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 4
+			文章总数 6
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -159,40 +160,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java语法笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java语法笔记（一）
+      Java函数
     </h1>
   
 
         
-        <a href="/2020/08/02/java%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-08-02T05:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
+        <a href="/2020/09/06/Java%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2020-09-06T02:04:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>相较于C语言的一些细节异同</p>
-<a id="more"></a>
-<h4 id="1、定义变量类型"><a href="#1、定义变量类型" class="headerlink" title="1、定义变量类型"></a>1、定义变量类型</h4><p>1、定义float类型时，要在数值结尾+f或F</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">float a&#x3D;13.2f;</span><br></pre></td></tr></table></figure>
-<p>2、定义long类型时，要在数值结尾+L</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">long a&#x3D;1204L</span><br></pre></td></tr></table></figure>
-<h4 id="2、数组"><a href="#2、数组" class="headerlink" title="2、数组"></a>2、数组</h4><p>格式一：数据类型[] 变量名=new 数据类型[数字];</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[] arr&#x3D;new int[5];</span><br><span class="line">&#x2F;*通过new关键词创建了一个int型，名为arr含有5个元素的数组。*&#x2F;</span><br></pre></td></tr></table></figure>
-<p>格式二：数据类型 变量名[]=new 数据类型[数字];</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int arr[]&#x3D;new int[5];</span><br></pre></td></tr></table></figure>
-<h4 id="3、逻辑运算符"><a href="#3、逻辑运算符" class="headerlink" title="3、逻辑运算符"></a>3、逻辑运算符</h4><h5 id="amp-与-amp-amp"><a href="#amp-与-amp-amp" class="headerlink" title="&amp;与&amp;&amp;"></a>&amp;与&amp;&amp;</h5><p>左&amp;右，左右都为才是真。<br>左&amp;&amp;右，当左边为假，右边就不执行了</p>
-<h5 id="与"><a href="#与" class="headerlink" title="|与||"></a>|与||</h5><p>左|右，左右都为才是其中一个是真就为真。<br>左&amp;&amp;右，当左边为真，右边就不执行了</p>
-<h5 id=""><a href="#" class="headerlink" title="!"></a>!</h5><p>取反。</p>
-<h5 id="-1"><a href="#-1" class="headerlink" title="^"></a>^</h5><p>左^右,当左右真假相反时，才为真。<br>| | |<br>|—|—|<br>|true^true|false|<br>|false^false|false|<br>|true^false|true|<br>|false^true|true|</p>
+        <a id="more"></a>
+<h2 id="一，Random函数——产生你随机数"><a href="#一，Random函数——产生你随机数" class="headerlink" title="一，Random函数——产生你随机数"></a>一，Random函数——产生你随机数</h2><p>①导包：</p>
+<p>import java.util.Random;<br>导包必须出现在类定义上面</p>
+<p>②创建对象</p>
+<p>Random r=new Random();<br>其中只有r可以变化，其余为固定格式。<br>③获取随机数<br>int number=r.nectInt(10);<br>定义了一个int类型的number变量来接收随机数，10是指数据范围，[0,10),不包括10。</p>
 
       
 
@@ -232,6 +224,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Random函数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -282,7 +285,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/02/java%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/06/Java%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,8 +300,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2020/08/02/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">IDEA常用快捷键</div>
+    <a href="/2020/08/07/java%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0%E4%BA%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java语法笔记二</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -325,7 +328,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、定义变量类型"><span class="toc-number">1.</span> <span class="toc-text">1、定义变量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、数组"><span class="toc-number">2.</span> <span class="toc-text">2、数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、逻辑运算符"><span class="toc-number">3.</span> <span class="toc-text">3、逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#amp-与-amp-amp"><span class="toc-number">3.1.</span> <span class="toc-text">&amp;与&amp;&amp;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#与"><span class="toc-number">3.2.</span> <span class="toc-text">|与||</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#"><span class="toc-number">3.3.</span> <span class="toc-text">!</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-1"><span class="toc-number">3.4.</span> <span class="toc-text">^</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，Random函数——产生你随机数"><span class="toc-number">1.</span> <span class="toc-text">一，Random函数——产生你随机数</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -437,10 +440,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -450,6 +449,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Random函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">键盘录入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">输出字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java命名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
             
             <div class="clearfix"></div>

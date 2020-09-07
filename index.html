@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 6
+			文章总数 7
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -157,6 +157,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java笔记三" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">java笔记（三）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/" class="archive-article-date">
+  	<time datetime="2020-09-06T06:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、面向对象与面向过程"><a href="#一、面向对象与面向过程" class="headerlink" title="一、面向对象与面向过程"></a>一、面向对象与面向过程</h2><p>⑴面向对象：自己干活泼。<br>对象：客观存在的事物，万物皆对象<br>⑵面向过程：找别人干活。</p>
+<h3 id="二、类与对象"><a href="#二、类与对象" class="headerlink" title="二、类与对象"></a>二、类与对象</h3><h4 id="1-类"><a href="#1-类" class="headerlink" title="1.类"></a>1.类</h4><p>类的组成：行为和属性。<br>属性：在代码中通过<strong>成员变量</strong>来实现（类中方法外的变量）<br>行为：在代码中通过<strong>成员方法</strong>来实现（和前面的方法相比去点了static关键字）<br>public void 方法名 () {}<br>定义类：public class 类名 {}<br>注：没有主方法的类不能使用</p>
+<h4 id="2-对象"><a href="#2-对象" class="headerlink" title="2.对象"></a>2.对象</h4><p>⑴创建对象<br>格式：类名 对象名=new 类名（）;<br>例：Student a new=students();</p>
+<p>⑵使用对象</p>
+<p>①使用成员变量<br>格式：对象名.变量名<br>例：a.name</p>
+<p>②使用成员方法<br>格式：对象名.方法名();<br>例：a.name();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建一个Student类</span><br><span class="line">public class Student</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类&#x3D;属性+行为</span><br><span class="line">    &#x2F;&#x2F;属性-&gt;成员变量：(和之前定义变量一样，只不过位置在类中方法外。)</span><br><span class="line">    String name;&#x2F;&#x2F;属性：姓名</span><br><span class="line">    int age;&#x2F;&#x2F;属性：年龄</span><br><span class="line">    &#x2F;&#x2F;行为：在代码中通过成员方法,（和前面的方法相比去点了static关键字）</span><br><span class="line">    &#x2F;&#x2F;普通方法： public static void study()&#123;&#125;</span><br><span class="line">    public void study()</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;加油！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">       &#x2F;&#x2F;类名 对象名 &#x3D; new 类名();  ——创建对象格式</span><br><span class="line">        Student stu &#x3D; new Student();</span><br><span class="line">        &#x2F;&#x2F;对象名.变量名——调用成员变量格式</span><br><span class="line">        stu.name&#x3D;&quot;奔波霸&quot;;</span><br><span class="line">        stu.age&#x3D;99;</span><br><span class="line">        System.out.println(stu.name);  &#x2F;&#x2F; 控制台打印：奔波霸</span><br><span class="line">        System.out.println(stu.age);   &#x2F;&#x2F; 控制台打印：99</span><br><span class="line">        &#x2F;&#x2F; 对象名.方法名();</span><br><span class="line">        stu.study();     &#x2F;&#x2F; 控制台打印：加油！</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -242,7 +325,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/07/java%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0%E4%BA%8C/">java语法笔记二</a>
+      <a class="article-title" href="/2020/08/07/java%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0%E4%BA%8C/">java语法笔记（二）</a>
     </h1>
   
 
@@ -765,6 +848,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">键盘录入</a>
               </li>
              
@@ -774,10 +861,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java命名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
             
             <div class="clearfix"></div>

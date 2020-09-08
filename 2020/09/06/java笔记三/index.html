@@ -16,8 +16,10 @@
 <meta property="og:description" content="一、面向对象与面向过程⑴面向对象：自己干活泼。对象：客观存在的事物，万物皆对象⑵面向过程：找别人干活。 二、类与对象1.类类的组成：行为和属性。属性：在代码中通过成员变量来实现（类中方法外的变量）行为：在代码中通过成员方法来实现（和前面的方法相比去点了static关键字）public void 方法名 () {}定义类：public class 类名 {}注：没有主方法的类不能使用 2.对象⑴创建">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-06T06:30:51.000Z">
-<meta property="article:modified_time" content="2020-09-07T07:16:59.522Z">
+<meta property="article:modified_time" content="2020-09-08T15:17:20.366Z">
 <meta property="article:author" content="韩牧">
+<meta property="article:tag" content="类">
+<meta property="article:tag" content="对象">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="塔台" type="application/atom+xml">
@@ -68,7 +70,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 7
+			文章总数 8
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -180,26 +182,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、面向对象与面向过程"><a href="#一、面向对象与面向过程" class="headerlink" title="一、面向对象与面向过程"></a>一、面向对象与面向过程</h2><p>⑴面向对象：自己干活泼。<br>对象：客观存在的事物，万物皆对象<br>⑵面向过程：找别人干活。</p>
-<h3 id="二、类与对象"><a href="#二、类与对象" class="headerlink" title="二、类与对象"></a>二、类与对象</h3><h4 id="1-类"><a href="#1-类" class="headerlink" title="1.类"></a>1.类</h4><p>类的组成：行为和属性。<br>属性：在代码中通过<strong>成员变量</strong>来实现（类中方法外的变量）<br>行为：在代码中通过<strong>成员方法</strong>来实现（和前面的方法相比去点了static关键字）<br>public void 方法名 () {}<br>定义类：public class 类名 {}<br>注：没有主方法的类不能使用</p>
+<h2 id="二、类与对象"><a href="#二、类与对象" class="headerlink" title="二、类与对象"></a>二、类与对象</h2><h4 id="1-类"><a href="#1-类" class="headerlink" title="1.类"></a>1.类</h4><p>类的组成：行为和属性。<br>属性：在代码中通过<strong>成员变量</strong>来实现（类中方法外的变量）<br>行为：在代码中通过<strong>成员方法</strong>来实现（和前面的方法相比去点了static关键字）<br>public void 方法名 () {}<br>定义类：public class 类名 {}<br>注：没有主方法的类不能使用</p>
 <h4 id="2-对象"><a href="#2-对象" class="headerlink" title="2.对象"></a>2.对象</h4><p>⑴创建对象<br>格式：类名 对象名=new 类名（）;<br>例：Student a new=students();</p>
 <p>⑵使用对象</p>
 <p>①使用成员变量<br>格式：对象名.变量名<br>例：a.name</p>
 <p>②使用成员方法<br>格式：对象名.方法名();<br>例：a.name();</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建一个Student类</span><br><span class="line">public class Student</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类&#x3D;属性+行为</span><br><span class="line">    &#x2F;&#x2F;属性-&gt;成员变量：(和之前定义变量一样，只不过位置在类中方法外。)</span><br><span class="line">    String name;&#x2F;&#x2F;属性：姓名</span><br><span class="line">    int age;&#x2F;&#x2F;属性：年龄</span><br><span class="line">    &#x2F;&#x2F;行为：在代码中通过成员方法,（和前面的方法相比去点了static关键字）</span><br><span class="line">    &#x2F;&#x2F;普通方法： public static void study()&#123;&#125;</span><br><span class="line">    public void study()</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;加油！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">       &#x2F;&#x2F;类名 对象名 &#x3D; new 类名();  ——创建对象格式</span><br><span class="line">        Student stu &#x3D; new Student();</span><br><span class="line">        &#x2F;&#x2F;对象名.变量名——调用成员变量格式</span><br><span class="line">        stu.name&#x3D;&quot;奔波霸&quot;;</span><br><span class="line">        stu.age&#x3D;99;</span><br><span class="line">        System.out.println(stu.name);  &#x2F;&#x2F; 控制台打印：奔波霸</span><br><span class="line">        System.out.println(stu.age);   &#x2F;&#x2F; 控制台打印：99</span><br><span class="line">        &#x2F;&#x2F; 对象名.方法名();</span><br><span class="line">        stu.study();     &#x2F;&#x2F; 控制台打印：加油！</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建一个Student类</span><br><span class="line">public class Student</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F;类&#x3D;属性+行为</span><br><span class="line">    &#x2F;&#x2F;属性-&gt;成员变量：(和之前定义变量一样，只不过位置在类中方法外。)</span><br><span class="line">    String name;&#x2F;&#x2F;属性：姓名 </span><br><span class="line">    int age;&#x2F;&#x2F;属性：年龄</span><br><span class="line">    &#x2F;&#x2F;行为：在代码中通过成员方法,（和前面的方法相比去点了static关键字）</span><br><span class="line">    &#x2F;&#x2F;普通方法： public static void study()&#123;&#125;</span><br><span class="line">    &#x2F;&#x2F; 成员变量：</span><br><span class="line">    public void study()</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;加油！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">       &#x2F;&#x2F;类名 对象名 &#x3D; new 类名();  ——创建对象格式</span><br><span class="line">        Student stu &#x3D; new Student();</span><br><span class="line">        &#x2F;&#x2F;对象名.变量名——调用成员变量格式</span><br><span class="line">        stu.name&#x3D;&quot;奔波霸&quot;;</span><br><span class="line">        stu.age&#x3D;99;</span><br><span class="line">        System.out.println(stu.name);  &#x2F;&#x2F; 控制台打印：奔波霸</span><br><span class="line">        System.out.println(stu.age);   &#x2F;&#x2F; 控制台打印：99</span><br><span class="line">        &#x2F;&#x2F; 对象名.方法名();</span><br><span class="line">        stu.study();     &#x2F;&#x2F; 控制台打印：加油！</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-两个对象的内存"><a href="#2-1-两个对象的内存" class="headerlink" title="2.1 两个对象的内存"></a>2.1 两个对象的内存</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class Student</span><br><span class="line">&#123;</span><br><span class="line">    String name;</span><br><span class="line">    int age;</span><br><span class="line"></span><br><span class="line">    public void study() &#123;</span><br><span class="line">        System.out.println(&quot;加油&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Student stu1 &#x3D; new Student();  &#x2F;&#x2F;声明一个对象 stu1</span><br><span class="line">        stu1.name&#x3D;&quot;奔波儿霸&quot;;&#x2F;&#x2F;对象名.变量名——调用成员变量格式</span><br><span class="line">        stu1.age&#x3D;99;</span><br><span class="line">        System.out.println(stu1.name+&quot;---&quot;+stu1.age);  &#x2F;&#x2F; 控制台打印：奔波儿霸---99</span><br><span class="line">        &#x2F;&#x2F; 对象名.方法名();</span><br><span class="line">        stu1.study();   &#x2F;&#x2F;调用了一个成员方法  &#x2F;&#x2F; 控制台打印：加油！</span><br><span class="line">        Student stu2 &#x3D; new Student();  &#x2F;&#x2F;声明了另一个对象stu2</span><br><span class="line">        stu2.name&#x3D;&quot;霸波儿奔&quot;;</span><br><span class="line">        stu2.age&#x3D;100;</span><br><span class="line">        System.out.println(stu2.name+&quot;---&quot;+stu2.age);   &#x2F;&#x2F; 控制台打印：霸波儿奔---100</span><br><span class="line">        stu2.study(); &#x2F;&#x2F; 再一次调用方法，该方法与stu1调用的是同一个方法，同样会打印 加油</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 注：多个对象使用的是同一个字节码文件，即多个对象使用的是同一个成员方法，但是成员变量不是同一份，因为你每new一次，在堆内存中都是一份新的内存空间，他们每个空间都有各自的成员变量，所以对象的成员变量都有对应的存储空间，但是成员方法用的是同一份。</p>
+<h4 id="2-2-两个引用指向同一个对象"><a href="#2-2-两个引用指向同一个对象" class="headerlink" title="2.2 两个引用指向同一个对象"></a>2.2 两个引用指向同一个对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class Student</span><br><span class="line">&#123;</span><br><span class="line">    String name;</span><br><span class="line">    int age;</span><br><span class="line"></span><br><span class="line">    public void study() &#123;</span><br><span class="line">        System.out.println(&quot;加油&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Student stu1 &#x3D; new Student();  &#x2F;&#x2F;声明一个对象 stu1 如果stu1记录的位置是001</span><br><span class="line">        stu1.name &#x3D; &quot;奔波儿灞&quot;;</span><br><span class="line">        Student stu2 &#x3D; stu1;  &#x2F;&#x2F;申明另一个对象stu2&#x3D;stu1，也就是把stu1记录的位置是001也给了stu2一次</span><br><span class="line">        &#x2F;&#x2F;这时stu1和stu2记录的是同一个位置</span><br><span class="line">        stu2.name &#x3D; &quot;霸波儿奔&quot;;</span><br><span class="line">        &#x2F;&#x2F;这时对stu2进行赋值时，就会把001位置的“奔波儿灞”改成“霸波儿奔”，原来的奔波儿灞就被覆盖掉了。</span><br><span class="line">        System.out.println( stu1.name+&quot;---&quot;+ stu2.name); &#x2F;&#x2F;控制台就会打印：霸波儿奔---霸波儿奔</span><br><span class="line">         stu1&#x3D;null; &#x2F;&#x2F;当stu1&#x3D;null是就意味着stu1与堆内存的地址切断了，stu1找不到对应的地址了,</span><br><span class="line">        System.out.println(stu1.name);&#x2F;&#x2F;在打印stu1时就会出现NullPointerException,当把该注释掉在打印stu2时，还会出现霸啵儿奔。</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<h2 id="三、垃圾回收"><a href="#三、垃圾回收" class="headerlink" title="三、垃圾回收"></a>三、垃圾回收</h2><p>当堆内存中，对象或者数组产生的地址，通过任何方法都找不到时，就会被判定为垃圾，垃圾会被java垃圾回收器，在空闲时候进行自动清理。</p>
+<h2 id="四、"><a href="#四、" class="headerlink" title="四、"></a>四、</h2><p>1.成员变量：看他是否在类中方法外<br>2.局部变量：方法中的变量<br>|区别|成员变量|局部变量|<br>|—|—|—|<br>|类中位置|类中方法外|方法内或者方法声明上|<br>|内存中位置|堆内存|栈内存|<br>|生命周期|随着对象的存在而存在|随着方法调用而存在|<br>|初始化值|有默认初始化值|没有默认初始化值，必须先定义，赋值才能使用|</p>
 
       
 
@@ -239,6 +234,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -303,6 +313,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          C语言笔记
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/09/06/Java%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Java函数</div>
@@ -332,7 +351,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、面向对象与面向过程"><span class="toc-number">1.</span> <span class="toc-text">一、面向对象与面向过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#二、类与对象"><span class="toc-number">1.1.</span> <span class="toc-text">二、类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-类"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-对象"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.对象</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、面向对象与面向过程"><span class="toc-number">1.</span> <span class="toc-text">一、面向对象与面向过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、类与对象"><span class="toc-number">2.</span> <span class="toc-text">二、类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-类"><span class="toc-number">2.0.1.</span> <span class="toc-text">1.类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-对象"><span class="toc-number">2.0.2.</span> <span class="toc-text">2.对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-两个对象的内存"><span class="toc-number">2.0.3.</span> <span class="toc-text">2.1 两个对象的内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-两个引用指向同一个对象"><span class="toc-number">2.0.4.</span> <span class="toc-text">2.2 两个引用指向同一个对象</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、垃圾回收"><span class="toc-number">3.</span> <span class="toc-text">三、垃圾回收</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、"><span class="toc-number">4.</span> <span class="toc-text">四、</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -444,6 +463,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -452,15 +475,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Random函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,6 +492,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java命名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
               </li>
             
             <div class="clearfix"></div>

@@ -16,7 +16,7 @@
 <meta property="og:description" content="C语言输入输出函数1、getcher( )、putchar( )2、scanf_s3、gets_s( )4、fgets( )5、printf( )6、puts( )7、fputs( )">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-26T01:34:04.000Z">
-<meta property="article:modified_time" content="2020-07-26T13:23:06.232Z">
+<meta property="article:modified_time" content="2020-09-08T14:10:41.560Z">
 <meta property="article:author" content="韩牧">
 <meta property="article:tag" content="输入输出">
 <meta property="article:tag" content="C语言">
@@ -70,7 +70,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 7
+			文章总数 8
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -206,16 +206,56 @@
 <h3 id="gets-s与fgets的区别"><a href="#gets-s与fgets的区别" class="headerlink" title="gets_s与fgets的区别"></a>gets_s与fgets的区别</h3><p>1、fgets()函数的第2个参数指明读入字符最大数量，如果参数的值是n，那么fets()将读到n-1个字符，，或者遇到第一个换行符位置。</p>
 <p>2、fgets()读到一个换行符时，会把它储存在字符串中,gets_s()则会丢弃换行符。</p>
 <p>3、fgets()函数的第3个参数指明读入文件。如果是键盘输入，则以<strong>stdin</strong>（标准输入）作为参数，该标识符定义在stdio.h中。</p>
-<h2 id="五、printf-——输出"><a href="#五、printf-——输出" class="headerlink" title="五、printf( )——输出"></a>五、printf( )——输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char str[30]&#x3D;&quot;to be or not to be&quot;;</span><br><span class="line">printf(&quot;%s&quot;,str);</span><br></pre></td></tr></table></figure>
-<h2 id="六、puts-——输出"><a href="#六、puts-——输出" class="headerlink" title="六、puts( )——输出"></a>六、puts( )——输出</h2><p>puts( )函数会在结尾自动加上换行符。</p>
+<h2 id="五、puts-——输出"><a href="#五、puts-——输出" class="headerlink" title="五、puts( )——输出"></a>五、puts( )——输出</h2><p>puts( )函数会在结尾自动加上换行符。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">char str[10]&#x3D;&quot;to be or not to be&quot;;</span><br><span class="line">puts(str);</span><br><span class="line">等价于</span><br><span class="line">printf(&quot;to be or not to be\n&quot;);</span><br><span class="line">等价于</span><br><span class="line">puts(&quot;to be or not to be&quot;);&#x2F;*puts函数会自动在结尾加一个\n(换行)*&#x2F;</span><br></pre></td></tr></table></figure>
-<h2 id="七、fputs-——输出"><a href="#七、fputs-——输出" class="headerlink" title="七、fputs( )——输出"></a>七、fputs( )——输出</h2><p>fputs()函数是puts()针对于文件定制的版本。</p>
+<h2 id="六、fputs-——输出"><a href="#六、fputs-——输出" class="headerlink" title="六、fputs( )——输出"></a>六、fputs( )——输出</h2><p>fputs()函数是puts()针对于文件定制的版本。</p>
 <p>fputs( )函数不会在结尾自己加上换行符。</p>
 <p>格式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fputs(a,b);</span><br><span class="line">a:函数名。</span><br><span class="line">b:指明写入数据的文件。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char line[81];</span><br><span class="line">while(fgets(line,81,stdin))</span><br><span class="line">fputs(line,stdin);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char line[81];</span><br><span class="line">while(fgets(line,81,stdin))</span><br><span class="line"> puts(line,stdin);</span><br></pre></td></tr></table></figure>
 <h3 id="fputs-与puts-的区别"><a href="#fputs-与puts-的区别" class="headerlink" title="fputs()与puts()的区别"></a>fputs()与puts()的区别</h3><p>1、fputs()函数第2个参数指明写入数据的文件。如果要打印在显示器上，可以用定义在stdio.h中的<strong>stdout</strong>（标准输出）作为该参数。</p>
 <p>2、fputs( )函数不会在结尾自己加上换行符，puts会。</p>
+<h2 id="七、printf-——输出"><a href="#七、printf-——输出" class="headerlink" title="七、printf( )——输出"></a>七、printf( )——输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char str[30]&#x3D;&quot;to be or not to be&quot;;</span><br><span class="line">printf(&quot;%s&quot;,str);</span><br></pre></td></tr></table></figure>
+<h3 id="printf-的修饰符"><a href="#printf-的修饰符" class="headerlink" title="printf()的修饰符"></a>printf()的修饰符</h3><table>
+<thead>
+<tr>
+<th align="center">修饰符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td>有符号的数若为正加+号，为负加-号。实例”%+6.5d”</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td>打印左对齐</td>
+</tr>
+<tr>
+<td align="center">#</td>
+<td>把结果转换成另一种形式，例如#o这0一开头，%x，例如#o这0x一开头。对于浮点数#保证即使后面没有任何数也打印小数点。例如%#o,</td>
+</tr>
+<tr>
+<td align="center">数字</td>
+<td>最小字段宽度。例如”%4d”如果打印数字不到4位，就补空格。</td>
+</tr>
+<tr>
+<td align="center">.数字(精度)</td>
+<td>例如”%5.2f”打印一个浮点数字段宽度位5个字符(包括小数点一共五位数)，小数点后有两位数。</td>
+</tr>
+<tr>
+<td align="center">h</td>
+<td>和整形转换说明一起使用表示short int,unsigned short int 例如”%hu”、”%hhx”</td>
+</tr>
+<tr>
+<td align="center">l</td>
+<td>和整形转换说明一起使用表示long int、unsigned long int例如:”%ld”</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody></table>
 
       
 
@@ -372,7 +412,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C语言输入输出函数"><span class="toc-number">1.</span> <span class="toc-text">C语言输入输出函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、getcher-、putchar-——"><span class="toc-number">1.1.</span> <span class="toc-text">一、getcher( )、putchar( ) ——</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#getchar"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">getchar( );</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#putchar"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">putchar( );</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、scanf-s"><span class="toc-number">1.2.</span> <span class="toc-text">二、scanf_s( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、gets-s-——字符串输入"><span class="toc-number">1.3.</span> <span class="toc-text">三、gets_s( )——字符串输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、fgets-——字符串输入"><span class="toc-number">1.4.</span> <span class="toc-text">四、fgets( )——字符串输入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gets-s与fgets的区别"><span class="toc-number">1.4.1.</span> <span class="toc-text">gets_s与fgets的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、printf-——输出"><span class="toc-number">1.5.</span> <span class="toc-text">五、printf( )——输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、puts-——输出"><span class="toc-number">1.6.</span> <span class="toc-text">六、puts( )——输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、fputs-——输出"><span class="toc-number">1.7.</span> <span class="toc-text">七、fputs( )——输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fputs-与puts-的区别"><span class="toc-number">1.7.1.</span> <span class="toc-text">fputs()与puts()的区别</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C语言输入输出函数"><span class="toc-number">1.</span> <span class="toc-text">C语言输入输出函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、getcher-、putchar-——"><span class="toc-number">1.1.</span> <span class="toc-text">一、getcher( )、putchar( ) ——</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#getchar"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">getchar( );</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#putchar"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">putchar( );</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、scanf-s"><span class="toc-number">1.2.</span> <span class="toc-text">二、scanf_s( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、gets-s-——字符串输入"><span class="toc-number">1.3.</span> <span class="toc-text">三、gets_s( )——字符串输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、fgets-——字符串输入"><span class="toc-number">1.4.</span> <span class="toc-text">四、fgets( )——字符串输入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gets-s与fgets的区别"><span class="toc-number">1.4.1.</span> <span class="toc-text">gets_s与fgets的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、puts-——输出"><span class="toc-number">1.5.</span> <span class="toc-text">五、puts( )——输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、fputs-——输出"><span class="toc-number">1.6.</span> <span class="toc-text">六、fputs( )——输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fputs-与puts-的区别"><span class="toc-number">1.6.1.</span> <span class="toc-text">fputs()与puts()的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、printf-——输出"><span class="toc-number">1.7.</span> <span class="toc-text">七、printf( )——输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#printf-的修饰符"><span class="toc-number">1.7.1.</span> <span class="toc-text">printf()的修饰符</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -484,6 +524,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -492,15 +536,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Random函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,6 +553,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java命名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
               </li>
             
             <div class="clearfix"></div>

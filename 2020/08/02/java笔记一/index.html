@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/9 | 塔台</title>
+  <title>java语法笔记（一） | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="塔台">
-<meta property="og:url" content="http://yoursite.com/archives/2020/09/index.html">
+  <meta name="description" content="相较于C语言的一些细节异同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java语法笔记（一）">
+<meta property="og:url" content="http://yoursite.com/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/index.html">
 <meta property="og:site_name" content="塔台">
+<meta property="og:description" content="相较于C语言的一些细节异同">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-02T05:54:59.000Z">
+<meta property="article:modified_time" content="2020-08-07T08:09:30.263Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -155,129 +159,201 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java笔记一" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java语法笔记（一）
+    </h1>
+  
+
+        
+        <a href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/" class="archive-article-date">
+  	<time datetime="2020-08-02T05:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>相较于C语言的一些细节异同</p>
+<a id="more"></a>
+<h4 id="1、定义变量类型"><a href="#1、定义变量类型" class="headerlink" title="1、定义变量类型"></a>1、定义变量类型</h4><p>1、定义float类型时，要在数值结尾+f或F</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">float a&#x3D;13.2f;</span><br></pre></td></tr></table></figure>
+<p>2、定义long类型时，要在数值结尾+L</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">long a&#x3D;1204L</span><br></pre></td></tr></table></figure>
+<h4 id="2、数组"><a href="#2、数组" class="headerlink" title="2、数组"></a>2、数组</h4><p>格式一：数据类型[] 变量名=new 数据类型[数字];</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[] arr&#x3D;new int[5];</span><br><span class="line">&#x2F;*通过new关键词创建了一个int型，名为arr含有5个元素的数组。*&#x2F;</span><br></pre></td></tr></table></figure>
+<p>格式二：数据类型 变量名[]=new 数据类型[数字];</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int arr[]&#x3D;new int[5];</span><br></pre></td></tr></table></figure>
+<h4 id="3、逻辑运算符"><a href="#3、逻辑运算符" class="headerlink" title="3、逻辑运算符"></a>3、逻辑运算符</h4><h5 id="amp-与-amp-amp"><a href="#amp-与-amp-amp" class="headerlink" title="&amp;与&amp;&amp;"></a>&amp;与&amp;&amp;</h5><p>左&amp;右，左右都为才是真。<br>左&amp;&amp;右，当左边为假，右边就不执行了</p>
+<h5 id="与"><a href="#与" class="headerlink" title="|与||"></a>|与||</h5><p>左|右，左右都为才是其中一个是真就为真。<br>左&amp;&amp;右，当左边为真，右边就不执行了</p>
+<h5 id=""><a href="#" class="headerlink" title="!"></a>!</h5><p>取反。</p>
+<h5 id="-1"><a href="#-1" class="headerlink" title="^"></a>^</h5><p>左^右,当左右真假相反时，才为真。<br>| | |<br>|:—:|:—:|<br>|true^true|false|<br>|false^false|false|<br>|true^false|true|<br>|false^true|true|</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-C语言笔记">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">C语言笔记</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/" class="archive-article-date">
-  	<time datetime="2020-09-06T06:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/08/07/java%E7%AC%94%E8%AE%B0%E4%BA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          java语法笔记（二）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/02/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IDEA常用快捷键</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">java笔记（三）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、定义变量类型"><span class="toc-number">1.</span> <span class="toc-text">1、定义变量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、数组"><span class="toc-number">2.</span> <span class="toc-text">2、数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、逻辑运算符"><span class="toc-number">3.</span> <span class="toc-text">3、逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#amp-与-amp-amp"><span class="toc-number">3.1.</span> <span class="toc-text">&amp;与&amp;&amp;</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#与"><span class="toc-number">3.2.</span> <span class="toc-text">|与||</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#"><span class="toc-number">3.3.</span> <span class="toc-text">!</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#-1"><span class="toc-number">3.4.</span> <span class="toc-text">^</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/06/Java%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-09-06T02:04:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/06/Java%E5%87%BD%E6%95%B0/">Java函数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Random函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -300,8 +376,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

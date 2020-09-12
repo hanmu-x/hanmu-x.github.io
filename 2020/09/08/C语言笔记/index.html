@@ -16,7 +16,7 @@
 <meta property="og:description" content="一、数据类型   转义字符 含义    \a 报警(警报声)   \b 退格   \f 换页   \n 回车换行   \r 回车不换行   \t 水平制表符   \v 垂直制表符   \\ \   \‘ ‘   \“ “   \? ?   \0oo 八进制值   \xhh 十六进制值       ### 转换说明    转换说明 输出   :—: —–   %a 浮点数、十六进制和p记数法   %">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-08T08:41:03.000Z">
-<meta property="article:modified_time" content="2020-09-10T03:13:24.675Z">
+<meta property="article:modified_time" content="2020-09-10T06:38:20.916Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -378,7 +378,26 @@
 <h3 id="2-结构体初始化"><a href="#2-结构体初始化" class="headerlink" title="2.结构体初始化"></a>2.结构体初始化</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="string">"the Pinous Pirate and the Sevious "</span>;</span><br><span class="line">    <span class="string">"Reee Vivotte"</span>;                                   </span><br><span class="line">    <span class="number">1.95</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//结构体可以这样初始化，但是一定要按顺序。</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    .title = <span class="string">"the Pinous Pirate and the Sevious "</span>;</span><br><span class="line">    .author = <span class="string">"ReeeVivotte"</span>;                                   </span><br><span class="line">    .value = <span class="number">1.95</span>;</span><br><span class="line">    .value = <span class="number">2.56</span>;</span><br><span class="line">&#125;;   <span class="comment">//可以任意顺序要赋值。但是如果对一个变量付了两次之，以最后一次赋值为最终结果。例如library.value=2.56。</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-访问结构体成员"><a href="#3-访问结构体成员" class="headerlink" title="3.访问结构体成员"></a>3.访问结构体成员</h3><p>⑴使用结构体成员运算符点(.)来访问结构体成员。例如library.title来访问library的title部分。<br>⑵注library是一个结构体，但是library.title是一个char类型的数组。</p>
-<h3 id="4-结构数组"><a href="#4-结构数组" class="headerlink" title="4.结构数组"></a>4.结构数组</h3>
+<h3 id="4-结构数组"><a href="#4-结构数组" class="headerlink" title="4.结构数组"></a>4.结构数组</h3><p>1.声明结构数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>[100];</span></span><br><span class="line"><span class="comment">//以上代码表明library是内涵100个元素的数组，每一个数组元素都是一个book类型的结构体。library[0]是第一个book类型的结构体变量。</span></span><br></pre></td></tr></table></figure>
+<p>2.结构体数组成员</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library[<span class="number">0</span>].author;  <span class="comment">//第一个数组元素的author相关联。     </span></span><br><span class="line">library[<span class="number">2</span>].author[<span class="number">4</span>];  <span class="comment">//第三个结构体变量中author的第五个字符。</span></span><br></pre></td></tr></table></figure>
+<p>总结</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library              <span class="comment">//一个book结构的结构体数组</span></span><br><span class="line">library[<span class="number">2</span>]           <span class="comment">//一个数组元素，该元素为book结构</span></span><br><span class="line">library[<span class="number">2</span>].title     <span class="comment">//一个char类型的数组，(library[2]的title成员)</span></span><br><span class="line">library[<span class="number">2</span>].title[<span class="number">4</span>]  <span class="comment">//library[2]的title成员的一个字符</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
 
       
@@ -630,15 +649,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Random函数</a>
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,6 +662,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Random函数</a>
               </li>
              
               <li class="article-tag-list-item">

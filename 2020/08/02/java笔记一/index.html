@@ -16,7 +16,7 @@
 <meta property="og:description" content="相较于C语言的一些细节异同">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-02T05:54:59.000Z">
-<meta property="article:modified_time" content="2020-09-13T00:48:12.381Z">
+<meta property="article:modified_time" content="2020-09-13T23:50:27.124Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -68,7 +68,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 8
+			文章总数 7
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -184,17 +184,15 @@
 <h2 id="一、一个java程序"><a href="#一、一个java程序" class="headerlink" title="一、一个java程序"></a>一、一个java程序</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWord</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"hello word"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>1.class 声明一个类，类名为HelloWord，他是一个公共类（public）,整个定义由{}包起来。<br>2.定义了一个main()方法，其中public表示访问权限，表示所有类都可以用这个方法。<br>3.static指明该方法说一个类方法，成员方法中没有static关键字。<br>4.void表明main()方法没有返回值。<br>5.每个类中可以定义多个方法，但是最多有一个公共类，<br>6.主方法只能有一个。<br>7.String args[] 是传递给main()方法的参数，参数名为args，他是类String的一个实例，参数可以为0个或多个，每个参数用“类名 参数名”来指定，多个参数用逗号隔开。</p>
 <h2 id="二、基本知识"><a href="#二、基本知识" class="headerlink" title="二、基本知识"></a>二、基本知识</h2><h4 id="1、定义变量类型"><a href="#1、定义变量类型" class="headerlink" title="1、定义变量类型"></a>1、定义变量类型</h4><p>1、定义float类型时，要在数值结尾+f或F</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">float a&#x3D;13.2f;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a=<span class="number">13.2f</span>;</span><br></pre></td></tr></table></figure>
 <p>2、定义long类型时，要在数值结尾+L</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">long a&#x3D;1204L</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> a=<span class="number">1204L</span></span><br></pre></td></tr></table></figure>
 <h4 id="2、数组"><a href="#2、数组" class="headerlink" title="2、数组"></a>2、数组</h4><p>格式一：数据类型[] 变量名=new 数据类型[数字];</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[] arr&#x3D;new int[5];</span><br><span class="line">&#x2F;*通过new关键词创建了一个int型，名为arr含有5个元素的数组。*&#x2F;</span><br></pre></td></tr></table></figure>
-<p>格式二：数据类型 变量名[]=new 数据类型[数字];</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int arr[]&#x3D;new int[5];</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span><br><span class="line"><span class="comment">/*通过new关键词创建了一个int型，名为arr含有5个元素的数组。*/</span></span><br><span class="line">```java</span><br><span class="line">格式二：数据类型 变量名[]=<span class="keyword">new</span> 数据类型[数字];</span><br><span class="line">```java</span><br><span class="line"><span class="keyword">int</span> arr[]=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span><br></pre></td></tr></table></figure>
 <h4 id="3、逻辑运算符"><a href="#3、逻辑运算符" class="headerlink" title="3、逻辑运算符"></a>3、逻辑运算符</h4><h5 id="amp-与-amp-amp"><a href="#amp-与-amp-amp" class="headerlink" title="&amp;与&amp;&amp;"></a>&amp;与&amp;&amp;</h5><p>左&amp;右，左右都为才是真。<br>左&amp;&amp;右，当左边为假，右边就不执行了</p>
 <h5 id="与"><a href="#与" class="headerlink" title="|与||"></a>|与||</h5><p>左|右，左右都为才是其中一个是真就为真。<br>左&amp;&amp;右，当左边为真，右边就不执行了</p>
 <h5 id=""><a href="#" class="headerlink" title="!"></a>!</h5><p>取反。</p>
-<h5 id="-1"><a href="#-1" class="headerlink" title="^"></a>^</h5><p>左^右,当左右真假相反时，才为真。<br>| | |<br>|:—:|:—:|<br>|true^true|false|<br>|false^false|false|<br>|true^false|true|<br>|false^true|true|</p>
+<h5 id="-1"><a href="#-1" class="headerlink" title="^"></a>^</h5><p>左^右,当左右真假相反时，才为真。<br>|||<br>|:—:|:—:|<br>|true^true|false|<br>|false^false|false|<br>|true^false|true|<br>|false^true|true|</p>
 
       
 
@@ -448,6 +446,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -456,7 +458,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Random函数</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -465,14 +467,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">

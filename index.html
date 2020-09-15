@@ -500,12 +500,19 @@
 <li>构造，创建对象的时候所调用的方法</li>
 <li>格式：<br>1.方法名与类名完全相同<br>2.没有返回值类型，连void都没有<br>3.没有具体的返回值（不能由return带回结构数据）</li>
 <li>执行时机<br>1，创建对象时候调用，没创建一次就会执行一次构造方法<br>2，不能手动调用构造方法。</li>
-<li>构造方法：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> 类名()&#123;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">School</span><span class="params">()</span></span>&#123;</span><br><span class="line">       System.out.println(<span class="string">"遇事淡定脸小三分"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-↓                              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        School han=<span class="keyword">new</span> School();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//运行的话控制台会打印 遇事淡定脸小三分</span></span><br></pre></td></tr></table></figure>
-
-</li>
 </ul>
+<h4 id="1-构造方法："><a href="#1-构造方法：" class="headerlink" title="1. 构造方法："></a>1. 构造方法：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> 类名()&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">     <span class="comment">//构造方法：public 类名()&#123;&#125;</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">School</span><span class="params">()</span></span>&#123;</span><br><span class="line">       System.out.println(<span class="string">"遇事淡定脸小三分"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  ↓                              </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        School han=<span class="keyword">new</span> School();  <span class="comment">//只创建了一个对象</span></span><br><span class="line">        <span class="comment">//在此处运行的话控制台会打印 遇事淡定脸小三分</span></span><br><span class="line">        School han2=<span class="keyword">new</span> School();  <span class="comment">//又创建了一个对象</span></span><br><span class="line">         <span class="comment">//在此处运行的话控制台会又打印 遍遇事淡定脸小三分</span></span><br><span class="line">        han.School();<span class="comment">//就不行，不能手动调用构造方法。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-构造方法的作用"><a href="#2-构造方法的作用" class="headerlink" title="2. 构造方法的作用"></a>2. 构造方法的作用</h4><p>作用：用于给对象的数据进行初始化</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>注.如果一个类中没有编写任何构造方法，系统将会提供一个默认的无参数构造方法。但是如果你定义了一个构造方法，系统就不会提供一个默认的无参数构造方法了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> String name;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(name+<span class="string">"---"</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>↓</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       School stu = <span class="keyword">new</span> School();</span><br><span class="line">       stu.show(); <span class="comment">//控制台会打印 null---0</span></span><br><span class="line">       <span class="comment">/* 原因：如果一个类中没有编写任何构造方法，系统将会提供一个默认的无参数构造方法。默认的无参数构造方法为public 类名()&#123;&#125;*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="StringBuilder-构造方法"><a href="#StringBuilder-构造方法" class="headerlink" title="StringBuilder 构造方法"></a>StringBuilder 构造方法</h3><table>
 <thead>
 <tr>
@@ -521,11 +528,9 @@
 <td>public StringBuilder(String str)</td>
 <td>根据字符串的内容来创建可变字符串对象</td>
 </tr>
-<tr>
-<td><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder sb1 = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">System.out.println(sb1);</span><br><span class="line">StringBuilder sb2 = <span class="keyword">new</span> StringBuilder(<span class="string">"abc"</span>);</span><br><span class="line">System.out.println(sb2);</span><br></pre></td></tr></table></figure></td>
-<td></td>
-</tr>
 </tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder sb1 = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">System.out.println(sb1);</span><br><span class="line">StringBuilder sb2 = <span class="keyword">new</span> StringBuilder(<span class="string">"abc"</span>);</span><br><span class="line">System.out.println(sb2);</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -1109,15 +1114,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">类</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">

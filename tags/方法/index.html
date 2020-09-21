@@ -6,23 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java语法笔记（二） | 塔台</title>
+  <title>Tag: 方法 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="键盘录入">
-<meta property="og:type" content="article">
-<meta property="og:title" content="java语法笔记（二）">
-<meta property="og:url" content="http://yoursite.com/2020/08/07/java%E7%AC%94%E8%AE%B0%E4%BA%8C/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="塔台">
+<meta property="og:url" content="http://yoursite.com/tags/%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="塔台">
-<meta property="og:description" content="键盘录入">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-07T08:11:07.000Z">
-<meta property="article:modified_time" content="2020-09-21T13:13:16.145Z">
 <meta property="article:author" content="韩牧">
-<meta property="article:tag" content="键盘录入">
-<meta property="article:tag" content="输出字符串">
-<meta property="article:tag" content="java命名">
-<meta property="article:tag" content="逻辑">
-<meta property="article:tag" content="位移">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="塔台" type="application/atom+xml">
@@ -164,255 +155,76 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java笔记二" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      java语法笔记（二）
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/" class="archive-article-date">
+  	<time datetime="2020-09-06T06:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">java语法笔记（三）</a>
     </h1>
   
 
-        
-        <a href="/2020/08/07/java%E7%AC%94%E8%AE%B0%E4%BA%8C/" class="archive-article-date">
-  	<time datetime="2020-08-07T08:11:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>键盘录入 </p>
-<a id="more"></a>
-<h2 id="一、键盘录入"><a href="#一、键盘录入" class="headerlink" title="一、键盘录入"></a>一、键盘录入</h2><p>1、导包：要写在class上边。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;<span class="comment">//导包</span></span><br></pre></td></tr></table></figure>
-<p>2、创建对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc=<span class="keyword">new</span> Scanner(System.in);<span class="comment">//其中只有sc可以改变，其他为固定格式。</span></span><br></pre></td></tr></table></figure>
-<p>3、使用变量接收数据</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=sc.nextInt();</span><br></pre></td></tr></table></figure>
-<h2 id="二，输出字符串"><a href="#二，输出字符串" class="headerlink" title="二，输出字符串"></a>二，输出字符串</h2><p>1，输出字符串的都要用””，数字不用。</p>
-<p>2，</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.print();<span class="comment">//输出不换行</span></span><br><span class="line">System.out.println();<span class="comment">//输出 换行</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"itheima"</span>+<span class="number">666</span>);</span><br><span class="line"><span class="comment">//会输出itheima666，会把连个组合在一起</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1</span>+<span class="number">99</span>+<span class="string">"哈哈"</span>)；</span><br><span class="line"><span class="comment">//会输出100哈哈</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"5+5="</span><span class="number">5</span>+<span class="number">5</span>);</span><br><span class="line"><span class="comment">//会输出5+5=55</span></span><br><span class="line"><span class="comment">//要输出5+5=10则要</span></span><br><span class="line">System.out.println(<span class="string">"5+5="</span>（<span class="number">5</span>+<span class="number">5</span>）);</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、java命名"><a href="#三、java命名" class="headerlink" title="三、java命名"></a>三、java命名</h2><h4 id="2-1-方法，变量命名"><a href="#2-1-方法，变量命名" class="headerlink" title="2.1 方法，变量命名"></a>2.1 方法，变量命名</h4><p> <strong>一个单词</strong>时，首字母小写。如：name<br> <strong>多个单词</strong>时，第一个单词首字母小写，其余单词首字母大写。如：firstName</p>
-<h4 id="2-2类命名"><a href="#2-2类命名" class="headerlink" title="2.2类命名"></a>2.2类命名</h4><p>一个单词或多个单词时每个独立单词 首字母都大写。如Student,GoodSdtuent</p>
-<h2 id="四、取位数"><a href="#四、取位数" class="headerlink" title="四、取位数"></a>四、取位数</h2><p>那数字中的某一位单独取出来，</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">个位：数%<span class="number">10</span></span><br><span class="line">十位：数/<span class="number">10</span>%<span class="number">10</span></span><br><span class="line">百位:数/<span class="number">10</span>/<span class="number">10</span>%<span class="number">10</span></span><br><span class="line">千位:数/<span class="number">10</span>/<span class="number">10</span>/<span class="number">10</span>%<span class="number">10</span></span><br></pre></td></tr></table></figure>
-<p>这个数有几位就有几个10，只有最后一个时取余。</p>
-<h2 id="五、IDEA项目结构"><a href="#五、IDEA项目结构" class="headerlink" title="五、IDEA项目结构"></a>五、IDEA项目结构</h2><h3 id="project-项目"><a href="#project-项目" class="headerlink" title="project 项目"></a>project 项目</h3><p>淘宝，京东等项目就属于一个项目。</p>
-<h3 id="module-模块"><a href="#module-模块" class="headerlink" title="module 模块"></a>module 模块</h3><p>淘宝中的天天特价等就像是一个个模块。<br>module下面有一个src,代码都是放在src下面，在src下面创建packet。</p>
-<h3 id="packet-包"><a href="#packet-包" class="headerlink" title="packet 包"></a>packet 包</h3><h3 id="class-类"><a href="#class-类" class="headerlink" title="class 类"></a>class 类</h3><p>一个项目中有对个模块，一个模块中有多个包，一个包中有多个类。</p>
-<h2 id="六、方法"><a href="#六、方法" class="headerlink" title="六、方法"></a>六、方法</h2><p>就是C语言里的函数</p>
-<h4 id="⑴方法定义："><a href="#⑴方法定义：" class="headerlink" title="⑴方法定义："></a>⑴方法定义：</h4><p>public static void 方法名 (){方法体}</p>
-<h4 id="⑵方法调用："><a href="#⑵方法调用：" class="headerlink" title="⑵方法调用："></a>⑵方法调用：</h4><p>方法名();<br>方法必须先定义后调用，方法与其他方法，包括main方法 平级关系，不能嵌套定义，可以写在main{}方法下面，但要写在 class{}里面，方法之间可以互相调用。</p>
-<h4 id="⑶带参数的方法定义"><a href="#⑶带参数的方法定义" class="headerlink" title="⑶带参数的方法定义"></a>⑶带参数的方法定义</h4><p>public static void 方法名 (数据类型1 变量名1，数据类型1 变量名2){方法体}<br>多个参数之间用逗号(，)</p>
-<h2 id="七、逻辑运算符"><a href="#七、逻辑运算符" class="headerlink" title="七、逻辑运算符"></a>七、逻辑运算符</h2><p>逻辑且：&amp;&amp;与&amp;</p>
-<h4 id="amp-amp-与-amp"><a href="#amp-amp-与-amp" class="headerlink" title="&amp;&amp;与&amp;"></a>&amp;&amp;与&amp;</h4><p>a&amp;&amp;b:当a为false时，b就不判断了。<br>a&amp;b:条件必须都执行判断<br>逻辑非：|与||</p>
-<h4 id="与"><a href="#与" class="headerlink" title="|与||"></a>|与||</h4><p>a||b：当a为true时，b就不执行判断。<br>a|b：条件必须都执行判断。</p>
-<h4 id="异或"><a href="#异或" class="headerlink" title="异或^"></a>异或^</h4><p>#####⑴a^b<br>当a为true，b为false时，当b为true，a为false时，a^b为true<br>a,b相同为false<br>a,b不同为true</p>
-<h5 id="⑵一个数异或两次一个数，结果还为这个数"><a href="#⑵一个数异或两次一个数，结果还为这个数" class="headerlink" title="⑵一个数异或两次一个数，结果还为这个数"></a>⑵一个数异或两次一个数，结果还为这个数</h5><p>10^ 5^ 5=10;<br>用异或交换两个数数值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">10</span>,b=<span class="number">20</span></span><br><span class="line">a=a^b;</span><br><span class="line">b=a^b;</span><br><span class="line">a=a^b;</span><br><span class="line">结果a=<span class="number">20</span>,b=<span class="number">10</span></span><br></pre></td></tr></table></figure>
-<p>a=10^20;<br>b=10^20^20=10;<br>a10^20^10=10;</p>
-<h2 id="八、位移运算符"><a href="#八、位移运算符" class="headerlink" title="八、位移运算符"></a>八、位移运算符</h2><ul>
-<li>(&lt;&lt;)左移运算符</li>
-<li>(&gt;&gt;)右移运算符<h4 id="左移运算符"><a href="#左移运算符" class="headerlink" title="左移运算符"></a>左移运算符</h4>运算规律：向左移动几位，就乘2的几次幂。<br>12&lt;&lt;1=24→12*2=24<h4 id="右移运算符"><a href="#右移运算符" class="headerlink" title="右移运算符"></a>右移运算符</h4>运算规律：向右移动几位，就除2的几次幂。<br>12&gt;&gt;2=3→12÷4=3<h2 id="九、Random函数——产生你随机数"><a href="#九、Random函数——产生你随机数" class="headerlink" title="九、Random函数——产生你随机数"></a>九、Random函数——产生你随机数</h2>①导包：</li>
-</ul>
-<p>import java.util.Random;<br>导包必须出现在类定义上面</p>
-<p>②创建对象</p>
-<p>Random r=new Random();<br>其中只有r可以变化，其余为固定格式。<br>③获取随机数<br>int number=r.nectInt(10);<br>定义了一个int类型的number变量来接收随机数，10是指数据范围，[0,10),不包括10。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">键盘录入</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">输出字符串</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java命名</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">方法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">逻辑</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">封装</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">位移</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/07/java%E7%AC%94%E8%AE%B0%E4%BA%8C/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java语法笔记（三）
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java语法笔记（一）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、键盘录入"><span class="toc-number">1.</span> <span class="toc-text">一、键盘录入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，输出字符串"><span class="toc-number">2.</span> <span class="toc-text">二，输出字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、java命名"><span class="toc-number">3.</span> <span class="toc-text">三、java命名</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-方法，变量命名"><span class="toc-number">3.0.1.</span> <span class="toc-text">2.1 方法，变量命名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2类命名"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.2类命名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、取位数"><span class="toc-number">4.</span> <span class="toc-text">四、取位数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、IDEA项目结构"><span class="toc-number">5.</span> <span class="toc-text">五、IDEA项目结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#project-项目"><span class="toc-number">5.1.</span> <span class="toc-text">project 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#module-模块"><span class="toc-number">5.2.</span> <span class="toc-text">module 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#packet-包"><span class="toc-number">5.3.</span> <span class="toc-text">packet 包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-类"><span class="toc-number">5.4.</span> <span class="toc-text">class 类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、方法"><span class="toc-number">6.</span> <span class="toc-text">六、方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#⑴方法定义："><span class="toc-number">6.0.1.</span> <span class="toc-text">⑴方法定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#⑵方法调用："><span class="toc-number">6.0.2.</span> <span class="toc-text">⑵方法调用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#⑶带参数的方法定义"><span class="toc-number">6.0.3.</span> <span class="toc-text">⑶带参数的方法定义</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、逻辑运算符"><span class="toc-number">7.</span> <span class="toc-text">七、逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#amp-amp-与-amp"><span class="toc-number">7.0.1.</span> <span class="toc-text">&amp;&amp;与&amp;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#与"><span class="toc-number">7.0.2.</span> <span class="toc-text">|与||</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异或"><span class="toc-number">7.0.3.</span> <span class="toc-text">异或^</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#⑵一个数异或两次一个数，结果还为这个数"><span class="toc-number">7.0.3.1.</span> <span class="toc-text">⑵一个数异或两次一个数，结果还为这个数</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、位移运算符"><span class="toc-number">8.</span> <span class="toc-text">八、位移运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#左移运算符"><span class="toc-number">8.0.1.</span> <span class="toc-text">左移运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#右移运算符"><span class="toc-number">8.0.2.</span> <span class="toc-text">右移运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、Random函数——产生你随机数"><span class="toc-number">9.</span> <span class="toc-text">九、Random函数——产生你随机数</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -435,9 +247,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

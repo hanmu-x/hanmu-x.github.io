@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 7
+			文章总数 8
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -156,6 +156,90 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-java中的方法一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/26/java%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%80/">java中的方法（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/26/java%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%80/" class="archive-article-date">
+  	<time datetime="2020-09-26T06:07:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="（一）、CharAt"><a href="#（一）、CharAt" class="headerlink" title="（一）、CharAt( )"></a>（一）、CharAt( )</h2><p>作用：返回所引出的char值</p>
+<h2 id="（二）、toCharArray"><a href="#（二）、toCharArray" class="headerlink" title="（二）、toCharArray( )"></a>（二）、toCharArray( )</h2><p>作用：将字符串拆分成字符数组并返回</p>
+<ul>
+<li>字符串.toCharArray( )</li>
+<li>char[] chars = s.toCharArray( )<h2 id="（三）、length"><a href="#（三）、length" class="headerlink" title="（三）、length( )"></a>（三）、length( )</h2>作用：返回字符串长度</li>
+<li>public int length( ):返回此字符串长度。</li>
+<li>数组名.length( ):数组长度</li>
+<li>字符串对象.length( ):字符串长度<h2 id="（四）、统计字符种类"><a href="#（四）、统计字符种类" class="headerlink" title="（四）、统计字符种类"></a>（四）、统计字符种类</h2></li>
+</ul>
+<p>1.把字符串用toCharArray( )方法转成字符数组。<br>2.</p>
+<ul>
+<li>大写字母：char &gt; ‘A’&amp;&amp; char&lt;’Z’</li>
+<li>小写字母：char &gt; ‘a’&amp;&amp; char&lt;z’</li>
+<li>数字：char &gt; ‘0’&amp;&amp; char&lt;’9’<h2 id="（五）、substring"><a href="#（五）、substring" class="headerlink" title="（五）、substring( )"></a>（五）、substring( )</h2>作用：字符串的截取</li>
+<li>String substring(int beginIndex)<br>从传入索引位置，以直接截取到最后</li>
+<li>String substring(beginIndex,endIndex)<br>从beginIndex位置的索引,截取到endIndex索引位置（包含头，不包含尾）</li>
+</ul>
+<p>注：返回值类型为String,有返回值就表示要有一个变量来接收他，且字符串一旦被定义，就无法更改，所以要一个新的变量来接受它。</p>
+<h2 id="（六）、replace"><a href="#（六）、replace" class="headerlink" title="（六）、replace( )"></a>（六）、replace( )</h2><p>作用：字符串的替换</p>
+<ul>
+<li>String replace(old,new)<br>old:想要被替换掉的词。new:替换后的新词<br>例如：String result = s.replace(“TMD”,”***”)</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/26/java%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="C语言笔记-C语言笔记" class="article article-type-C语言笔记  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1204,6 +1288,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -1229,14 +1321,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">

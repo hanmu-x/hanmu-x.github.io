@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 8
+			文章总数 11
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -156,6 +156,287 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-数据链路层笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/02/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%AC%94%E8%AE%B0/">数据链路层笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/02/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-02T07:22:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="数据链路层信道的两种类型"><a href="#数据链路层信道的两种类型" class="headerlink" title="数据链路层信道的两种类型"></a>数据链路层信道的两种类型</h4><ul>
+<li>点对点的信道</li>
+<li>广播信道：必须使用共享信道协议</li>
+</ul>
+<h3 id="数据链路和帧"><a href="#数据链路和帧" class="headerlink" title="数据链路和帧"></a>数据链路和帧</h3><ul>
+<li>链路（物理链路）：点到点的物理线路，中间没有节点</li>
+<li>数据链路（逻辑链路）：把实现通信协议的硬件和软件加到链路上<br>逻辑链路=数据链路+必要的通信协议  <h4 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1.封装成帧"></a>1.封装成帧</h4>在一段数据收尾分别添加不同的字符，构成一个帧，确定帧的界限。  <h4 id="2-透明传输"><a href="#2-透明传输" class="headerlink" title="2.透明传输"></a>2.透明传输</h4>如果数据中有和帧尾字符一样的时，就会错误的识别一段帧，多出来的部分会被当做无效而丢弃。<h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5></li>
+</ul>
+<h4 id="3差错检验"><a href="#3差错检验" class="headerlink" title="3差错检验"></a>3差错检验</h4><ul>
+<li>误码率： 传输错误的比特总数占总比特总数的多少<h5 id="冗余检验"><a href="#冗余检验" class="headerlink" title="冗余检验"></a>冗余检验</h5>循环冗余检验  检验单个帧的对错<br>可靠传输：不重复，不丢失，不失序</li>
+</ul>
+<h2 id="点对点协议（PPP协议）"><a href="#点对点协议（PPP协议）" class="headerlink" title="点对点协议（PPP协议）"></a>点对点协议（PPP协议）</h2><h4 id="PPP协议满足的要求"><a href="#PPP协议满足的要求" class="headerlink" title="PPP协议满足的要求"></a>PPP协议满足的要求</h4><ul>
+<li>简单（首要要求）</li>
+<li>封装成帧——规定帧的边界符号</li>
+<li>透明性——保证数据传输的透明性</li>
+<li>在同一物理链路上同时支持多种网络协议</li>
+<li>支持多种类型链路</li>
+<li>差错检验</li>
+<li>检测连接状态</li>
+<li>最大传输单元——必须对每一种的点对点链路设置最大传送单元（MTU的标准默认值）促进各种实现之间的互操作性。</li>
+<li>网络层地址协议——两个通信的网络层知道或能够配置彼此的网络地址</li>
+<li>数据压缩协议<h4 id="PPP协议不需要的功能"><a href="#PPP协议不需要的功能" class="headerlink" title="PPP协议不需要的功能"></a>PPP协议不需要的功能</h4></li>
+<li>纠错</li>
+<li>流量控制</li>
+<li>序号</li>
+<li>多点线路</li>
+<li>半双工或单工链路<h4 id="PPP协议的三个组成部分"><a href="#PPP协议的三个组成部分" class="headerlink" title="PPP协议的三个组成部分"></a>PPP协议的三个组成部分</h4></li>
+<li>一个将IP数据封装到串行链路的方法</li>
+<li>链路控制协议</li>
+<li>网络控制协议<h4 id="PPP协议帧的格式"><a href="#PPP协议帧的格式" class="headerlink" title="PPP协议帧的格式"></a>PPP协议帧的格式</h4></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/02/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-物理层" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/23/%E7%89%A9%E7%90%86%E5%B1%82/">物理层笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/23/%E7%89%A9%E7%90%86%E5%B1%82/" class="archive-article-date">
+  	<time datetime="2021-02-23T14:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="物理层的基本概念"><a href="#物理层的基本概念" class="headerlink" title="物理层的基本概念"></a>物理层的基本概念</h3><ul>
+<li>物理层考虑的是怎样才能怎样才能<strong>连接</strong>各种计算机传输媒体上传输数据<strong>比特流</strong>，而不是<strong>连接</strong>具体的<strong>传输媒体</strong>。</li>
+<li>作用是<em>屏蔽</em>不同传输媒体和通讯手段的<em>差异</em>。</li>
+<li>物理层协议也称物理层规范<h3 id="物理层作用"><a href="#物理层作用" class="headerlink" title="物理层作用"></a>物理层作用</h3>确定传输媒体的接口的一些特点，如：接口的形状、尺寸、引线数量等  <h3 id="常用术语"><a href="#常用术语" class="headerlink" title="常用术语"></a>常用术语</h3></li>
+<li>数据：消息的实体</li>
+<li>信号：数据的（电气或电磁）表现</li>
+<li>模拟信号：<strong>连续</strong>的消息参数取值</li>
+<li>数字信号：<strong>离散</strong>的消息参数取值</li>
+<li>码元：<h4 id="信道"><a href="#信道" class="headerlink" title="信道"></a>信道</h4></li>
+<li>信道：表示某一个方向传递信息的媒体</li>
+<li>单向通信：只能一个方向通信，反向不行</li>
+<li>双向交替通信（半双工）：双方都可以发送信息， 但不能同时</li>
+<li>双向同时通信（全双工）：~~</li>
+</ul>
+<h5 id="调制"><a href="#调制" class="headerlink" title="调制"></a>调制</h5><ul>
+<li>基带信号：计算机输出的代表各种文字或图形文件的信号都是</li>
+<li>调制：把信道不能传输的低频、直流成分转化成可传输的</li>
+<li>基带调制（编码）：基带信号（不适应）转化为基带信号（适应）</li>
+<li>带通调制：基带信号转化为模拟信号（把基带信号频率调高成模拟信号）<ul>
+<li>调幅：调节幅度</li>
+<li>调频：调节频率</li>
+<li>调相：调节初相位（一个是正弦波，一个是余弦波）<h5 id="极限容量"><a href="#极限容量" class="headerlink" title="极限容量"></a>极限容量</h5></li>
+</ul>
+</li>
+<li>任何信道在传输时都会受到干扰</li>
+<li>码元传输速率越高、信号传输距离越远、传输媒介质量越差，都会使失真严重   </li>
+</ul>
+<p>1.如果码元传输速率没有上限（可传输的范围太宽），就会出现码间串扰。<br>2.如果信道频带越宽（能通过的信号高频分量越多），就可以使用更高的速率传送码元，而不会出现串码<br>噪声存在于所有电子设备和同道中，噪声随机产生，瞬时值很大。<br>信噪比：当信号强度越大时，噪声的影响也就越小   </p>
+<ul>
+<li>信噪比 </li>
+<li>香农公式：用信息论的理论推出带宽受限制且有高斯白噪音干扰的信道极限、无差错的信息传输速率。</li>
+</ul>
+<h3 id="物理层下的传输媒体"><a href="#物理层下的传输媒体" class="headerlink" title="物理层下的传输媒体"></a>物理层下的传输媒体</h3><ul>
+<li>双绞线：   </li>
+<li>同轴电缆：用于传输高速数据</li>
+<li>光纤：<ul>
+<li>多模光纤：信号损耗大，传输距离远</li>
+<li>单模光纤：信号损耗小，传输距离近</li>
+<li>光猫：把光纤中的光信号转化计算机能识别的电信号。    </li>
+</ul>
+</li>
+</ul>
+<p>光纤优点：通信容量大，损耗小，距离远，抗干扰能力强，保密性好，体积小，重量轻 </p>
+<p>电波传输：</p>
+<ul>
+<li>短波</li>
+<li>微波：卫星</li>
+</ul>
+<h3 id="信道复用"><a href="#信道复用" class="headerlink" title="信道复用"></a>信道复用</h3><ul>
+<li>频分复用</li>
+<li>波分复用</li>
+<li>码分复用</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/23/%E7%89%A9%E7%90%86%E5%B1%82/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-计算机网络1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/">计算机网络1</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/" class="archive-article-date">
+  	<time datetime="2021-02-06T14:45:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>计算机网络=通信技术+计算机技术（计网是一种特殊的通信技术）<br><strong>协议簇：</strong> 一系列列协议的的集合。<br> 协议：计网中数据交换的规则（格式、意义、顺序）<br> 协议三要素：</p>
+<ul>
+<li>语法 ：数据信息的结构与格式</li>
+<li>语义 ：需要发出何种控制信息，完成何种动作以及做出何种响应</li>
+<li>时序 ：事件顺序、速度匹配</li>
+</ul>
+<p>因特网: 在计算机之间提供了消息通讯能力<br>万维网：是一种使用因特网来通讯的<strong>具体应用</strong><br>电话网络的特点：没有释放所占线路就一直占用。<br>网络边缘：</p>
+<ul>
+<li>主机</li>
+<li>网络核心：路由器  </li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-java中的方法一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1119,82 +1400,10 @@
 
 
   
-    <article id="post-DOS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/21/DOS/">DOS常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/21/DOS/" class="archive-article-date">
-  	<time datetime="2020-07-21T06:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="DOS命令"><a href="#DOS命令" class="headerlink" title="DOS命令"></a>DOS命令</h1>
-        
-          <a class="article-more-a" href="/2020/07/21/DOS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">dos</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/21/DOS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1205,7 +1414,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 韩牧
+    		&copy; 2021 韩牧
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1288,11 +1497,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">

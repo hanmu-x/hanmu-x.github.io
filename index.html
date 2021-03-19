@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 11
+			文章总数 12
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -157,58 +157,27 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-数据链路层笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-传输层笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/02/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%AC%94%E8%AE%B0/">数据链路层笔记</a>
+      <a class="article-title" href="/2021/03/19/%E4%BC%A0%E8%BE%93%E5%B1%82%E7%AC%94%E8%AE%B0/">传输层笔记</a>
     </h1>
   
 
         
-        <a href="/2021/03/02/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-03-02T07:22:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
+        <a href="/2021/03/19/%E4%BC%A0%E8%BE%93%E5%B1%82%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-19T04:12:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="数据链路层信道的两种类型"><a href="#数据链路层信道的两种类型" class="headerlink" title="数据链路层信道的两种类型"></a>数据链路层信道的两种类型</h4><ul>
-<li>点对点的信道</li>
-<li>广播信道：必须使用共享信道协议</li>
-</ul>
-<h3 id="数据链路和帧"><a href="#数据链路和帧" class="headerlink" title="数据链路和帧"></a>数据链路和帧</h3><ul>
-<li>链路（物理链路）：点到点的物理线路，中间没有节点</li>
-<li>数据链路（逻辑链路）：把实现通信协议的硬件和软件加到链路上<br>逻辑链路=数据链路+必要的通信协议  <h4 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1.封装成帧"></a>1.封装成帧</h4>在一段数据收尾分别添加不同的字符，构成一个帧，确定帧的界限。  <h4 id="2-透明传输"><a href="#2-透明传输" class="headerlink" title="2.透明传输"></a>2.透明传输</h4>如果数据中有和帧尾字符一样的时，就会错误的识别一段帧，多出来的部分会被当做无效而丢弃。<h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5></li>
-</ul>
-<h4 id="3差错检验"><a href="#3差错检验" class="headerlink" title="3差错检验"></a>3差错检验</h4><ul>
-<li>误码率： 传输错误的比特总数占总比特总数的多少<h5 id="冗余检验"><a href="#冗余检验" class="headerlink" title="冗余检验"></a>冗余检验</h5>循环冗余检验  检验单个帧的对错<br>可靠传输：不重复，不丢失，不失序</li>
-</ul>
-<h2 id="点对点协议（PPP协议）"><a href="#点对点协议（PPP协议）" class="headerlink" title="点对点协议（PPP协议）"></a>点对点协议（PPP协议）</h2><h4 id="PPP协议满足的要求"><a href="#PPP协议满足的要求" class="headerlink" title="PPP协议满足的要求"></a>PPP协议满足的要求</h4><ul>
-<li>简单（首要要求）</li>
-<li>封装成帧——规定帧的边界符号</li>
-<li>透明性——保证数据传输的透明性</li>
-<li>在同一物理链路上同时支持多种网络协议</li>
-<li>支持多种类型链路</li>
-<li>差错检验</li>
-<li>检测连接状态</li>
-<li>最大传输单元——必须对每一种的点对点链路设置最大传送单元（MTU的标准默认值）促进各种实现之间的互操作性。</li>
-<li>网络层地址协议——两个通信的网络层知道或能够配置彼此的网络地址</li>
-<li>数据压缩协议<h4 id="PPP协议不需要的功能"><a href="#PPP协议不需要的功能" class="headerlink" title="PPP协议不需要的功能"></a>PPP协议不需要的功能</h4></li>
-<li>纠错</li>
-<li>流量控制</li>
-<li>序号</li>
-<li>多点线路</li>
-<li>半双工或单工链路<h4 id="PPP协议的三个组成部分"><a href="#PPP协议的三个组成部分" class="headerlink" title="PPP协议的三个组成部分"></a>PPP协议的三个组成部分</h4></li>
-<li>一个将IP数据封装到串行链路的方法</li>
-<li>链路控制协议</li>
-<li>网络控制协议<h4 id="PPP协议帧的格式"><a href="#PPP协议帧的格式" class="headerlink" title="PPP协议帧的格式"></a>PPP协议帧的格式</h4></li>
-</ul>
-
+        
       
 
       
@@ -220,7 +189,326 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/02/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/03/19/%E4%BC%A0%E8%BE%93%E5%B1%82%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-网络层笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/11/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%AC%94%E8%AE%B0/">网络层笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/11/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-11T12:31:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>网络层接到数据链路层传来的数据已经是检验差错过的了（只检验单个帧内部），但数据链路层遗留了连个问题：     </p>
+<ol>
+<li>数据链路层无法保证<strong>可靠传输</strong>（数据的不重复、不丢失、不失序，无法保证帧与帧之间的关系）   </li>
+<li>要实现不同单位之间各网络通讯时，数据链路层是做不到的。</li>
+</ol>
+<h1 id="2-网络层提供两种服务"><a href="#2-网络层提供两种服务" class="headerlink" title="2.网络层提供两种服务"></a>2.网络层提供两种服务</h1><h2 id="2-1虚拟电路服务"><a href="#2-1虚拟电路服务" class="headerlink" title="2.1虚拟电路服务"></a>2.1虚拟电路服务</h2><ul>
+<li>是让<strong>网络负责可靠传输</strong>，模拟电信网络，使用面向连接的通信方式。</li>
+</ul>
+<ol>
+<li>通信前建立虚拟电路。（模仿电话传输）</li>
+<li>在使用可靠的传输协议，就可以是发送分组无差错发送数据。</li>
+</ol>
+<h3 id="2-1-1缺点"><a href="#2-1-1缺点" class="headerlink" title="2.1.1缺点"></a>2.1.1缺点</h3><p>非常浪费。链路的录用率非常低。</p>
+<h2 id="2-2数据报服务"><a href="#2-2数据报服务" class="headerlink" title="2.2数据报服务"></a>2.2数据报服务</h2><ul>
+<li>让网络层负责<strong>尽最大努力交付</strong>，而不负责可靠性。</li>
+<li>由主机中的<strong>传输层</strong>，负责可靠性交付<h3 id="2-2-1优点"><a href="#2-2-1优点" class="headerlink" title="2.2.1优点"></a>2.2.1优点</h3></li>
+<li>网络的造价大大降低。</li>
+<li>运行方式灵活，能够适应更对的应用。 </li>
+</ul>
+<h2 id="2-3对比"><a href="#2-3对比" class="headerlink" title="2.3对比"></a>2.3对比</h2><table>
+<thead>
+<tr>
+<th align="center">对比方面</th>
+<th align="center">虚拟电路服务</th>
+<th align="center">数据报服务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">思路</td>
+<td align="center">由网络来保证可靠通信</td>
+<td align="center">由用户主机来保证可靠通信</td>
+</tr>
+<tr>
+<td align="center">简洁的建立</td>
+<td align="center">必须要</td>
+<td align="center">不需要</td>
+</tr>
+<tr>
+<td align="center">终点地址</td>
+<td align="center">仅在间接建立阶段使用，每个分组使用短的虚拟电路</td>
+<td align="center">每个分组都用终点的完整地址</td>
+</tr>
+<tr>
+<td align="center">分组转发</td>
+<td align="center">属于同一条虚拟电路的分组均按照同一路由进行转发</td>
+<td align="center">每个分组独立选择路由进行转发</td>
+</tr>
+<tr>
+<td align="center">结点出现故障</td>
+<td align="center">所用通过故障节点的虚电路都不能正常工作</td>
+<td align="center">出故障的节点可能会丢失分组，一些路由可能会发生变化</td>
+</tr>
+<tr>
+<td align="center">分组的顺序</td>
+<td align="center">总是按发送顺序到达终点</td>
+<td align="center">不一定按顺序到达终点</td>
+</tr>
+<tr>
+<td align="center">差错处理和流量控制</td>
+<td align="center">可以由网络负责，也可以由用户主机负责</td>
+<td align="center">由用户主机负责</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="3-网际协议IP"><a href="#3-网际协议IP" class="headerlink" title="3.网际协议IP"></a>3.网际协议IP</h1><ul>
+<li>网络协议IP时TCP/IP体系的一个重要组成部分。</li>
+<li>与IP协议配钥匙用的还有3个：<ol>
+<li>ARP 地址解析协议</li>
+<li>ICMP 网络控制报文协议</li>
+<li>IGMP 网际组管理协议</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">层次</th>
+<th align="left">协议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">应用层</td>
+<td align="left">HTTP,FTP,SMTP</td>
+</tr>
+<tr>
+<td align="left">传输层</td>
+<td align="left">TCP,UDP</td>
+</tr>
+<tr>
+<td align="left">网络层</td>
+<td align="left">IP,ICMP,IGMP,ARP</td>
+</tr>
+</tbody></table>
+<h2 id="3-1-虚拟互联网络（互联网）"><a href="#3-1-虚拟互联网络（互联网）" class="headerlink" title="3.1 虚拟互联网络（互联网）"></a>3.1 虚拟互联网络（互联网）</h2><ul>
+<li>把各种物理网络客观存在的<strong>异构性</strong>，利用IP协议把这些性能差异的网络看起来像一个有机的整体。</li>
+<li>IP网：IP协议的虚拟互联网络。</li>
+<li>好处：淡化不同网络之间通信的异构性</li>
+<li>现在互联网=覆盖全球的IP网+TCP协议</li>
+</ul>
+<h2 id="3-2-IP地址"><a href="#3-2-IP地址" class="headerlink" title="3.2 IP地址"></a>3.2 IP地址</h2><ul>
+<li>给每一个连接在互联网上的主机分配一个全球唯一个的地址（32位的2进制数）</li>
+<li>IP地址按某<strong>固定长度</strong>分成连段，（前面）网号段（net-id）+（后面）主机号段（host-id）</li>
+</ul>
+<h3 id="3-2-1-IP地址表示方法"><a href="#3-2-1-IP地址表示方法" class="headerlink" title="3.2.1 IP地址表示方法"></a>3.2.1 IP地址表示方法</h3><ul>
+<li>A类地址：[(开头为0)共8位net-id]+[24位host-id]</li>
+<li>B类地址：[(开头为10)共16位net-id]+[16位host-id]</li>
+<li>C类地址：[(开头为110)共24位net-id]+[8位host-id]</li>
+<li>D类地址：[(开头为1110)]</li>
+<li>E类地址：[(开头为1111)]<h4 id="点分十进制法"><a href="#点分十进制法" class="headerlink" title="点分十进制法"></a>点分十进制法</h4></li>
+<li>每8位分一组，把每组中的二进制数学成十进制数（<strong>最大为255</strong>），写成四个十进制数。</li>
+<li>优点：写成十进制后，方便书写。<br>缺点：无法表示二进制时所展示的更多信息。（可根据开头二进制数区分地址的类）</li>
+</ul>
+<h3 id="物联网中的IP地址"><a href="#物联网中的IP地址" class="headerlink" title="物联网中的IP地址"></a>物联网中的IP地址</h3><ul>
+<li>同一局域网或路由器的IP地址中网络号必须是一样的。</li>
+<li>路由器的每一个接口上都有一个网络号的IP地址。<h3 id="IP地址与硬件地址"><a href="#IP地址与硬件地址" class="headerlink" title="IP地址与硬件地址"></a>IP地址与硬件地址</h3></li>
+<li>IP地址与硬件地址不同</li>
+<li>硬件地址：物理地址，是数据链路层与物理层<br>IP地址：是网络层以上的地址，是一种逻辑地址（可以改变） </li>
+</ul>
+<h2 id="3-3-ARP-地址解析协议"><a href="#3-3-ARP-地址解析协议" class="headerlink" title="3.3 ARP 地址解析协议"></a>3.3 ARP 地址解析协议</h2><ul>
+<li><p>通信时用到两个地址：<br>IP地址：网络层地址<br>MAC地址：数据链路层地址</p>
+</li>
+<li><p>ARP的作用:</p>
+<ul>
+<li>解决<strong>同一个局域网上</strong>的主句或路由器的IP地址和硬件地址的映射问题（已知其网络层的IP地址，解析出他数据链路层的地址。）</li>
+<li>如果<strong>不在同一个局域网上</strong>，那么就要用过，ARP找到一个一个<strong>本局域网上</strong>的<strong>路由器的硬件地址</strong>把分组传给这个路由器，让这个路由器把分组传给<strong>下一个网络</strong>，剩下的工作由，下一个网络完成。</li>
+</ul>
+</li>
+<li><p>在实际网络的链路上，传送数据帧时，最终还是要使用硬件地址。</p>
+</li>
+<li><p>ARP高速缓冲区<br>每一个主机都有高速缓冲区，里面有所用局域网上的各主机路由器的<strong>IP地址到硬件地址的映射表</strong>。</p>
+<h3 id="地址解析过程"><a href="#地址解析过程" class="headerlink" title="地址解析过程"></a>地址解析过程</h3></li>
+<li><p>A向B发送IP数据包时，先在其ARP高速缓冲区中查找有无B的<strong>IP地址</strong></p>
+<ul>
+<li>有：可以找出其对应的硬件地址，将此地址写入MAC帧，通过局域网，将该MAC帧发往硬件地址。</li>
+<li>没有：APR进程在局域网上<strong>发送APR请求分组</strong>，收到ARP相应分组后，<strong>将IP地址地址对应的硬件地址</strong>写入<strong>ARP高速缓冲区</strong><h3 id="ARP高速缓存的作用"><a href="#ARP高速缓存的作用" class="headerlink" title="ARP高速缓存的作用"></a>ARP高速缓存的作用</h3></li>
+</ul>
+</li>
+<li><p>存放最近获得的IP地址到MAC地址的绑定，减少ARP广播的数量。</p>
+</li>
+<li><p>减少网络上的通信量，主机A在发送其ARP请求的时候，就将自己的IP地址到硬件的反射写入了<strong>ARP请求分组</strong></p>
+</li>
+<li><p>B收到A的ARP请求分组时，就将主机A的地址映射写入B自己的ARP高速缓冲区，方便后续发送数据。 </p>
+</li>
+</ul>
+<h2 id="3-4-IP数据报的格式"><a href="#3-4-IP数据报的格式" class="headerlink" title="3.4 IP数据报的格式"></a>3.4 IP数据报的格式</h2><ul>
+<li>IP数据包的组成：首部+数据</li>
+</ul>
+<h3 id="首部："><a href="#首部：" class="headerlink" title="首部："></a>首部：</h3><ul>
+<li>前一部分是固定的长度，固定长度为20个字节，是所有IP数据报必须既有的。</li>
+<li>首部固定部分之后是一些可选的字段，其长度不固定（最大40个字节(0~40)）。</li>
+<li>首部最短20和字节，最长60个字节，由于固定长度20个字节，可选字段最长不能超过40个字节。</li>
+<li>首部长度一个单位是4个字节，所有长度为4的整数倍，</li>
+<li>区分服务：只有在使用区分服务时，这个字段才被使用，一般情况下不被使用。</li>
+<li>IP数据报首部没有用来指明“下一跳路由器”的IP地址</li>
+</ul>
+<h4 id="总长度："><a href="#总长度：" class="headerlink" title="总长度："></a>总长度：</h4><ul>
+<li>首部长度+数据长度（单位：字节）</li>
+</ul>
+<h4 id="标识："><a href="#标识：" class="headerlink" title="标识："></a>标识：</h4><ul>
+<li>他是一个<strong>计数器</strong>，产生IP数据报的标识</li>
+</ul>
+<h4 id="标志："><a href="#标志：" class="headerlink" title="标志："></a>标志：</h4><ul>
+<li>站3位，目前只有前2位有意义。 </li>
+<li>3位：MF+DF+MF<ul>
+<li>MF=1:表示后面还有分片</li>
+<li>MF=0:表示最有一个分片</li>
+<li>只有中间位DF=0，才允许分片 </li>
+</ul>
+</li>
+</ul>
+<h4 id="片偏移"><a href="#片偏移" class="headerlink" title="片偏移"></a>片偏移</h4><ul>
+<li>8个字节为一个单位</li>
+<li>表示分片距离原始分片偏移了多少。（针对第一个分片的距离。如第一个分片有40个字节，第二个分片的偏移了（5各单位）40个字节。第三个分片偏移了（10各单位）80个字节，表示前两个分片一共80个字节）</li>
+<li>为什么分片：把较长的数据分成，可以被发送的长度。</li>
+</ul>
+<h4 id="生存时间"><a href="#生存时间" class="headerlink" title="生存时间"></a>生存时间</h4><ul>
+<li>占8位</li>
+<li>数据包在网络中通过的路由器的最大数值。</li>
+</ul>
+<h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><ul>
+<li>占8位</li>
+<li>指出该数据包携带的数据使用何种协议，以便目的主机IP层将数据部分上交给哪个处理。</li>
+</ul>
+<h4 id="首部校验和"><a href="#首部校验和" class="headerlink" title="首部校验和"></a>首部校验和</h4><ul>
+<li>占16位</li>
+<li>只检验数据报首部，不检验数据部分。</li>
+</ul>
+<h2 id="3-5-IP层转发分组的流程"><a href="#3-5-IP层转发分组的流程" class="headerlink" title="3.5 IP层转发分组的流程"></a>3.5 IP层转发分组的流程</h2><h3 id="路由表"><a href="#路由表" class="headerlink" title="路由表"></a>路由表</h3><ul>
+<li>路由表中最重要的是：目的网络地址、下一跳地址</li>
+<li>经过多个路由器的跳跃（<strong>间接交付</strong>），只有到达最后一个路由器向目的主机交付时，才为<strong>直接交付</strong>。</li>
+</ul>
+<h3 id="特定主机路由器"><a href="#特定主机路由器" class="headerlink" title="特定主机路由器"></a>特定主机路由器</h3><ul>
+<li>为特定目的主机指明一个路由。（大多数情况分组转发都是基于目的主机的所在网络）</li>
+<li>目的：使网络监管人员能更方便的，控制和监测网络，</li>
+</ul>
+<h3 id="默认路由器"><a href="#默认路由器" class="headerlink" title="默认路由器"></a>默认路由器</h3><ul>
+<li>可减少路由表所占用空间和搜索路由表所占用的时间。</li>
+<li>这种方式只在一个网络上连接很少的对外连接时可用。</li>
+<li>他在主机发送IP数据报是往往更有好处。</li>
+<li>如果一个网络只有一个路由器连接时，用默认路由合适。</li>
+</ul>
+<p>###</p>
+<ul>
+<li>IP数据报首部没有用来指明“下一跳路由器”的IP地址</li>
+<li>路由器收到带转发的数据报，不是将下一跳路由器的IP地址填入IP数据报，而是送交<strong>下一层</strong>的网络接口软件。</li>
+</ul>
+<h1 id="4-划分子网和构造超网"><a href="#4-划分子网和构造超网" class="headerlink" title="4.划分子网和构造超网"></a>4.划分子网和构造超网</h1><h2 id="4-1划分子网"><a href="#4-1划分子网" class="headerlink" title="4.1划分子网"></a>4.1划分子网</h2><ul>
+<li>子网的划分是<strong>单位内部</strong>的事情，外面看没有划分。</li>
+<li>IP地址为网络号+主机号，从<strong>主机号</strong>中<strong>借</strong>用几位作为子网号，此案赢得主机号也就少了几位。（IP地址共32位，网络号固定下不能改变）<h3 id="4-1-1-子网掩码"><a href="#4-1-1-子网掩码" class="headerlink" title="4.1.1 子网掩码"></a>4.1.1 子网掩码</h3></li>
+<li>IP数据报首部无法判断网络<strong>是否进行了子网划分</strong></li>
+<li>使用子网掩码可以找出IP地址中的子网部分</li>
+<li>规则<ul>
+<li>子网掩码长度32位<h4 id="重要属性"><a href="#重要属性" class="headerlink" title="重要属性"></a>重要属性</h4></li>
+</ul>
+</li>
+<li>两个相邻路由器交换信息时，<strong>必须</strong>相互告知子网掩码</li>
+<li>路由表中除了要给出网络地址外，还要给出子网掩码</li>
+<li>一个路由器连接到两个子网络上，就有两个子网掩码</li>
+</ul>
+<h2 id="使用子网时分组的转发"><a href="#使用子网时分组的转发" class="headerlink" title="使用子网时分组的转发"></a>使用子网时分组的转发</h2><ul>
+<li>不划分网络，可以从IP地址获得网络地址。</li>
+<li>划分网络，数据包的首部并没有提供子网掩码的信息，网络地址的获取需要子网掩码，所以划分网络IP地址，不能从IP地址得出唯一的网络地址。</li>
+<li>判断两个IP地址是否在一个网络中<ul>
+<li>子网掩码一样</li>
+<li>两个IP地址与子网掩码进行与运算，运算出的是否一样 </li>
+</ul>
+</li>
+</ul>
+<h2 id="无分类编址CIDR-构造超网"><a href="#无分类编址CIDR-构造超网" class="headerlink" title="无分类编址CIDR(构造超网)"></a>无分类编址CIDR(构造超网)</h2><h1 id="5-网际控制报文协议"><a href="#5-网际控制报文协议" class="headerlink" title="5.网际控制报文协议"></a>5.网际控制报文协议</h1><h1 id="6-物联网的路由选择协议"><a href="#6-物联网的路由选择协议" class="headerlink" title="6.物联网的路由选择协议"></a>6.物联网的路由选择协议</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h2 id="内部网关协议-RIP"><a href="#内部网关协议-RIP" class="headerlink" title="内部网关协议 RIP"></a>内部网关协议 RIP</h2><ul>
+<li>是一种分布式的、基于基于距离向量的路由选择协议。</li>
+<li>RIP要求每一个路由器都要维护从他到其他每一个目的网络的距离记录。<h3 id="距离的定义"><a href="#距离的定义" class="headerlink" title="距离的定义"></a>距离的定义</h3></li>
+<li>RIP认为通过最少的路由器才是好的路由。</li>
+<li>一条路径做多包含15个路由器，距离大于16相当于不可到达。</li>
+<li>RIP不能在两个网络间同时适应多条路由。</li>
+</ul>
+<h3 id="RIP-三个特点"><a href="#RIP-三个特点" class="headerlink" title="RIP 三个特点"></a>RIP 三个特点</h3><ul>
+<li>紧和相邻路由器交换信息</li>
+<li>交换信息即交换路由表</li>
+<li>按固定时间间隔交换路由信息，或在网络拓扑发生变化时， </li>
+</ul>
+<h3 id="路由表的建立"><a href="#路由表的建立" class="headerlink" title="路由表的建立"></a>路由表的建立</h3><ol>
+<li>路由器刚刚工作时，路由表是空的。</li>
+<li>之后每个路由器只和数目非常有限的，路由器交换并更新信息。</li>
+<li>经过若干次更新后，路由器最终会知道，到达<strong>自治系统</strong>中腾和一个网络的<strong>最短距离</strong>和<strong>下一跳路由器的地址</strong></li>
+</ol>
+<ul>
+<li>RIP协议的收敛过程较快。<br>收敛：自治系统中所有结点都得到正确的路由选择信息的过程。</li>
+</ul>
+<h2 id="内部网关协议-OSPF"><a href="#内部网关协议-OSPF" class="headerlink" title="内部网关协议 OSPF"></a>内部网关协议 OSPF</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>开放最短路径优先。<br>“开放”表明SDPF协议不是受某一家厂商控制，而是公开表明。</li>
+<li>最短路径：使用Dijkstra提出的最短路径算法SPF</li>
+<li>采用分布式线路协议</li>
+</ul>
+<h2 id="外部网关协议-BDP"><a href="#外部网关协议-BDP" class="headerlink" title="外部网关协议 BDP"></a>外部网关协议 BDP</h2><h2 id="路由器的构成"><a href="#路由器的构成" class="headerlink" title="路由器的构成"></a>路由器的构成</h2><h1 id="7-IPv6"><a href="#7-IPv6" class="headerlink" title="7.IPv6"></a>7.IPv6</h1><h2 id="IPv6的基本首部"><a href="#IPv6的基本首部" class="headerlink" title="IPv6的基本首部"></a>IPv6的基本首部</h2><h2 id="IPv6的地址"><a href="#IPv6的地址" class="headerlink" title="IPv6的地址"></a>IPv6的地址</h2><h2 id="从IPv6向IPv6过渡"><a href="#从IPv6向IPv6过渡" class="headerlink" title="从IPv6向IPv6过渡"></a>从IPv6向IPv6过渡</h2><h2 id="ICMPv6"><a href="#ICMPv6" class="headerlink" title="ICMPv6"></a>ICMPv6</h2><h1 id="8-IP多播"><a href="#8-IP多播" class="headerlink" title="8.IP多播"></a>8.IP多播</h1><h1 id="9-虚拟专用网VPN和网络地址转换NAT"><a href="#9-虚拟专用网VPN和网络地址转换NAT" class="headerlink" title="9.虚拟专用网VPN和网络地址转换NAT"></a>9.虚拟专用网VPN和网络地址转换NAT</h1><h1 id="10-多协议标记交换MPLS"><a href="#10-多协议标记交换MPLS" class="headerlink" title="10.多协议标记交换MPLS"></a>10.多协议标记交换MPLS</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/11/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -270,28 +558,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="物理层的基本概念"><a href="#物理层的基本概念" class="headerlink" title="物理层的基本概念"></a>物理层的基本概念</h3><ul>
+        <h1 id="物理层的基本概念"><a href="#物理层的基本概念" class="headerlink" title="物理层的基本概念"></a>物理层的基本概念</h1><ul>
 <li>物理层考虑的是怎样才能怎样才能<strong>连接</strong>各种计算机传输媒体上传输数据<strong>比特流</strong>，而不是<strong>连接</strong>具体的<strong>传输媒体</strong>。</li>
 <li>作用是<em>屏蔽</em>不同传输媒体和通讯手段的<em>差异</em>。</li>
-<li>物理层协议也称物理层规范<h3 id="物理层作用"><a href="#物理层作用" class="headerlink" title="物理层作用"></a>物理层作用</h3>确定传输媒体的接口的一些特点，如：接口的形状、尺寸、引线数量等  <h3 id="常用术语"><a href="#常用术语" class="headerlink" title="常用术语"></a>常用术语</h3></li>
+<li>物理层协议也称物理层规范<h1 id="物理层作用"><a href="#物理层作用" class="headerlink" title="物理层作用"></a>物理层作用</h1></li>
+</ul>
+<ol>
+<li>确定传输媒体的接口的一些特点，如：接口的形状、尺寸、引线数量等   </li>
+<li>解决计算机间的比特传输问题（透明的传输比特流），关心点到点的问题<h1 id="物理层的功能"><a href="#物理层的功能" class="headerlink" title="物理层的功能"></a>物理层的功能</h1></li>
+<li>接口特性：物理层不包含物理媒介，而是确定接口特性</li>
+<li>机械特性：规定接口的形状，尺寸，引线数目。</li>
+<li>电气特性：各个接口上的电压范围、阻抗匹配。</li>
+<li>功能特性：某一接口上出现某一电压的用途、接口信号的用途。</li>
+<li>过程特性：各条物理线路的工作过程，时序关系。</li>
+</ol>
+<h1 id="常用术语"><a href="#常用术语" class="headerlink" title="常用术语"></a>常用术语</h1><ul>
 <li>数据：消息的实体</li>
-<li>信号：数据的（电气或电磁）表现</li>
+<li>信号：数据的（电气或 电磁）表现</li>
 <li>模拟信号：<strong>连续</strong>的消息参数取值</li>
 <li>数字信号：<strong>离散</strong>的消息参数取值</li>
-<li>码元：<h4 id="信道"><a href="#信道" class="headerlink" title="信道"></a>信道</h4></li>
+<li>码元：<h2 id="信道"><a href="#信道" class="headerlink" title="信道"></a>信道</h2></li>
 <li>信道：表示某一个方向传递信息的媒体</li>
-<li>单向通信：只能一个方向通信，反向不行</li>
-<li>双向交替通信（半双工）：双方都可以发送信息， 但不能同时</li>
-<li>双向同时通信（全双工）：~~</li>
+<li>单向通信：只能一个方向通信，反向不行（广播，收音机）</li>
+<li>双向交替通信（半双工）：双方都可以发送信息， 但不能同时（对讲机）</li>
+<li>双向同时通信（全双工）：~~（电话）</li>
 </ul>
-<h5 id="调制"><a href="#调制" class="headerlink" title="调制"></a>调制</h5><ul>
+<h3 id="调制"><a href="#调制" class="headerlink" title="调制"></a>调制</h3><ul>
 <li>基带信号：计算机输出的代表各种文字或图形文件的信号都是</li>
 <li>调制：把信道不能传输的低频、直流成分转化成可传输的</li>
 <li>基带调制（编码）：基带信号（不适应）转化为基带信号（适应）</li>
 <li>带通调制：基带信号转化为模拟信号（把基带信号频率调高成模拟信号）<ul>
 <li>调幅：调节幅度</li>
 <li>调频：调节频率</li>
-<li>调相：调节初相位（一个是正弦波，一个是余弦波）<h5 id="极限容量"><a href="#极限容量" class="headerlink" title="极限容量"></a>极限容量</h5></li>
+<li>调相：调节初相位（一个是正弦波，一个是余弦波）<h3 id="极限容量"><a href="#极限容量" class="headerlink" title="极限容量"></a>极限容量</h3></li>
 </ul>
 </li>
 <li>任何信道在传输时都会受到干扰</li>
@@ -302,7 +601,7 @@
 <li>信噪比 </li>
 <li>香农公式：用信息论的理论推出带宽受限制且有高斯白噪音干扰的信道极限、无差错的信息传输速率。</li>
 </ul>
-<h3 id="物理层下的传输媒体"><a href="#物理层下的传输媒体" class="headerlink" title="物理层下的传输媒体"></a>物理层下的传输媒体</h3><ul>
+<h1 id="物理层下的传输媒体"><a href="#物理层下的传输媒体" class="headerlink" title="物理层下的传输媒体"></a>物理层下的传输媒体</h1><ul>
 <li>双绞线：   </li>
 <li>同轴电缆：用于传输高速数据</li>
 <li>光纤：<ul>
@@ -318,10 +617,24 @@
 <li>短波</li>
 <li>微波：卫星</li>
 </ul>
-<h3 id="信道复用"><a href="#信道复用" class="headerlink" title="信道复用"></a>信道复用</h3><ul>
-<li>频分复用</li>
-<li>波分复用</li>
-<li>码分复用</li>
+<h1 id="信道复用"><a href="#信道复用" class="headerlink" title="信道复用"></a>信道复用</h1><h2 id="频分复用"><a href="#频分复用" class="headerlink" title="频分复用"></a>频分复用</h2><ul>
+<li>把带宽分成多份，用户分配到不同的频率。</li>
+<li>所有户在同样时间占用不用的带宽。（“带宽”是频路带宽，而怒视数据发送速率）</li>
+</ul>
+<h2 id="时分复用"><a href="#时分复用" class="headerlink" title="时分复用"></a>时分复用</h2><ul>
+<li>每一个用户所占用的时间间隙，成周期性</li>
+</ul>
+<h2 id="波分复用"><a href="#波分复用" class="headerlink" title="波分复用"></a>波分复用</h2><h2 id="码分复用"><a href="#码分复用" class="headerlink" title="码分复用"></a>码分复用</h2><ul>
+<li>个用户挑选不同的码型因此不会造成干扰。这种抗干扰能力强</li>
+<li>码片：</li>
+</ul>
+<ul>
+<li>每个站发动的码片序列必须<strong>各不相同</strong>，<strong>相互正交</strong>，在实际系统中使用<strong>伪随机码序列</strong><ul>
+<li>随机码：无论多长不会循环</li>
+<li>伪随机码：码长达到一定长度，开始循环。（CDMA采用42位伪随机码，循环可能位4.4亿分之一）</li>
+<li></li>
+</ul>
+</li>
 </ul>
 
       
@@ -396,6 +709,35 @@
 <li>主机</li>
 <li>网络核心：路由器  </li>
 </ul>
+<h2 id="计算机网络性能指标"><a href="#计算机网络性能指标" class="headerlink" title="计算机网络性能指标"></a>计算机网络性能指标</h2><h4 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h4><p>指数据传输速率，单位：比特（bit/s）<br>bit同时也是内存单位，表示一个数据量单位，表示一个0或1  </p>
+<h4 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h4><p>两种意义：</p>
+<ul>
+<li>信道本身的物理属性（信道的频带宽度（最高频率宽度与最低频率宽度之差））</li>
+<li>计算机网络中，表示能通过的最高速率。<br>例如：计算机100Mbps接入网络：<strong>计算机</strong>能以100Mbps的速率<strong>向信道</strong>注入bit流<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4>单位时间内通过（出去、进来）某个网络（信道、接口）的数据量，实际测量的是到底有多少数据能通过网络（最关心的是出去多少）<h4 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h4><h5 id="传输时延（发送时延）"><a href="#传输时延（发送时延）" class="headerlink" title="传输时延（发送时延）"></a>传输时延（发送时延）</h5>数据帧从节点进入传输媒体的时间。（从数据帧的第一个bit到最后一个bit所用时间）<h5 id="传播时延"><a href="#传播时延" class="headerlink" title="传播时延"></a>传播时延</h5>电磁波在信道中传输的速度<h5 id="处理时延"><a href="#处理时延" class="headerlink" title="处理时延"></a>处理时延</h5>主机或路由器收到分组时，处理分组（分析首部，提取数据，差错检验）所要的时间。<h5 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h5>从某个接口出去，排队索要的时间</li>
+</ul>
+<h4 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h4><p> 又称以比特为单位的链路长度，（某段链路现在有多少比特）</p>
+<h4 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h4><p> 从发送方发送数据开始，到发送方收到来自接收方确认接收的总时间。</p>
+<h4 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h4><p> 并非越高越好，当利用率接近100%时，时延会非常高。</p>
+<h3 id="五层协议的网络体系结构的要点，包括各层的主要功能"><a href="#五层协议的网络体系结构的要点，包括各层的主要功能" class="headerlink" title="五层协议的网络体系结构的要点，包括各层的主要功能"></a>五层协议的网络体系结构的要点，包括各层的主要功能</h3><ol>
+<li>应用层</li>
+</ol>
+<p>应用层是体系结构中的最高层。应用层确定进程之间通信的性质以满足用户的需要。这里的进程就是指正在运行的程序。</p>
+<ol start="2">
+<li>传输层</li>
+</ol>
+<p>传输层的任务就是负责主机中两个进程之间的通信。因特网的传输层可使用两种不同协议：即面向连接的传输控制协议TCP，和无连接的用户数据报协议UDP。</p>
+<ol start="3">
+<li>网络层</li>
+</ol>
+<p>网络层负责为分组交换网上的不同主机提供通信。在发送数据时，网络层将运输层产生的报文段或用户数据报封装成分组或包进行传送。</p>
+<ol start="4">
+<li>数据链路层</li>
+</ol>
+<p>当发送数据时，数据链路层的任务是将在网络层交下来的IP数据报组装成帧，在两个相邻结点间的链路上传送以帧为单位的数据。每一帧包括数据和必要的控制信息（如同步信息、地址信息、差错控制、以及流量控制信息等）。</p>
+<ol start="5">
+<li>物理层</li>
+</ol>
+<p>物理层的任务就是透明地传送比特流。在物理层上所传数据的单位是比特。传递信息所利用的一些物理媒体，如双绞线、同轴电缆、光缆等，并不在物理层之内而是在物理层的下面。</p>
 
       
 
@@ -1320,86 +1662,6 @@
 
 
   
-    <article id="post-C语言输入输出函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/26/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0/">C语言输入输出函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/26/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-07-26T01:34:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C语言输入输出函数"><a href="#C语言输入输出函数" class="headerlink" title="C语言输入输出函数"></a>C语言输入输出函数</h1><p>1、getcher( )、putchar( )<br>2、scanf_s<br>3、gets_s( )<br>4、fgets( )<br>5、printf( )<br>6、puts( )<br>7、fputs( )</p>
-        
-          <a class="article-more-a" href="/2020/07/26/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">输入输出</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/26/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1497,10 +1759,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
@@ -1513,23 +1771,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">方法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">封装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1550,6 +1792,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">位移</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">方法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">封装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
             
             <div class="clearfix"></div>

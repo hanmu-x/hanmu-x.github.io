@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>传输层笔记 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="1. 传输层协议概述传输层基本概念 传输层位于通信部分的最高层，也是用户功能的最底层 只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。  传输层的作用 传输层的两个主要协议 用户数据包协议UDP  传输控制协议TCP   UDP 一种无连接协议 提供无连接服务 在传送数据之前不需要家里连接 传送的数据单位协议是UDP报文或用户数据包 对方收到UDP报文后不需要给出">
+<meta property="og:type" content="article">
 <meta property="og:title" content="传输层笔记">
 <meta property="og:url" content="http://yoursite.com/2021/03/19/%E4%BC%A0%E8%BE%93%E5%B1%82%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="塔台">
+<meta property="og:description" content="1. 传输层协议概述传输层基本概念 传输层位于通信部分的最高层，也是用户功能的最底层 只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。  传输层的作用 传输层的两个主要协议 用户数据包协议UDP  传输控制协议TCP   UDP 一种无连接协议 提供无连接服务 在传送数据之前不需要家里连接 传送的数据单位协议是UDP报文或用户数据包 对方收到UDP报文后不需要给出">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-19T04:12:44.000Z">
-<meta property="article:modified_time" content="2021-03-19T04:12:44.487Z">
+<meta property="article:modified_time" content="2021-03-20T02:36:57.514Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -66,7 +68,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 12
+			文章总数 13
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -177,7 +179,104 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="1-传输层协议概述"><a href="#1-传输层协议概述" class="headerlink" title="1. 传输层协议概述"></a>1. 传输层协议概述</h1><h2 id="传输层基本概念"><a href="#传输层基本概念" class="headerlink" title="传输层基本概念"></a>传输层基本概念</h2><ul>
+<li>传输层位于通信部分的最高层，也是用户功能的最底层</li>
+<li>只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。</li>
+</ul>
+<h2 id="传输层的作用"><a href="#传输层的作用" class="headerlink" title="传输层的作用"></a>传输层的作用</h2><ul>
+<li><h2 id="传输层的两个主要协议"><a href="#传输层的两个主要协议" class="headerlink" title="传输层的两个主要协议"></a>传输层的两个主要协议</h2></li>
+<li><p>用户数据包协议UDP</p>
+</li>
+<li><p>传输控制协议TCP</p>
+</li>
+</ul>
+<h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><ul>
+<li>一种无连接协议<ul>
+<li>提供无连接服务</li>
+<li>在传送数据之前不需要家里连接</li>
+<li>传送的数据单位协议是<strong>UDP报文</strong>或<strong>用户数据包</strong></li>
+<li>对方收到UDP报文后不需要给出确认</li>
+<li>岁不提供可靠支付，但在某种情况下是最有效的工作方式</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><ul>
+<li>一种面向连接的协议<ul>
+<li>提供面向连接服务</li>
+<li>传送的数据单位协议是<strong>TCP报文</strong></li>
+<li>该协议提供<strong>可靠的传输服务</strong>，因此不可避免增加了许多开销，</li>
+</ul>
+</li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
+<li><p>传输层UDP用户数据报与网络层IP数据报有很大区别</p>
+<ul>
+<li>IP数据报要经过互联网中很多路由器的转发</li>
+<li>UDP用户数据报在传输层端到端抽象的逻辑信道中传送</li>
+</ul>
+</li>
+<li><p>TCP报文段实在运输层抽象的端到端逻辑信道中传送，该信道是全双工信道，但这种信道却不知经过哪些路由器，而且这些路由器也不知道上面传输层是否建立了TCP连接。</p>
+</li>
+</ul>
+<h2 id="传输层的端口"><a href="#传输层的端口" class="headerlink" title="传输层的端口"></a>传输层的端口</h2><ul>
+<li>端口用16位端口号标记</li>
+<li>端口号只有本地意义（未标记本计算机应用层中的各进程）</li>
+<li>不同计算机相同端口没有联系。<ul>
+<li>连个计算机互相通信不仅要知道IP地址，还要知道端口号</li>
+</ul>
+</li>
+</ul>
+<h3 id="服务器端口号"><a href="#服务器端口号" class="headerlink" title="服务器端口号"></a>服务器端口号</h3><h3 id="客户端口号"><a href="#客户端口号" class="headerlink" title="客户端口号"></a>客户端口号</h3><h1 id="2-用户数据包协议UDP"><a href="#2-用户数据包协议UDP" class="headerlink" title="2. 用户数据包协议UDP"></a>2. 用户数据包协议UDP</h1><h2 id="UDP-概述"><a href="#UDP-概述" class="headerlink" title="UDP 概述"></a>UDP 概述</h2><ul>
+<li>UDP只在IP数据报服务之上增加了很少的一点功能<ul>
+<li>复用和分用</li>
+<li><strong>差错检验</strong></li>
+</ul>
+</li>
+<li>虽然UDP用户数据报只能提供不可靠的交付，但是UDP在某些方面有优点。</li>
+</ul>
+<h2 id="UDP特点"><a href="#UDP特点" class="headerlink" title="UDP特点"></a>UDP特点</h2><ul>
+<li><strong>UDP是无连接的</strong>（发送数据前不需要连接，因此<strong>减少了开销和发送数据之前的延迟</strong>）</li>
+<li><strong>UDP使用尽可能最大努力交付</strong>。（不保证可靠交付，因此主机<strong>不需要维持复杂的连接状态</strong>）</li>
+<li><strong>UDP是面向报文的</strong>。（对应用层交下来的报文不做处理，<strong>保留了报文的大小</strong>）</li>
+<li><strong>UDP没有拥塞控制</strong>（网络出现阻塞不会是源主机的发送速率下降）</li>
+</ul>
+<h2 id="面向报文UDP"><a href="#面向报文UDP" class="headerlink" title="面向报文UDP"></a>面向报文UDP</h2><ul>
+<li>由于UDP对IP层数据报文去除首部后原封不动的交付给应用层</li>
+<li><strong>应用程序</strong>必须选择大小合适的报文<ul>
+<li>太长: EUP给IP层后，IP层会进行分片，减低IP层效率</li>
+<li>太短：EUP给IP层后，IP数据报首部相对长度太大，降低了IP层效率</li>
+</ul>
+</li>
+</ul>
+<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><h1 id="3-传输控制协议TCP概述"><a href="#3-传输控制协议TCP概述" class="headerlink" title="3. 传输控制协议TCP概述"></a>3. 传输控制协议TCP概述</h1><h2 id="TCP最主要的特点"><a href="#TCP最主要的特点" class="headerlink" title="TCP最主要的特点"></a>TCP最主要的特点</h2><ul>
+<li>TCP是<strong>面向连接</strong>的传输层协议</li>
+<li>TCP连接只能点对点，<strong>一对一</strong></li>
+<li><strong>TCP提供可靠交付的服务</strong></li>
+<li>TCP提供<strong>全双工</strong>通信</li>
+<li><strong>TCP面向流</strong><ul>
+<li>“流”指流入或流出程序的<strong>字节序列</strong> </li>
+<li>TCP面向流：TCP把应用程序传下来的<strong>数据块</strong>仅看成一串无结构的<strong>字节流</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="TCP面向流的概念"><a href="#TCP面向流的概念" class="headerlink" title="TCP面向流的概念"></a>TCP面向流的概念</h2><ul>
+<li>TCP不保证接收方和发送发的<strong>数据块大小</strong>对应关系</li>
+<li>但是能确保接收方和发送发的<strong>数据流</strong>完全一样</li>
+<li>TCP链接是一条虚连接，而不是一条真正的物理连接</li>
+<li>TCP不关心一次把多长的报文发送到TCP的缓存区</li>
+<li>TCP根据对方的<strong>窗口值</strong>和<strong>当前网络拥塞</strong>程度，来决定一个报文段应包含多少个字节。</li>
+<li>TCP可把太长的数据块 分短一些在发送。</li>
+<li>TCP可等待积累足够多的字节后在构成报文段发送出去。</li>
+</ul>
+<h2 id="TCP的连接"><a href="#TCP的连接" class="headerlink" title="TCP的连接"></a>TCP的连接</h2><ul>
+<li>TCP把连接作为最<strong>基本的抽象</strong></li>
+<li>每一条TCP连接有两个端点</li>
+<li>TCP连接的是<strong>套接字或插口</strong>。（不是主机，不是IP地址，不是应用进程，不是传输层协议端口）<ul>
+<li>套接字：IP地址和端口号的组合，通过IP地址确定唯一主机，又通过端口来确定确定唯一主机的唯一端口唯一进程</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-可靠传输的工作原理"><a href="#4-可靠传输的工作原理" class="headerlink" title="4. 可靠传输的工作原理"></a>4. 可靠传输的工作原理</h1><h1 id="5-TCP报文段的首部格式"><a href="#5-TCP报文段的首部格式" class="headerlink" title="5. TCP报文段的首部格式"></a>5. TCP报文段的首部格式</h1><h1 id="6-TCP可靠传输的实现"><a href="#6-TCP可靠传输的实现" class="headerlink" title="6. TCP可靠传输的实现"></a>6. TCP可靠传输的实现</h1><h1 id="7-TCP的流量控制"><a href="#7-TCP的流量控制" class="headerlink" title="7. TCP的流量控制"></a>7. TCP的流量控制</h1><h1 id="8-TCP的拥塞控制"><a href="#8-TCP的拥塞控制" class="headerlink" title="8. TCP的拥塞控制"></a>8. TCP的拥塞控制</h1><h1 id="9-TCP的运输连接管理"><a href="#9-TCP的运输连接管理" class="headerlink" title="9.TCP的运输连接管理"></a>9.TCP的运输连接管理</h1>
       
 
       
@@ -309,7 +408,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-传输层协议概述"><span class="toc-number">1.</span> <span class="toc-text">1. 传输层协议概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">传输层基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的作用"><span class="toc-number">1.2.</span> <span class="toc-text">传输层的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的两个主要协议"><span class="toc-number">1.3.</span> <span class="toc-text">传输层的两个主要协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP"><span class="toc-number">1.3.1.</span> <span class="toc-text">UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP"><span class="toc-number">1.3.2.</span> <span class="toc-text">TCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-number">1.3.3.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的端口"><span class="toc-number">1.4.</span> <span class="toc-text">传输层的端口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器端口号"><span class="toc-number">1.4.1.</span> <span class="toc-text">服务器端口号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#客户端口号"><span class="toc-number">1.4.2.</span> <span class="toc-text">客户端口号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-用户数据包协议UDP"><span class="toc-number">2.</span> <span class="toc-text">2. 用户数据包协议UDP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP-概述"><span class="toc-number">2.1.</span> <span class="toc-text">UDP 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP特点"><span class="toc-number">2.2.</span> <span class="toc-text">UDP特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向报文UDP"><span class="toc-number">2.3.</span> <span class="toc-text">面向报文UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP首部格式"><span class="toc-number">2.4.</span> <span class="toc-text">UDP首部格式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-传输控制协议TCP概述"><span class="toc-number">3.</span> <span class="toc-text">3. 传输控制协议TCP概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP最主要的特点"><span class="toc-number">3.1.</span> <span class="toc-text">TCP最主要的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP面向流的概念"><span class="toc-number">3.2.</span> <span class="toc-text">TCP面向流的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP的连接"><span class="toc-number">3.3.</span> <span class="toc-text">TCP的连接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-可靠传输的工作原理"><span class="toc-number">4.</span> <span class="toc-text">4. 可靠传输的工作原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-TCP报文段的首部格式"><span class="toc-number">5.</span> <span class="toc-text">5. TCP报文段的首部格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-TCP可靠传输的实现"><span class="toc-number">6.</span> <span class="toc-text">6. TCP可靠传输的实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-TCP的流量控制"><span class="toc-number">7.</span> <span class="toc-text">7. TCP的流量控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-TCP的拥塞控制"><span class="toc-number">8.</span> <span class="toc-text">8. TCP的拥塞控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-TCP的运输连接管理"><span class="toc-number">9.</span> <span class="toc-text">9.TCP的运输连接管理</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -421,10 +520,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -433,27 +528,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">键盘录入</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">输出字符串</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java命名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">逻辑</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">位移</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -474,6 +553,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">键盘录入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">输出字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java命名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">逻辑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">位移</a>
               </li>
             
             <div class="clearfix"></div>

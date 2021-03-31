@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 13
+			文章总数 14
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -156,6 +156,119 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-应用层笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/24/%E5%BA%94%E7%94%A8%E5%B1%82%E7%AC%94%E8%AE%B0/">应用层笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/24/%E5%BA%94%E7%94%A8%E5%B1%82%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-24T01:32:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-域名系统DNS"><a href="#1-域名系统DNS" class="headerlink" title="1.域名系统DNS"></a>1.域名系统DNS</h1><ul>
+<li>许多应用软件直接使用域名系统，三十用户只能间接的使用域名系统</li>
+<li>互联网采用<strong>层次结构</strong>的命名树作文书记得名字，比采用<strong>分布式</strong>的域名系统DNS</li>
+<li>若干个服务器远程完成对名字到IP地址的解析</li>
+<li>域名服务器在专设的节点上运行，运行程序的机器叫<strong>域名服务器</strong></li>
+</ul>
+<h2 id="域名结构"><a href="#域名结构" class="headerlink" title="域名结构"></a>域名结构</h2><ul>
+<li>层次树状结构的命名方法</li>
+<li>任何一个连接在互联网上的主机或路由器都有唯一一个域名</li>
+<li>域名的结构有符号序列组成：…三级域名.二级域名.顶级域名（）</li>
+</ul>
+<h3 id="顶级域名TLD"><a href="#顶级域名TLD" class="headerlink" title="顶级域名TLD"></a>顶级域名TLD</h3><ul>
+<li>.cn：表示中国</li>
+<li>.su：美国</li>
+<li>.uk：英国<h4 id="通用的顶级域名gTLD"><a href="#通用的顶级域名gTLD" class="headerlink" title="通用的顶级域名gTLD"></a>通用的顶级域名gTLD</h4></li>
+<li>.com：公司企业</li>
+<li>.net：网络服务机构</li>
+<li>.org：非营利性组织</li>
+<li>.int：国际组织</li>
+</ul>
+<h2 id="迭代查询"><a href="#迭代查询" class="headerlink" title="迭代查询"></a>迭代查询</h2><h2 id="递归查询"><a href="#递归查询" class="headerlink" title="递归查询"></a>递归查询</h2><h1 id="2-文件传送协议"><a href="#2-文件传送协议" class="headerlink" title="2.文件传送协议"></a>2.文件传送协议</h1><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
+<li>允许提供交互的访问，允许客户之明文件的类型和格式，并允许</li>
+<li>主要功能是较少或消除不用操作系统之间处理不同文件的不兼容性</li>
+</ul>
+<h2 id="TFTP协议"><a href="#TFTP协议" class="headerlink" title="TFTP协议"></a>TFTP协议</h2><ul>
+<li>很小很简单的文本传输协议</li>
+<li>需要有自己的差错检验措施</li>
+<li>只需要文件传输不支持交互</li>
+<li>TFTP没有一个庞大的命令集合，没有列目录的功能，也不能对用户进行身份鉴别</li>
+</ul>
+<h1 id="3-远程终端协议TELNET"><a href="#3-远程终端协议TELNET" class="headerlink" title="3.远程终端协议TELNET"></a>3.远程终端协议TELNET</h1><ul>
+<li>TELNET是一个简单的远程远程终端协议，也是互联网的正式协议</li>
+<li>用户用TELNET就可以通过TCP连接注册连接到另一个主机上</li>
+</ul>
+<h1 id="4-万维网WWW"><a href="#4-万维网WWW" class="headerlink" title="4.万维网WWW"></a>4.万维网WWW</h1><ul>
+<li>万维网并不是一种网络，而是一种大规模、联机式的<strong>信息储存方式</strong>。</li>
+<li>万维网用连接的方法从一个站访问另一个站</li>
+<li>以<strong>客户-服务器</strong>的方式工作</li>
+<li><strong>浏览器</strong>是用户计算机上的万维网<strong>客户程序</strong>。</li>
+<li><strong>万维网文档</strong>所驻留的计算机则运行<strong>服务器程序</strong><ul>
+<li>客户程序向服务器程序发送请求，服务器程序向客户程序发送回客户所要的万维网文档。</li>
+</ul>
+</li>
+<li>页面：客户程序主窗口上显示的万维网文档</li>
+</ul>
+<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ul>
+<li><strong>万维网客户端程序</strong>与<strong>万维网服务器程序</strong>之间进行的交互所使用的协议<ul>
+<li>HTTP协议是一个应用层协议，使用T<strong>CP连接</strong>进行可靠传输</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-电子邮件"><a href="#5-电子邮件" class="headerlink" title="5.电子邮件"></a>5.电子邮件</h1><h1 id="6-动态主机配置协议DHCP"><a href="#6-动态主机配置协议DHCP" class="headerlink" title="6.动态主机配置协议DHCP"></a>6.动态主机配置协议DHCP</h1><h1 id="简单网络管理协议SNMP"><a href="#简单网络管理协议SNMP" class="headerlink" title="简单网络管理协议SNMP"></a>简单网络管理协议SNMP</h1><h1 id="应用进程跨越网络的通信"><a href="#应用进程跨越网络的通信" class="headerlink" title="应用进程跨越网络的通信"></a>应用进程跨越网络的通信</h1><h1 id="P2P"><a href="#P2P" class="headerlink" title="P2P"></a>P2P</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/24/%E5%BA%94%E7%94%A8%E5%B1%82%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-传输层笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -274,7 +387,69 @@
 </ul>
 </li>
 </ul>
-<h1 id="4-可靠传输的工作原理"><a href="#4-可靠传输的工作原理" class="headerlink" title="4. 可靠传输的工作原理"></a>4. 可靠传输的工作原理</h1><h1 id="5-TCP报文段的首部格式"><a href="#5-TCP报文段的首部格式" class="headerlink" title="5. TCP报文段的首部格式"></a>5. TCP报文段的首部格式</h1><h1 id="6-TCP可靠传输的实现"><a href="#6-TCP可靠传输的实现" class="headerlink" title="6. TCP可靠传输的实现"></a>6. TCP可靠传输的实现</h1><h1 id="7-TCP的流量控制"><a href="#7-TCP的流量控制" class="headerlink" title="7. TCP的流量控制"></a>7. TCP的流量控制</h1><h1 id="8-TCP的拥塞控制"><a href="#8-TCP的拥塞控制" class="headerlink" title="8. TCP的拥塞控制"></a>8. TCP的拥塞控制</h1><h1 id="9-TCP的运输连接管理"><a href="#9-TCP的运输连接管理" class="headerlink" title="9.TCP的运输连接管理"></a>9.TCP的运输连接管理</h1>
+<h1 id="4-可靠传输的工作原理"><a href="#4-可靠传输的工作原理" class="headerlink" title="4. 可靠传输的工作原理"></a>4. 可靠传输的工作原理</h1><h2 id="连续的ARQ协议"><a href="#连续的ARQ协议" class="headerlink" title="连续的ARQ协议"></a>连续的ARQ协议</h2><ul>
+<li>滑动窗口协议较为复杂，是TCP协议的精华所在。</li>
+<li>发送方维持窗口是为了，<strong>位于发送窗口内的分组可以连续发送而不需要等待对方确认</strong>，提高了利用率。</li>
+<li>连续的ARQ协议规定，发送方收到一个确认就可以把发送窗口向前移动一分组。</li>
+</ul>
+<h2 id="累计确认"><a href="#累计确认" class="headerlink" title="累计确认"></a>累计确认</h2><ul>
+<li>按顺序发送的分组<strong>最后一个分组发送确认</strong>，表示这个分组前所有分组都以确认收到。<ul>
+<li>当前5个分组发送完，而中间第三个分组丢失，这时发送方会把从第3个分组往后的所有分组从新传输一次。叫做（Go-back-N）</li>
+<li>可见通信链路质量不好时，连续的ARQ协议会带来负面影响。</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP可靠传输的具体实现"><a href="#TCP可靠传输的具体实现" class="headerlink" title="TCP可靠传输的具体实现"></a>TCP可靠传输的具体实现</h3><ul>
+<li>一个发送窗口和一个接收窗口</li>
+<li>依靠<strong>字节的序号</strong>进行控制，而不是基于报文段（TCP所有序号都是基于序号）</li>
+<li>TCP两端的四个窗口处于动态变化中</li>
+<li>TCP连接的往返时间RTT也是不固定的，需要使用特定的算法估算<strong>较为合理的重传时间</strong></li>
+</ul>
+<h1 id="5-TCP报文段的首部格式"><a href="#5-TCP报文段的首部格式" class="headerlink" title="5. TCP报文段的首部格式"></a>5. TCP报文段的首部格式</h1><ul>
+<li>TCP面向字节流，</li>
+</ul>
+<h2 id="源端口"><a href="#源端口" class="headerlink" title="源端口"></a>源端口</h2><h2 id="目的端口"><a href="#目的端口" class="headerlink" title="目的端口"></a>目的端口</h2><h2 id="序号"><a href="#序号" class="headerlink" title="序号"></a>序号</h2><h2 id="确认号"><a href="#确认号" class="headerlink" title="确认号"></a>确认号</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h1 id="6-TCP可靠传输的实现"><a href="#6-TCP可靠传输的实现" class="headerlink" title="6. TCP可靠传输的实现"></a>6. TCP可靠传输的实现</h1><h2 id="以字节为单位的的滑动窗口"><a href="#以字节为单位的的滑动窗口" class="headerlink" title="以字节为单位的的滑动窗口"></a>以字节为单位的的滑动窗口</h2><ul>
+<li>TCP的滑动窗口是以字节为单位的</li>
+<li></li>
+</ul>
+<h2 id="超时重传时间的选择"><a href="#超时重传时间的选择" class="headerlink" title="超时重传时间的选择"></a>超时重传时间的选择</h2><h2 id="选择确认的SACK"><a href="#选择确认的SACK" class="headerlink" title="选择确认的SACK"></a>选择确认的SACK</h2><h1 id="7-TCP的流量控制"><a href="#7-TCP的流量控制" class="headerlink" title="7. TCP的流量控制"></a>7. TCP的流量控制</h1><h2 id="利用滑动窗口控制流量"><a href="#利用滑动窗口控制流量" class="headerlink" title="利用滑动窗口控制流量"></a>利用滑动窗口控制流量</h2><ul>
+<li>当我们希望发送数据很快的时候，若接收方接收速度跟不上就会造成数据丢失。</li>
+<li>流量控制：让发送方以合适速度发送，让接收方来得及接收，同时不要使网络发生拥塞。</li>
+<li>利用滑动窗口机制可以很方便的在TCP连接上实现流量控制</li>
+</ul>
+<h2 id="持续计时器"><a href="#持续计时器" class="headerlink" title="持续计时器"></a>持续计时器</h2><ol>
+<li>TCP位每一个衔接设置一个持续计时器。</li>
+<li>只要TCP连接的一方的<strong>零窗口通知</strong>，就启动持续计时器</li>
+<li>计时器设置时间到期，就发送一个<strong>零窗口探测报文段</strong>（仅带一个字节），接收方在确认这个报文段时给出现在的窗口值。</li>
+<li>肉窗口值仍为零，发送方重设一个持续计时器</li>
+<li>若窗口不为零，可锁死就会打破。</li>
+</ol>
+<h2 id="传输效率"><a href="#传输效率" class="headerlink" title="传输效率"></a>传输效率</h2><ul>
+<li>用不同的机制控制TCP报文段的发送机制<ul>
+<li>第一种机制：TCP维持一个变量，缓存中的数据达到最大报文长度MSS字节时，就组装成一个TCP报文发送出去</li>
+<li>第二种机制：是由发送方的应用进程指明要求发送报文段，</li>
+<li>第三种机制：发送方的一个计时器期限到了，就发当前缓存的发送出去</li>
+</ul>
+</li>
+</ul>
+<h1 id="8-TCP的拥塞控制"><a href="#8-TCP的拥塞控制" class="headerlink" title="8. TCP的拥塞控制"></a>8. TCP的拥塞控制</h1><ul>
+<li>TCP采用基于窗口的方法今次那个拥塞控制。该方法属于闭环控制方法。</li>
+</ul>
+<h1 id="9-TCP的运输连接管理"><a href="#9-TCP的运输连接管理" class="headerlink" title="9.TCP的运输连接管理"></a>9.TCP的运输连接管理</h1><h2 id="TCP连接建立要解决的三个问题"><a href="#TCP连接建立要解决的三个问题" class="headerlink" title="TCP连接建立要解决的三个问题"></a>TCP连接建立要解决的三个问题</h2><ul>
+<li>双方能够确定对方的存在</li>
+<li>允许双方协商一些参数</li>
+<li>能够对运输实体资源进行分配</li>
+</ul>
+<h3 id="三报文握手"><a href="#三报文握手" class="headerlink" title="三报文握手"></a>三报文握手</h3><ul>
+<li>TCP连接的过程叫握手</li>
+<li>握手需要在客户和服务器之间交换三个TCP报文</li>
+<li>主要为了防止已失效的链接请求报文段突然又传过来，产生错误。</li>
+</ul>
+<h3 id="TCP的间接释放"><a href="#TCP的间接释放" class="headerlink" title="TCP的间接释放"></a>TCP的间接释放</h3><ul>
+<li>数据传输结束，通信双方都可以释放连接</li>
+<li>TCP链接释放过程是四报文握手</li>
+</ul>
+
       
 
       
@@ -348,7 +523,7 @@
 <li>通信前建立虚拟电路。（模仿电话传输）</li>
 <li>在使用可靠的传输协议，就可以是发送分组无差错发送数据。</li>
 </ol>
-<h3 id="2-1-1缺点"><a href="#2-1-1缺点" class="headerlink" title="2.1.1缺点"></a>2.1.1缺点</h3><p>非常浪费。链路的录用率非常低。</p>
+<h3 id="2-1-1缺点"><a href="#2-1-1缺点" class="headerlink" title="2.1.1缺点"></a>2.1.1缺点</h3><p>非常浪费。链路的利用率非常低。</p>
 <h2 id="2-2数据报服务"><a href="#2-2数据报服务" class="headerlink" title="2.2数据报服务"></a>2.2数据报服务</h2><ul>
 <li>让网络层负责<strong>尽最大努力交付</strong>，而不负责可靠性。</li>
 <li>由主机中的<strong>传输层</strong>，负责可靠性交付<h3 id="2-2-1优点"><a href="#2-2-1优点" class="headerlink" title="2.2.1优点"></a>2.2.1优点</h3></li>
@@ -666,7 +841,8 @@
 </ul>
 <h1 id="数据链路层的基本概念"><a href="#数据链路层的基本概念" class="headerlink" title="数据链路层的基本概念"></a>数据链路层的基本概念</h1><ul>
 <li>是一条五元的点到点的物理链路，中间没有节点。</li>
-<li>数据链路=链路+协议</li>
+<li>数据链路=链路+协议（数据链路是节点间的逻辑通路）</li>
+<li>帧：链路层协议数据单元，分装网络等的数据报</li>
 </ul>
 <h2 id="数据链路层信道的两种类型"><a href="#数据链路层信道的两种类型" class="headerlink" title="数据链路层信道的两种类型"></a>数据链路层信道的两种类型</h2><ul>
 <li>点对点的信道 </li>
@@ -677,16 +853,22 @@
 <li>数据链路（逻辑链路）：把实现通信协议的硬件和软件加到链路上<br>逻辑链路=数据链路+必要的通信协议 </li>
 </ul>
 <h1 id="数据链路层三个基本功能"><a href="#数据链路层三个基本功能" class="headerlink" title="数据链路层三个基本功能"></a>数据链路层三个基本功能</h1><h2 id="1-封装成帧"><a href="#1-封装成帧" class="headerlink" title="1.封装成帧"></a>1.封装成帧</h2><p>在一段数据收尾分别添加不同的字符，构成一个帧，确定帧的界限。</p>
+<ul>
+<li>MTU:帧的数据部分，也叫最大传输单元</li>
+</ul>
 <h2 id="2-透明传输"><a href="#2-透明传输" class="headerlink" title="2.透明传输"></a>2.透明传输</h2><p>如果数据中有和帧尾字符一样的时，就会错误的识别一段帧，多出来的<br>部分会被当做无效而丢弃。</p>
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
 <li>字节填充</li>
-<li>字符填充<br>原始数据（0x7E）——&gt;发送数据（0x7D,0x5E）<br>发送数据（0x7D,0x5E）——&gt;原始数据（0x7E）<br>若信息中有0x7D时<br>将0x7D转化为0x7D，0x5D<br>例：PPP数据部分为 7D,5E,EF,27,7D,5D,65,7D,5E<br>原始数据：（7D,5E）,EF,27,（7D,5D）,65,（7D,5E）——&gt;（7E）,EF,27,（7D）,65,（7E）</li>
+<li>字符填充<br>原始数据（0x7E）——&gt;发送数据（0x7D,0x5E）<br>发送数据（0x7D,0x5E）——&gt;原始数据（0x7E）<br>若信息中有0x7D时，将0x7D转化为0x7D，0x5D<br>例：PPP数据部分为 7D,5E,EF,27,7D,5D,65,7D,5E<ul>
+<li>原始数据：（7D,5E）,EF,27,（7D,5D）,65,（7D,5E）——&gt;<br>（7E）,EF,27,（7D）,65,（7E）</li>
+</ul>
+</li>
 <li>零比特传输<br>发送端，只要发现5个连续的1，立刻插入一个0。<br>接收端，每当发现5个连续的1，立刻删除后面的一个0。<br>原始数据：0110111111111100，则经零比特传输后，需添加几个零，011011111(0)11111(0)00 </li>
 </ul>
 <h2 id="3差错检验"><a href="#3差错检验" class="headerlink" title="3差错检验"></a>3差错检验</h2><ul>
 <li>误码率： 传输错误的比特总数占总比特总数的多少</li>
 </ul>
-<h3 id="冗余检验"><a href="#冗余检验" class="headerlink" title="冗余检验"></a>冗余检验</h3><p>循环冗余检验  检验单个帧的对错<br>可靠传输：不重复，不丢失，不失序</p>
+<h3 id="循环冗余检验-CRC"><a href="#循环冗余检验-CRC" class="headerlink" title="循环冗余检验 CRC"></a>循环冗余检验 CRC</h3><p>循环冗余检验  检验单个帧的对错<br>可靠传输：不重复，不丢失，不失序</p>
 <h1 id="CSMA-CD协议"><a href="#CSMA-CD协议" class="headerlink" title="CSMA/CD协议"></a>CSMA/CD协议</h1><h1 id="碰撞检查"><a href="#碰撞检查" class="headerlink" title="碰撞检查"></a>碰撞检查</h1><p>数据由A传到B，A需要单程传播延迟2倍的时间才能检测到与B的发送产生的冲突。<br>单程传播时延：t。往返时延：2t。  </p>
 <h1 id="争用期"><a href="#争用期" class="headerlink" title="争用期"></a>争用期</h1><p>主机端发送收到信息往返时延2t成为争用期，或碰撞窗口。<br>在2t时间内没有检测到碰撞，就能肯定下次发送不会发生碰撞。</p>
 <h1 id="点对点协议（PPP协议）"><a href="#点对点协议（PPP协议）" class="headerlink" title="点对点协议（PPP协议）"></a>点对点协议（PPP协议）</h1><h2 id="PPP协议满足的要求"><a href="#PPP协议满足的要求" class="headerlink" title="PPP协议满足的要求"></a>PPP协议满足的要求</h2><ul>
@@ -713,7 +895,35 @@
 <li>链路控制协议</li>
 <li>网络控制协议</li>
 </ul>
-<h2 id="PPP协议帧的格式"><a href="#PPP协议帧的格式" class="headerlink" title="PPP协议帧的格式"></a>PPP协议帧的格式</h2>
+<h2 id="PPP协议帧的格式"><a href="#PPP协议帧的格式" class="headerlink" title="PPP协议帧的格式"></a>PPP协议帧的格式</h2><h1 id="数据链路层扩展以太网"><a href="#数据链路层扩展以太网" class="headerlink" title="数据链路层扩展以太网"></a>数据链路层扩展以太网</h1><h1 id="以太网交换机"><a href="#以太网交换机" class="headerlink" title="以太网交换机"></a>以太网交换机</h1><ul>
+<li><p>特点：</p>
+<ol>
+<li>接口数量多</li>
+<li>全双工工作</li>
+<li>具有并行性：能同时连接多个接口，使多对主机可以同时通信</li>
+<li>传输无冲突：主机都是<strong>独占传输媒体</strong>，<strong>无碰撞</strong>的传输</li>
+<li>接口存储器：能在输出端口繁忙时把到来的帧<strong>缓存</strong></li>
+<li>即插即用：能<strong>自主学习</strong>算法自动的建立内部的<strong>帧交换表</strong></li>
+<li>转发速率高</li>
+</ol>
+</li>
+<li><p>优点</p>
+<ol>
+<li>用户独享带宽，增加了总容量</li>
+<li>向下兼容（共享总线以太网转到交换式以太网无需改动） </li>
+<li>支持多种速率的接口</li>
+</ol>
+</li>
+<li><p>自主学习功能</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="生成树协议"><a href="#生成树协议" class="headerlink" title="生成树协议"></a>生成树协议</h2><ul>
+<li>不改变网络拓扑，早逻辑上切断某些链路，从而使各主机之间的链路无环路结构，而是树状结构，从而取消兜圈子的现象。</li>
+</ul>
+<h2 id="虚拟局域网VLAN"><a href="#虚拟局域网VLAN" class="headerlink" title="虚拟局域网VLAN"></a>虚拟局域网VLAN</h2>
       
 
       
@@ -844,14 +1054,25 @@
 <h2 id="波分复用"><a href="#波分复用" class="headerlink" title="波分复用"></a>波分复用</h2><h2 id="码分复用"><a href="#码分复用" class="headerlink" title="码分复用"></a>码分复用</h2><ul>
 <li>个用户挑选不同的码型因此不会造成干扰。这种抗干扰能力强</li>
 <li>码片：</li>
-</ul>
-<ul>
 <li>每个站发动的码片序列必须<strong>各不相同</strong>，<strong>相互正交</strong>，在实际系统中使用<strong>伪随机码序列</strong><ul>
 <li>随机码：无论多长不会循环</li>
 <li>伪随机码：码长达到一定长度，开始循环。（CDMA采用42位伪随机码，循环可能位4.4亿分之一）</li>
 <li></li>
 </ul>
 </li>
+</ul>
+<h1 id="物理层拓展以太网"><a href="#物理层拓展以太网" class="headerlink" title="物理层拓展以太网"></a>物理层拓展以太网</h1><ol>
+<li>主机使用光纤和一对光纤调制解调器宽展以太网。</li>
+<li>用集线器宽展以太网。</li>
+</ol>
+<h2 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h2><ul>
+<li>碰撞域： 一台设备发送数据，其他设备发送数据与之发生冲突，这些设备的集合就称之为碰撞域</li>
+</ul>
+<p>用集线器宽展以太网的优点：</p>
+<ul>
+<li>可以进行<strong>跨碰撞域</strong>的通信（不属于同一个碰撞域的以太网上的计算机的通信）扩大了以太网的地理范围<br>缺点：</li>
+<li>碰撞域增大，但是<strong>吞吐量没有提高</strong></li>
+<li>不同碰撞域使用<strong>不同数据率</strong>，是不能用集线器互联在一起</li>
 </ul>
 
       
@@ -915,46 +1136,65 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>计算机网络=通信技术+计算机技术（计网是一种特殊的通信技术）<br><strong>协议簇：</strong> 一系列列协议的的集合。<br> 协议：计网中数据交换的规则（格式、意义、顺序）<br> 协议三要素：</p>
+        <ul>
+<li>计算机网络=通信技术+计算机技术（计网是一种特殊的通信技术）  </li>
+</ul>
+<p><strong>协议簇：</strong> 一系列列协议的的集合。   </p>
 <ul>
+<li><p>协议：计网中数据交换的规则（格式、意义、顺序）  </p>
+<ul>
+<li>协议三要素：<ul>
 <li>语法 ：数据信息的结构与格式</li>
 <li>语义 ：需要发出何种控制信息，完成何种动作以及做出何种响应</li>
 <li>时序 ：事件顺序、速度匹配</li>
 </ul>
-<p>因特网: 在计算机之间提供了消息通讯能力<br>万维网：是一种使用因特网来通讯的<strong>具体应用</strong><br>电话网络的特点：没有释放所占线路就一直占用。<br>网络边缘：</p>
+</li>
+</ul>
+</li>
+<li><p>因特网: 在计算机之间提供了消息通讯能力    </p>
+</li>
+<li><p>万维网：是一种使用因特网来通讯的<strong>具体应用</strong>   </p>
+</li>
+<li><p>电话网络的特点：没有释放所占线路就一直占用。     </p>
+</li>
+<li><p>网络边缘：</p>
 <ul>
 <li>主机</li>
-<li>网络核心：路由器  </li>
+<li></li>
 </ul>
-<h2 id="计算机网络性能指标"><a href="#计算机网络性能指标" class="headerlink" title="计算机网络性能指标"></a>计算机网络性能指标</h2><h4 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h4><p>指数据传输速率，单位：比特（bit/s）<br>bit同时也是内存单位，表示一个数据量单位，表示一个0或1  </p>
-<h4 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h4><p>两种意义：</p>
+</li>
+<li><p>网络核心：路由器  </p>
+</li>
+</ul>
+<h1 id="计算机网络性能指标"><a href="#计算机网络性能指标" class="headerlink" title="计算机网络性能指标"></a>计算机网络性能指标</h1><h2 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h2><p>指数据传输速率，单位：比特（bit/s）<br>bit同时也是内存单位，表示一个数据量单位，表示一个0或1  </p>
+<h2 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h2><p>两种意义：</p>
 <ul>
 <li>信道本身的物理属性（信道的频带宽度（最高频率宽度与最低频率宽度之差））</li>
-<li>计算机网络中，表示能通过的最高速率。<br>例如：计算机100Mbps接入网络：<strong>计算机</strong>能以100Mbps的速率<strong>向信道</strong>注入bit流<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4>单位时间内通过（出去、进来）某个网络（信道、接口）的数据量，实际测量的是到底有多少数据能通过网络（最关心的是出去多少）<h4 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h4><h5 id="传输时延（发送时延）"><a href="#传输时延（发送时延）" class="headerlink" title="传输时延（发送时延）"></a>传输时延（发送时延）</h5>数据帧从节点进入传输媒体的时间。（从数据帧的第一个bit到最后一个bit所用时间）<h5 id="传播时延"><a href="#传播时延" class="headerlink" title="传播时延"></a>传播时延</h5>电磁波在信道中传输的速度<h5 id="处理时延"><a href="#处理时延" class="headerlink" title="处理时延"></a>处理时延</h5>主机或路由器收到分组时，处理分组（分析首部，提取数据，差错检验）所要的时间。<h5 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h5>从某个接口出去，排队索要的时间</li>
+<li>计算机网络中，表示能通过的最高速率。<br>例如：计算机100Mbps接入网络：<strong>计算机</strong>能以100Mbps的速率<strong>向信道</strong>注入bit流<h2 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h2>单位时间内通过（出去、进来）某个网络（信道、接口）的数据量，实际测量的是到底有多少数据能通过网络（最关心的是出去多少）<h2 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h2><h3 id="传输时延（发送时延）"><a href="#传输时延（发送时延）" class="headerlink" title="传输时延（发送时延）"></a>传输时延（发送时延）</h3>数据帧从节点进入传输媒体的时间。（从数据帧的第一个bit到最后一个bit所用时间）<h3 id="传播时延"><a href="#传播时延" class="headerlink" title="传播时延"></a>传播时延</h3>电磁波在信道中传输的速度<h3 id="处理时延"><a href="#处理时延" class="headerlink" title="处理时延"></a>处理时延</h3>主机或路由器收到分组时，处理分组（分析首部，提取数据，差错检验）所要的时间。<h3 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h3>从某个接口出去，排队索要的时间</li>
 </ul>
-<h4 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h4><p> 又称以比特为单位的链路长度，（某段链路现在有多少比特）</p>
-<h4 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h4><p> 从发送方发送数据开始，到发送方收到来自接收方确认接收的总时间。</p>
-<h4 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h4><p> 并非越高越好，当利用率接近100%时，时延会非常高。</p>
-<h3 id="五层协议的网络体系结构的要点，包括各层的主要功能"><a href="#五层协议的网络体系结构的要点，包括各层的主要功能" class="headerlink" title="五层协议的网络体系结构的要点，包括各层的主要功能"></a>五层协议的网络体系结构的要点，包括各层的主要功能</h3><ol>
+<h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><p> 又称以比特为单位的链路长度，（某段链路现在有多少比特）</p>
+<h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h3><p> 从发送方发送数据开始，到发送方收到来自接收方确认接收的总时间。</p>
+<h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><p> 并非越高越好，当利用率接近100%时，时延会非常高。</p>
+<h2 id="五层协议的网络体系结构的要点，包括各层的主要功能"><a href="#五层协议的网络体系结构的要点，包括各层的主要功能" class="headerlink" title="五层协议的网络体系结构的要点，包括各层的主要功能"></a>五层协议的网络体系结构的要点，包括各层的主要功能</h2><ol>
 <li>应用层</li>
 </ol>
-<p>应用层是体系结构中的最高层。应用层确定进程之间通信的性质以满足用户的需要。这里的进程就是指正在运行的程序。</p>
+<p>应用层是体系结构中的<strong>最高层</strong>。应用层<strong>确定进程之间通信的性质以满足用户的需要</strong>。这里的进程就是指正在运行的程序。</p>
 <ol start="2">
 <li>传输层</li>
 </ol>
-<p>传输层的任务就是负责主机中两个进程之间的通信。因特网的传输层可使用两种不同协议：即面向连接的传输控制协议TCP，和无连接的用户数据报协议UDP。</p>
+<p>传输层的任务就是负责<strong>主机中两个进程之间的通信</strong>。因特网的传输层<strong>可使用两种不同协议</strong>：即面向连接的传输控制协议<strong>TCP</strong>，和无连接的用户数据报协议<strong>UDP</strong>。</p>
 <ol start="3">
 <li>网络层</li>
 </ol>
-<p>网络层负责为分组交换网上的不同主机提供通信。在发送数据时，网络层将运输层产生的报文段或用户数据报封装成分组或包进行传送。</p>
+<p>网络层负责为<strong>分组交换网上的不同主机提供通信和合适的路由</strong>。在发送数据时，网络层将传输层产生的报文段或用户数据报<strong>封装成分组或包</strong>进行传送。</p>
 <ol start="4">
 <li>数据链路层</li>
 </ol>
-<p>当发送数据时，数据链路层的任务是将在网络层交下来的IP数据报组装成帧，在两个相邻结点间的链路上传送以帧为单位的数据。每一帧包括数据和必要的控制信息（如同步信息、地址信息、差错控制、以及流量控制信息等）。</p>
+<p>当发送数据时，数据链路层的任务是将在网络层交下来的IP数据报<strong>组装成帧</strong>，在两个<strong>相邻结点间</strong>的链路上传送以帧为单位的数据。每一帧包括数据和必要的控制信息（如同步信息、地址信息、差错控制、以及流量控制信息等）。</p>
 <ol start="5">
 <li>物理层</li>
 </ol>
-<p>物理层的任务就是透明地传送比特流。在物理层上所传数据的单位是比特。传递信息所利用的一些物理媒体，如双绞线、同轴电缆、光缆等，并不在物理层之内而是在物理层的下面。</p>
+<p>物理层的任务就是<strong>透明地传送比特流</strong>。在物理层上所传数据的单位是比特。传递信息所利用的一些物理媒体，如双绞线、同轴电缆、光缆等，并不在物理层之内而是在物理层的下面。</p>
 
       
 
@@ -1698,71 +1938,6 @@
 
 
   
-    <article id="post-java笔记一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/">java语法笔记（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/" class="archive-article-date">
-  	<time datetime="2020-08-02T05:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>相较于C语言的一些细节异同</p>
-        
-          <a class="article-more-a" href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1868,31 +2043,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">方法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">封装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1913,6 +2068,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">位移</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">方法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">封装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
             
             <div class="clearfix"></div>

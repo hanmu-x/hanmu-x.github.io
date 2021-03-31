@@ -16,7 +16,7 @@
 <meta property="og:description" content="物理层的基本概念 物理层考虑的是怎样才能怎样才能连接各种计算机传输媒体上传输数据比特流，而不是连接具体的传输媒体。 作用是屏蔽不同传输媒体和通讯手段的差异。 物理层协议也称物理层规范物理层作用   确定传输媒体的接口的一些特点，如：接口的形状、尺寸、引线数量等    解决计算机间的比特传输问题（透明的传输比特流），关心点到点的问题物理层的功能 接口特性：物理层不包含物理媒介，而是确定接口特性 机械">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-23T14:33:06.000Z">
-<meta property="article:modified_time" content="2021-03-20T13:36:07.201Z">
+<meta property="article:modified_time" content="2021-03-30T15:01:34.025Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -68,7 +68,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 13
+			文章总数 14
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -248,14 +248,25 @@
 <h2 id="波分复用"><a href="#波分复用" class="headerlink" title="波分复用"></a>波分复用</h2><h2 id="码分复用"><a href="#码分复用" class="headerlink" title="码分复用"></a>码分复用</h2><ul>
 <li>个用户挑选不同的码型因此不会造成干扰。这种抗干扰能力强</li>
 <li>码片：</li>
-</ul>
-<ul>
 <li>每个站发动的码片序列必须<strong>各不相同</strong>，<strong>相互正交</strong>，在实际系统中使用<strong>伪随机码序列</strong><ul>
 <li>随机码：无论多长不会循环</li>
 <li>伪随机码：码长达到一定长度，开始循环。（CDMA采用42位伪随机码，循环可能位4.4亿分之一）</li>
 <li></li>
 </ul>
 </li>
+</ul>
+<h1 id="物理层拓展以太网"><a href="#物理层拓展以太网" class="headerlink" title="物理层拓展以太网"></a>物理层拓展以太网</h1><ol>
+<li>主机使用光纤和一对光纤调制解调器宽展以太网。</li>
+<li>用集线器宽展以太网。</li>
+</ol>
+<h2 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h2><ul>
+<li>碰撞域： 一台设备发送数据，其他设备发送数据与之发生冲突，这些设备的集合就称之为碰撞域</li>
+</ul>
+<p>用集线器宽展以太网的优点：</p>
+<ul>
+<li>可以进行<strong>跨碰撞域</strong>的通信（不属于同一个碰撞域的以太网上的计算机的通信）扩大了以太网的地理范围<br>缺点：</li>
+<li>碰撞域增大，但是<strong>吞吐量没有提高</strong></li>
+<li>不同碰撞域使用<strong>不同数据率</strong>，是不能用集线器互联在一起</li>
 </ul>
 
       
@@ -398,7 +409,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层的基本概念"><span class="toc-number">1.</span> <span class="toc-text">物理层的基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层作用"><span class="toc-number">2.</span> <span class="toc-text">物理层作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层的功能"><span class="toc-number">3.</span> <span class="toc-text">物理层的功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用术语"><span class="toc-number">4.</span> <span class="toc-text">常用术语</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#信道"><span class="toc-number">4.1.</span> <span class="toc-text">信道</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调制"><span class="toc-number">4.1.1.</span> <span class="toc-text">调制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#极限容量"><span class="toc-number">4.1.2.</span> <span class="toc-text">极限容量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层下的传输媒体"><span class="toc-number">5.</span> <span class="toc-text">物理层下的传输媒体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信道复用"><span class="toc-number">6.</span> <span class="toc-text">信道复用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#频分复用"><span class="toc-number">6.1.</span> <span class="toc-text">频分复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时分复用"><span class="toc-number">6.2.</span> <span class="toc-text">时分复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#波分复用"><span class="toc-number">6.3.</span> <span class="toc-text">波分复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#码分复用"><span class="toc-number">6.4.</span> <span class="toc-text">码分复用</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层的基本概念"><span class="toc-number">1.</span> <span class="toc-text">物理层的基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层作用"><span class="toc-number">2.</span> <span class="toc-text">物理层作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层的功能"><span class="toc-number">3.</span> <span class="toc-text">物理层的功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用术语"><span class="toc-number">4.</span> <span class="toc-text">常用术语</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#信道"><span class="toc-number">4.1.</span> <span class="toc-text">信道</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调制"><span class="toc-number">4.1.1.</span> <span class="toc-text">调制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#极限容量"><span class="toc-number">4.1.2.</span> <span class="toc-text">极限容量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层下的传输媒体"><span class="toc-number">5.</span> <span class="toc-text">物理层下的传输媒体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信道复用"><span class="toc-number">6.</span> <span class="toc-text">信道复用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#频分复用"><span class="toc-number">6.1.</span> <span class="toc-text">频分复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时分复用"><span class="toc-number">6.2.</span> <span class="toc-text">时分复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#波分复用"><span class="toc-number">6.3.</span> <span class="toc-text">波分复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#码分复用"><span class="toc-number">6.4.</span> <span class="toc-text">码分复用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物理层拓展以太网"><span class="toc-number">7.</span> <span class="toc-text">物理层拓展以太网</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#集线器"><span class="toc-number">7.1.</span> <span class="toc-text">集线器</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -518,31 +529,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">方法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">封装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -563,6 +554,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">位移</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">方法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">封装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
             
             <div class="clearfix"></div>

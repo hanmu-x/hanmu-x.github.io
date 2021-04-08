@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>计算机网络1 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="计算机网络&#x3D;通信技术+计算机技术（计网是一种特殊的通信技术）    协议簇： 一系列列协议的的集合。     协议：计网中数据交换的规则（格式、意义、顺序）    协议三要素： 语法 ：数据信息的结构与格式 语义 ：需要发出何种控制信息，完成何种动作以及做出何种响应 时序 ：事件顺序、速度匹配     因特网: 在计算机之间提供了消息通讯能力      万维网：是一种使用因特网来通讯的具体应用">
+  <meta name="description" content="五层协议的网络体系结构的要点，包括各层的主要功能 应用层  应用层是体系结构中的最高层。应用层确定进程之间通信的性质以满足用户的需要。这里的进程就是指正在运行的程序。  传输层  传输层的任务就是负责主机中两个进程之间的通信。因特网的传输层可使用两种不同协议：即面向连接的传输控制协议TCP，和无连接的用户数据报协议UDP。  网络层  网络层负责为分组交换网上的不同主机提供通信和合适的路由。在发送">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络1">
 <meta property="og:url" content="http://yoursite.com/2021/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C1/index.html">
 <meta property="og:site_name" content="塔台">
-<meta property="og:description" content="计算机网络&#x3D;通信技术+计算机技术（计网是一种特殊的通信技术）    协议簇： 一系列列协议的的集合。     协议：计网中数据交换的规则（格式、意义、顺序）    协议三要素： 语法 ：数据信息的结构与格式 语义 ：需要发出何种控制信息，完成何种动作以及做出何种响应 时序 ：事件顺序、速度匹配     因特网: 在计算机之间提供了消息通讯能力      万维网：是一种使用因特网来通讯的具体应用">
+<meta property="og:description" content="五层协议的网络体系结构的要点，包括各层的主要功能 应用层  应用层是体系结构中的最高层。应用层确定进程之间通信的性质以满足用户的需要。这里的进程就是指正在运行的程序。  传输层  传输层的任务就是负责主机中两个进程之间的通信。因特网的传输层可使用两种不同协议：即面向连接的传输控制协议TCP，和无连接的用户数据报协议UDP。  网络层  网络层负责为分组交换网上的不同主机提供通信和合适的路由。在发送">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-06T14:45:22.000Z">
-<meta property="article:modified_time" content="2021-03-31T12:06:33.264Z">
+<meta property="article:modified_time" content="2021-04-06T11:40:53.156Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -68,7 +68,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 14
+			文章总数 15
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -179,7 +179,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
+        <h1 id="五层协议的网络体系结构的要点，包括各层的主要功能"><a href="#五层协议的网络体系结构的要点，包括各层的主要功能" class="headerlink" title="五层协议的网络体系结构的要点，包括各层的主要功能"></a>五层协议的网络体系结构的要点，包括各层的主要功能</h1><ol>
+<li>应用层</li>
+</ol>
+<p>应用层是体系结构中的<strong>最高层</strong>。应用层<strong>确定进程之间通信的性质以满足用户的需要</strong>。这里的进程就是指正在运行的程序。</p>
+<ol start="2">
+<li>传输层</li>
+</ol>
+<p>传输层的任务就是负责<strong>主机中两个进程之间的通信</strong>。因特网的传输层<strong>可使用两种不同协议</strong>：即面向连接的传输控制协议<strong>TCP</strong>，和无连接的用户数据报协议<strong>UDP</strong>。</p>
+<ol start="3">
+<li>网络层</li>
+</ol>
+<p>网络层负责为<strong>分组交换网上的不同主机提供通信和合适的路由</strong>。在发送数据时，网络层将传输层产生的报文段或用户数据报<strong>封装成分组或包</strong>进行传送。</p>
+<ol start="4">
+<li>数据链路层</li>
+</ol>
+<p>当发送数据时，数据链路层的任务是将在网络层交下来的IP数据报<strong>组装成帧</strong>，在两个<strong>相邻结点间</strong>的链路上传送以帧为单位的数据。每一帧包括数据和必要的控制信息（如同步信息、地址信息、差错控制、以及流量控制信息等）。</p>
+<ol start="5">
+<li>物理层</li>
+</ol>
+<p>物理层的任务就是<strong>透明地传送比特流</strong>。在物理层上所传数据的单位是比特。传递信息所利用的一些物理媒体，如双绞线、同轴电缆、光缆等，并不在物理层之内而是在物理层的下面。</p>
+<ul>
 <li>计算机网络=通信技术+计算机技术（计网是一种特殊的通信技术）  </li>
 </ul>
 <p><strong>协议簇：</strong> 一系列列协议的的集合。   </p>
@@ -218,27 +238,7 @@
 <h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><p> 又称以比特为单位的链路长度，（某段链路现在有多少比特）</p>
 <h3 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h3><p> 从发送方发送数据开始，到发送方收到来自接收方确认接收的总时间。</p>
 <h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><p> 并非越高越好，当利用率接近100%时，时延会非常高。</p>
-<h2 id="五层协议的网络体系结构的要点，包括各层的主要功能"><a href="#五层协议的网络体系结构的要点，包括各层的主要功能" class="headerlink" title="五层协议的网络体系结构的要点，包括各层的主要功能"></a>五层协议的网络体系结构的要点，包括各层的主要功能</h2><ol>
-<li>应用层</li>
-</ol>
-<p>应用层是体系结构中的<strong>最高层</strong>。应用层<strong>确定进程之间通信的性质以满足用户的需要</strong>。这里的进程就是指正在运行的程序。</p>
-<ol start="2">
-<li>传输层</li>
-</ol>
-<p>传输层的任务就是负责<strong>主机中两个进程之间的通信</strong>。因特网的传输层<strong>可使用两种不同协议</strong>：即面向连接的传输控制协议<strong>TCP</strong>，和无连接的用户数据报协议<strong>UDP</strong>。</p>
-<ol start="3">
-<li>网络层</li>
-</ol>
-<p>网络层负责为<strong>分组交换网上的不同主机提供通信和合适的路由</strong>。在发送数据时，网络层将传输层产生的报文段或用户数据报<strong>封装成分组或包</strong>进行传送。</p>
-<ol start="4">
-<li>数据链路层</li>
-</ol>
-<p>当发送数据时，数据链路层的任务是将在网络层交下来的IP数据报<strong>组装成帧</strong>，在两个<strong>相邻结点间</strong>的链路上传送以帧为单位的数据。每一帧包括数据和必要的控制信息（如同步信息、地址信息、差错控制、以及流量控制信息等）。</p>
-<ol start="5">
-<li>物理层</li>
-</ol>
-<p>物理层的任务就是<strong>透明地传送比特流</strong>。在物理层上所传数据的单位是比特。传递信息所利用的一些物理媒体，如双绞线、同轴电缆、光缆等，并不在物理层之内而是在物理层的下面。</p>
-
+<h2 id="套接字"><a href="#套接字" class="headerlink" title="套接字"></a>套接字</h2>
       
 
       
@@ -379,7 +379,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机网络性能指标"><span class="toc-number">1.</span> <span class="toc-text">计算机网络性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#速率"><span class="toc-number">1.1.</span> <span class="toc-text">速率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#带宽"><span class="toc-number">1.2.</span> <span class="toc-text">带宽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#吞吐量"><span class="toc-number">1.3.</span> <span class="toc-text">吞吐量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时延"><span class="toc-number">1.4.</span> <span class="toc-text">时延</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传输时延（发送时延）"><span class="toc-number">1.4.1.</span> <span class="toc-text">传输时延（发送时延）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传播时延"><span class="toc-number">1.4.2.</span> <span class="toc-text">传播时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理时延"><span class="toc-number">1.4.3.</span> <span class="toc-text">处理时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#排队时延"><span class="toc-number">1.4.4.</span> <span class="toc-text">排队时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时延带宽积"><span class="toc-number">1.4.5.</span> <span class="toc-text">时延带宽积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#往返时延RTT"><span class="toc-number">1.4.6.</span> <span class="toc-text">往返时延RTT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用率"><span class="toc-number">1.4.7.</span> <span class="toc-text">利用率</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五层协议的网络体系结构的要点，包括各层的主要功能"><span class="toc-number">1.5.</span> <span class="toc-text">五层协议的网络体系结构的要点，包括各层的主要功能</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#五层协议的网络体系结构的要点，包括各层的主要功能"><span class="toc-number">1.</span> <span class="toc-text">五层协议的网络体系结构的要点，包括各层的主要功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机网络性能指标"><span class="toc-number">2.</span> <span class="toc-text">计算机网络性能指标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#速率"><span class="toc-number">2.1.</span> <span class="toc-text">速率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#带宽"><span class="toc-number">2.2.</span> <span class="toc-text">带宽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#吞吐量"><span class="toc-number">2.3.</span> <span class="toc-text">吞吐量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时延"><span class="toc-number">2.4.</span> <span class="toc-text">时延</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传输时延（发送时延）"><span class="toc-number">2.4.1.</span> <span class="toc-text">传输时延（发送时延）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传播时延"><span class="toc-number">2.4.2.</span> <span class="toc-text">传播时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理时延"><span class="toc-number">2.4.3.</span> <span class="toc-text">处理时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#排队时延"><span class="toc-number">2.4.4.</span> <span class="toc-text">排队时延</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时延带宽积"><span class="toc-number">2.4.5.</span> <span class="toc-text">时延带宽积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#往返时延RTT"><span class="toc-number">2.4.6.</span> <span class="toc-text">往返时延RTT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用率"><span class="toc-number">2.4.7.</span> <span class="toc-text">利用率</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#套接字"><span class="toc-number">2.5.</span> <span class="toc-text">套接字</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -491,11 +491,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,7 +499,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+                <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">

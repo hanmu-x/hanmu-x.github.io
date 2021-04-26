@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 15
+			文章总数 17
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -156,6 +156,296 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-c-笔记1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/17/c-%E7%AC%94%E8%AE%B01/">c++笔记1</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/17/c-%E7%AC%94%E8%AE%B01/" class="archive-article-date">
+  	<time datetime="2021-04-17T07:54:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><h2 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h2><ul>
+<li><p>C++的标准主函数形式</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>C语言标准主函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>c++标准</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h1 id="2-常量"><a href="#2-常量" class="headerlink" title="2.常量"></a>2.常量</h1><p>作用：记录不可更改的数据</p>
+<ol>
+<li>#define 宏定义：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> 常量名 常量值</span></span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> week 7</span></span><br><span class="line">   ``` </span><br><span class="line"><span class="number">2.</span> <span class="keyword">const</span> 修饰的变量</span><br><span class="line">+ <span class="keyword">const</span>作用是保护被定义的值不被改变。</span><br><span class="line">   ```cpp</span><br><span class="line">   <span class="keyword">const</span> 数据类型 常量名=常量值</span><br><span class="line">   <span class="keyword">const</span> <span class="keyword">int</span> week=<span class="number">7</span>; <span class="comment">// 是week的值一直为7</span></span><br><span class="line">   week=<span class="number">2</span>;  <span class="comment">//就会报错</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="3-关键字"><a href="#3-关键字" class="headerlink" title="3.关键字"></a>3.关键字</h1><h2 id="sizeof关键子"><a href="#sizeof关键子" class="headerlink" title="sizeof关键子"></a>sizeof关键子</h2><ul>
+<li>作用：统计数据类型所占内存大小</li>
+<li>语法：sizeof(数据类型或者变量名)<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"long型所占内存大小："</span>&lt;&lt; <span class="keyword">sizeof</span>(<span class="keyword">long</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="endl"><a href="#endl" class="headerlink" title="endl"></a>endl</h2></li>
+<li>作用：换行</li>
+<li>endl：屏幕光标移到下一行开头，重启一行，<strong>刷新缓冲区</strong></li>
+<li>/n：重启一行</li>
+</ul>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><ul>
+<li>C++ 有两种风格的字符串</li>
+<li>字符串都要放在””中</li>
+</ul>
+<ol>
+<li>C语言风格的字符串<br>char 变量名[]=”字符串值”</li>
+<li>C++ 风格的字符串<br>string 变量名=”字符串” <ul>
+<li>要用string型的字符串要添加一个#include&lt;<string>&gt;的头文件</li>
+</ul>
+</li>
+</ol>
+<h1 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4.输入输出"></a>4.输入输出</h1><h2 id="输入cin"><a href="#输入cin" class="headerlink" title="输入cin"></a>输入cin</h2><p>语法：cin &gt;&gt; 变量名</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line"></span><br><span class="line">floar f;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;f;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> ch;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt;ch;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> str=<span class="string">"hello"</span>;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; str;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> c;</span><br><span class="line"><span class="keyword">double</span> d;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; c &gt;&gt; d; <span class="comment">// 连续命名</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当给布尔类型赋值<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; flag;</span><br><span class="line">只要赋值不是<span class="number">0</span>，<span class="keyword">bool</span>类型的值都是真</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="输出cout"><a href="#输出cout" class="headerlink" title="输出cout"></a>输出cout</h2><ul>
+<li>语法 cout &lt;&lt;””;</li>
+<li>连续输出 cout &lt;&lt;内容&lt;&lt;内容&lt;&lt;内容； <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span> &lt;&lt;<span class="string">"hello word"</span>;   <span class="comment">//输出字符串</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="number">12.12</span>;         <span class="comment">//输出数字</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">'d'</span>;             <span class="comment">//输出字符</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"hello word"</span>&lt;&lt;<span class="number">12.12</span> &lt;&lt; <span class="string">'d'</span>; <span class="comment">// 连续输出</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="5-命名空间-namespace"><a href="#5-命名空间-namespace" class="headerlink" title="5.命名空间 namespace"></a>5.命名空间 namespace</h1><ul>
+<li>作用： 区别相同的变量和函数</li>
+<li>放在main函数外</li>
+<li>定义格式：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> 空间名</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">// 最后这里有无;都可以</span></span><br></pre></td></tr></table></figure></li>
+<li>调用格式<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">空间名::空间中的函数(变量)名；</span><br></pre></td></tr></table></figure>
+当一个程序中有两个相同的变量、函数或其他的什么，可以定义两个不同的命名空间，不两个相同的变量分别放在两个命名空间里</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">namespace</span> pace1  </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">namespace</span> pace2  <span class="comment">//定义</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">pace1::sort();  <span class="comment">//调用</span></span><br><span class="line">pace2::sort();  <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
+<p>6.结构体</p>
+<ul>
+<li>与C语言结构体大致相同，细节上有些区别</li>
+</ul>
+<ol>
+<li>声明变量可以不用struct关键字<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>  //  定义一个<span class="title">node</span>类型的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  node a;         <span class="comment">// 定义了一个node类型结构体，结构体名字为a.</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">node</span> <span class="title">a</span>;</span>  <span class="comment">//C语言需要用在node前要加一个struct关键字</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>C++可以再结构体里面放函数，C不可以，不过C可以放函数地址</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>  //  定义一个<span class="title">node</span>类型的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span>   <span class="comment">//C++允许在结构体里面放函数</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"hahaha"</span>;</span><br><span class="line">  &#125;     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="new和delete"><a href="#new和delete" class="headerlink" title="new和delete"></a>new和delete</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/17/c-%E7%AC%94%E8%AE%B01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C语言复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/15/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/">C语言复习</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/15/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-04-15T13:59:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1.基础知识"></a>1.基础知识</h1><ul>
+<li>一个字节（byte）时8位（bit）</li>
+</ul>
+<h1 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2.数据类型"></a>2.数据类型</h1><h2 id="1-int型"><a href="#1-int型" class="headerlink" title="1.int型"></a>1.int型</h2><ul>
+<li>整数型：如1,3,0,6,23,567等无小数的。</li>
+<li>占4个字节</li>
+<li>范围-32768~32767</li>
+<li>转换字符：%d</li>
+</ul>
+<h3 id="short型"><a href="#short型" class="headerlink" title="short型"></a>short型</h3><ul>
+<li>short int简写为short，占用储存空间被int少</li>
+<li>占2个字节</li>
+</ul>
+<h3 id="long型"><a href="#long型" class="headerlink" title="long型"></a>long型</h3><ul>
+<li>占用空间比int大，用于数值较大的场合</li>
+<li>占8个字节</li>
+</ul>
+<h3 id="long-long型"><a href="#long-long型" class="headerlink" title="long long型"></a>long long型</h3><ul>
+<li>占8个字节（该类型至少占64位）</li>
+</ul>
+<h3 id="unsigned型"><a href="#unsigned型" class="headerlink" title="unsigned型"></a>unsigned型</h3><ul>
+<li>unsigned与unsigned int只能用于非负数值</li>
+<li>unsigned int占16位，允许取值范围为0~65535</li>
+</ul>
+<h2 id="2-float型"><a href="#2-float型" class="headerlink" title="2.float型"></a>2.float型</h2><ul>
+<li>占</li>
+<li>至少表示6位有效数字（不是精确到小数点后六位）</li>
+<li>范围：10^-37^~10^37^</li>
+<li>转义字符：%f</li>
+<li>打印显示只是计数法：%e</li>
+</ul>
+<h2 id="3-double型"><a href="#3-double型" class="headerlink" title="3.double型"></a>3.double型</h2><ul>
+<li>至少表示10位有效数字</li>
+<li>转义字符：%f</li>
+</ul>
+<h2 id="4-char型"><a href="#4-char型" class="headerlink" title="4.char型"></a>4.char型</h2><ul>
+<li>用于存储字符：A,g,s,@,$等。</li>
+<li>定义的时候char类型要加单引号<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> grade=<span class="string">'A'</span>;</span><br></pre></td></tr></table></figure></li>
+<li>转义字符：%c</li>
+</ul>
+<h1 id="3-运算优先级与运算方向"><a href="#3-运算优先级与运算方向" class="headerlink" title="3.运算优先级与运算方向"></a>3.运算优先级与运算方向</h1><h1 id="4-选择机构"><a href="#4-选择机构" class="headerlink" title="4.选择机构"></a>4.选择机构</h1><h2 id="1-if-else"><a href="#1-if-else" class="headerlink" title="1.if-else"></a>1.if-else</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件)</span><br><span class="line">&#123;</span><br><span class="line">    语句<span class="number">1</span>；</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    语句二</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//如果**条件**为真执行语句一，否则执行语句二</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当if语句有多个else时if()-else if(){}-else{},第二个else{}中的语句是在前两个个if()中的条件为错误的时候才执行。</li>
+<li>如果if后面<strong>没有{}</strong>时，当有多个if同时出现，后面在跟着一个else，这个else会与最近的一个if匹配。</li>
+</ul>
+<h2 id="2-switch-语法"><a href="#2-switch-语法" class="headerlink" title="2.switch 语法"></a>2.switch 语法</h2><p>格式：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(number)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: statement <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: statement <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: statement <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:statement <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*如果number与case1相同，则执行statement 1，如果不相同与case2 比较以此类推，如果都不一样执行default的statement 4*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-循环结构"><a href="#5-循环结构" class="headerlink" title="5.循环结构"></a>5.循环结构</h1><h2 id="continue与break"><a href="#continue与break" class="headerlink" title="continue与break"></a>continue与break</h2><ol>
+<li>continue为结束本次循环的剩余本分，开始下一次循环。</li>
+<li>break为跳出这个循环体</li>
+</ol>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(；；)</span><br><span class="line">&#123;</span><br><span class="line">    循环体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(判断句)</span><br><span class="line">&#123;</span><br><span class="line">    循环体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do while循环"></a>do while循环</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> </span><br><span class="line">&#123;</span><br><span class="line">    循环体</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(判断句)</span><br></pre></td></tr></table></figure>
+<h2 id="条件运算符-："><a href="#条件运算符-：" class="headerlink" title="条件运算符? ："></a>条件运算符? ：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expression1?expression2:expression3</span><br><span class="line">如果expression1为真，整个条件表达式为expression2，否则整个条件表达式为expression3</span><br></pre></td></tr></table></figure>
+<p>例如一个个最大值赋值语句：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">max</span>=(a&gt;b)?a:b;</span><br><span class="line">如果a&gt;b,则<span class="built_in">max</span>=a,如果a&gt;b为假，则<span class="built_in">max</span>=b</span><br></pre></td></tr></table></figure>
+
+<p>6.指针</p>
+<h1 id="6-结构体"><a href="#6-结构体" class="headerlink" title="6.结构体"></a>6.结构体</h1><h3 id="1-创建结构体"><a href="#1-创建结构体" class="headerlink" title="1.创建结构体"></a>1.创建结构体</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">float</span> value ;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>⑴关键字struct,表明后面是一个结构体。<br>⑵该结构体包含两个char类型数组和一个float类型变量，该结构体并未创建实际数据对象。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>;</span>  <span class="comment">//把library声明成一个使用book结构布局的结构体。</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">doyle</span>,<span class="title">panshin</span>;</span> <span class="comment">//定义了两个struct book类型的结构体。</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">ptbook</span>;</span>  <span class="comment">//定义了一个指向struct book类型的结构体指针。</span></span><br></pre></td></tr></table></figure>
+<p>可以就简化声明</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">float</span> value ;</span><br><span class="line">&#125; library;<span class="comment">//花括号后可以直接跟变量名，就可省去struct book library;</span></span><br></pre></td></tr></table></figure>
+<p>1.1如果把结构体声明在一个函数内部，他的标记只能限于该函数与内部，如果把这个结构体至于函数外部，该声明能被所有函数标记。</p>
+<h3 id="2-结构体初始化"><a href="#2-结构体初始化" class="headerlink" title="2.结构体初始化"></a>2.结构体初始化</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="string">"the Pinous Pirate and the Sevious "</span>;</span><br><span class="line">    <span class="string">"Reee Vivotte"</span>;                                   </span><br><span class="line">     <span class="number">1.95</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//结构体可以这样初始化，但是一定要按顺序。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    .title = <span class="string">"the Pinous Pirate and the Sevious "</span>;</span><br><span class="line">    .author = <span class="string">"ReeeVivotte"</span>;                                   </span><br><span class="line">    .value = <span class="number">1.95</span>;</span><br><span class="line">    .value = <span class="number">2.56</span>;</span><br><span class="line">&#125;;   <span class="comment">//可以任意顺序要赋值。但是如果对一个变量付了两次之，以最后一次赋值为最终结果。例如library.value=2.56。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-访问结构体成员"><a href="#3-访问结构体成员" class="headerlink" title="3.访问结构体成员"></a>3.访问结构体成员</h3><p>⑴使用结构体成员运算符点(.)来访问结构体成员。例如library.title来访问library的title部分。<br>⑵注library是一个结构体，但是library.title是一个char类型的数组。</p>
+<h3 id="4-结构数组"><a href="#4-结构数组" class="headerlink" title="4.结构数组"></a>4.结构数组</h3><p>1.声明结构数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>[100];</span></span><br><span class="line"><span class="comment">//以上代码表明library是内涵100个元素的数组，每一个数组元素都是一个book类型的结构体。library[0]是第一个book类型的结构体变量。</span></span><br></pre></td></tr></table></figure>
+<p>2.结构体数组成员</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library[<span class="number">0</span>].author;  <span class="comment">//第一个数组元素的author相关联。     </span></span><br><span class="line">library[<span class="number">2</span>].author[<span class="number">4</span>];  <span class="comment">//第三个结构体变量中author的第五个字符。</span></span><br></pre></td></tr></table></figure>
+<p>总结</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library              <span class="comment">//一个book结构的结构体数组</span></span><br><span class="line">library[<span class="number">2</span>]           <span class="comment">//一个数组元素，该元素为book结构</span></span><br><span class="line">library[<span class="number">2</span>].title     <span class="comment">//一个char类型的数组，(library[2]的title成员)</span></span><br><span class="line">library[<span class="number">2</span>].title[<span class="number">4</span>]  <span class="comment">//library[2]的title成员的一个字符</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/15/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-计算机网络自顶向下课后题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -251,7 +541,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-域名系统DNS"><a href="#1-域名系统DNS" class="headerlink" title="1.域名系统DNS"></a>1.域名系统DNS</h1><ul>
+        <h1 id="1-应用层原理"><a href="#1-应用层原理" class="headerlink" title="1.应用层原理"></a>1.应用层原理</h1><ul>
+<li>网络核心设备并不在应用层上起作用，尽在较低层上起作用，特别是在网络层及一下的层，该设计是将然健限制在端系统，从而促进大量的网络应用层程序快速的研发和部署。</li>
+</ul>
+<h1 id="2-网络应用的体系结构"><a href="#2-网络应用的体系结构" class="headerlink" title="2.网络应用的体系结构"></a>2.网络应用的体系结构</h1><ol>
+<li>客户/服务器模式 C/S</li>
+<li>对等模式P2P</li>
+<li>混合体（ C/S + P2P）</li>
+</ol>
+<h2 id="客户-服务器模型"><a href="#客户-服务器模型" class="headerlink" title="客户/服务器模型"></a>客户/服务器模型</h2><ul>
+<li>客户之间不能直接通信（web两个浏览器之间不能直接通信）</li>
+<li>服务器是在<strong>固定（固定IP）</strong>的端口上，先于客户端跑起来</li>
+<li>客户端可以运行在运动的或固定的IP上，请求资源，服务器相应资源</li>
+<li>可扩展性比较差（随着用户数量的增加，服务能力是<strong>断崖似的下降</strong>）</li>
+</ul>
+<h3 id="传输速度瓶颈"><a href="#传输速度瓶颈" class="headerlink" title="传输速度瓶颈"></a>传输速度瓶颈</h3><ol>
+<li>C/S模式<ul>
+<li>主机个数少时：主机的下载带宽为瓶颈</li>
+<li>主机个数多时：服务器的上载带宽为瓶颈</li>
+<li>下载时间随着用户数量的增加为<strong>线性增加</strong></li>
+</ul>
+</li>
+<li>P2P模式<ul>
+<li></li>
+</ul>
+</li>
+</ol>
+<h2 id="对等模式P2P"><a href="#对等模式P2P" class="headerlink" title="对等模式P2P"></a>对等模式P2P</h2><ul>
+<li>每个结点既可以是客户又可以是服务器</li>
+<li>可扩展性（结点增加，请求节点和服务节点都增加，随着用户数量的增加，服务能力<strong>缓慢的降低</strong>）</li>
+<li>管理困难</li>
+</ul>
+<ol>
+<li>P2P分类：非结构化P2P、结构化P2P(DHT)</li>
+<li></li>
+</ol>
+<h3 id="BitTorrent（bit洪流）"><a href="#BitTorrent（bit洪流）" class="headerlink" title="BitTorrent（bit洪流）"></a>BitTorrent（bit洪流）</h3><ul>
+<li>一种用于文件分发的流行P2P协议</li>
+<li></li>
+</ul>
+<h2 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h2><p>在TCP/IP协议上寻址包括但部分</p>
+<ol>
+<li>你在哪个终端设备（IP）上</li>
+<li>在终端上的TCP上还是UDP上</li>
+<li>在TCP上有好多应用进程，在那个端口上</li>
+</ol>
+<ul>
+<li><p>有端口号还区分不同的应用进程</p>
+</li>
+<li><p>标识应用进程做起码两个信息1主机IP，2应用进程的端口号</p>
+<h2 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h2></li>
+<li><p>每次发送接收消息都要传输谁收谁接和信息，为减少每次发送的信息量</p>
+</li>
+<li><p>socket是在面向连接当中本地连接的本地端口的本地标识，对方连接的对方端口的本地标识</p>
+</li>
+<li><p>使得发送消息穿过的层间最少</p>
+</li>
+<li><p>一个进程用IP地址和端口号来标识 </p>
+</li>
+</ul>
+<h1 id="3-域名系统DNS"><a href="#3-域名系统DNS" class="headerlink" title="3.域名系统DNS"></a>3.域名系统DNS</h1><ul>
+<li>实现域名到IP地址的转化</li>
 <li>许多应用软件直接使用域名系统，而有些用户只能间接的使用域名系统</li>
 <li>互联网采用<strong>层次结构</strong>的命名树作文书记得名字，比采用<strong>分布式</strong>的域名系统DNS</li>
 <li>若干个服务器远程完成对名字到IP地址的解析</li>
@@ -271,8 +621,8 @@
 <li>.org：非营利性组织</li>
 <li>.int：国际组织</li>
 </ul>
-<h2 id="迭代查询"><a href="#迭代查询" class="headerlink" title="迭代查询"></a>迭代查询</h2><h2 id="递归查询"><a href="#递归查询" class="headerlink" title="递归查询"></a>递归查询</h2><h1 id="2-文件传送协议"><a href="#2-文件传送协议" class="headerlink" title="2.文件传送协议"></a>2.文件传送协议</h1><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
-<li>允许提供交互的访问，允许客户之间文件的类型和格式，并允许</li>
+<h2 id="迭代查询"><a href="#迭代查询" class="headerlink" title="迭代查询"></a>迭代查询</h2><h2 id="递归查询"><a href="#递归查询" class="headerlink" title="递归查询"></a>递归查询</h2><h1 id="4-文件传送协议"><a href="#4-文件传送协议" class="headerlink" title="4.文件传送协议"></a>4.文件传送协议</h1><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
+<li>允许提供交互的访问，允许客户之间文件的类型和格式，并允许 </li>
 <li>主要功能是较少或消除不同操作系统之间处理不同文件的不兼容性</li>
 </ul>
 <h2 id="TFTP协议"><a href="#TFTP协议" class="headerlink" title="TFTP协议"></a>TFTP协议</h2><ul>
@@ -285,7 +635,7 @@
 <li>TELNET是一个简单的远程终端协议，也是互联网的正式协议</li>
 <li>用户用TELNET就可以通过TCP连接注册连接到另一个主机上</li>
 </ul>
-<h1 id="4-万维网WWW"><a href="#4-万维网WWW" class="headerlink" title="4.万维网WWW"></a>4.万维网WWW</h1><ul>
+<h1 id="5-万维网WWW"><a href="#5-万维网WWW" class="headerlink" title="5.万维网WWW"></a>5.万维网WWW</h1><ul>
 <li>万维网并不是一种网络，而是一种大规模、联机式的<strong>信息储存方式</strong>。</li>
 <li>万维网用连接的方法从一个站访问另一个站</li>
 <li>以<strong>客户-服务器</strong>的方式工作</li>
@@ -296,13 +646,129 @@
 </li>
 <li>页面：客户程序主窗口上显示的万维网文档</li>
 </ul>
-<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ul>
-<li><strong>万维网客户端程序</strong>与<strong>万维网服务器程序</strong>之间进行的交互所使用的协议<ul>
-<li>HTTP协议是一个应用层协议，使用T<strong>CP连接</strong>进行可靠传输</li>
+<h1 id="6-HTTP协议"><a href="#6-HTTP协议" class="headerlink" title="6.HTTP协议"></a>6.HTTP协议</h1><ul>
+<li><strong>万维网客户端程序</strong>与<strong>万维网服务器程序</strong>之间进行的交互所使用的协议（HTTP是web的核心）<ol>
+<li>HTTP定义了web客户向web服务器请求web网页的方式 </li>
+</ol>
+</li>
+<li>HTTP协议是一个应用层协议，使用<strong>TCP连接</strong>进行可靠传输</li>
+<li>无状态的协议</li>
+</ul>
+<h2 id="URL格式"><a href="#URL格式" class="headerlink" title="URL格式"></a>URL格式</h2><ul>
+<li>协议名://用户名:口令+主机名+路径名+端口</li>
+<li>Port://user:<a href="mailto:pew@www.someSchool.edu">pew@www.someSchool.edu</a>/someDept/pic.gif:prot<ul>
+<li>Port:协议名</li>
+<li>user:pew 用户名:口令</li>
+<li><a href="http://www.someSchool.edu" target="_blank" rel="noopener">www.someSchool.edu</a>  主机名</li>
+<li>someDept/pic.gif  路径名</li>
+<li>prot 端口</li>
 </ul>
 </li>
 </ul>
-<h1 id="5-电子邮件"><a href="#5-电子邮件" class="headerlink" title="5.电子邮件"></a>5.电子邮件</h1><h1 id="6-动态主机配置协议DHCP"><a href="#6-动态主机配置协议DHCP" class="headerlink" title="6.动态主机配置协议DHCP"></a>6.动态主机配置协议DHCP</h1><h1 id="简单网络管理协议SNMP"><a href="#简单网络管理协议SNMP" class="headerlink" title="简单网络管理协议SNMP"></a>简单网络管理协议SNMP</h1><h1 id="应用进程跨越网络的通信"><a href="#应用进程跨越网络的通信" class="headerlink" title="应用进程跨越网络的通信"></a>应用进程跨越网络的通信</h1><h1 id="P2P"><a href="#P2P" class="headerlink" title="P2P"></a>P2P</h1>
+<h2 id="持续连接与非持续连接"><a href="#持续连接与非持续连接" class="headerlink" title="持续连接与非持续连接"></a>持续连接与非持续连接</h2><ol>
+<li>非持续连接：每一个请求响应都经一个单股的TCP连接发送请求。<ul>
+<li>响应时间为两个RTT</li>
+</ul>
+</li>
+<li>持续连接：请求响应经相同的TCP连接发送请求</li>
+</ol>
+<h3 id="HTTP的交付过程"><a href="#HTTP的交付过程" class="headerlink" title="HTTP的交付过程"></a>HTTP的交付过程</h3><ol>
+<li>1.0版本（<strong>非持续</strong>）：客户向服务器发送<strong>TCP连接建立请求</strong>，服务器传回<strong>连接确认</strong>，客户发送<strong>HTTP连接请求</strong>，服务器传回<strong>连接确认</strong>，服务器接着传回<strong>相应报文</strong>，最后服务器发出<strong>连接拆除请求</strong>，客户传回<strong>连接拆除的确认</strong>。</li>
+<li>2.0版本（<strong>持续</strong>）：客户向服务器发送TCP连接建立请求，服务器传回连接确认，客户发送HTTP连接请求，服务器传回连接确认，服务器接着传回相应报文，<strong>最后连接不关闭</strong>（持久性连接），如果还有其他的请求会在这个连接上继续发送</li>
+</ol>
+<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><ul>
+<li>HTTP协议是无状态的协议，cookies可以记录一下HTTP的状态，下次发在使用HTTP的时候可以调用使用，。</li>
+<li>cookie允许站点对用户进行跟踪，（可以限制用户的访问，把内容与用户身份联系起来）</li>
+</ul>
+<h2 id="HTTP报文格式"><a href="#HTTP报文格式" class="headerlink" title="HTTP报文格式"></a>HTTP报文格式</h2><h2 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h2><ol>
+<li>HTTP请求报文第一行为请求行后续的首部行<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET / somedir/page.htme THHP/<span class="number">1.1</span> <span class="comment">//请求行三个字段：方法字段/URL字段/HTTP版本字段</span></span><br><span class="line"><span class="comment">/*余下都为首部行*/</span></span><br><span class="line">Host:www.someschool.edu  <span class="comment">// 指明对象所在主机</span></span><br><span class="line">connection： close       <span class="comment">//告诉服务器不要使用持续连接       </span></span><br><span class="line">User-agent: Mozilla/<span class="number">5.0</span>  <span class="comment">//用于指明用户代理（浏览器类型），该浏览器型为Mozilla/5.0</span></span><br><span class="line">Acceptplanguage:fr       <span class="comment">//用户想得到的语言版本（fr表示法语）</span></span><br></pre></td></tr></table></figure></li>
+<li>请求行有三个字段：方法字段，URL字段，HTTP版本字段<ol>
+<li>方法字段例如 GET（实体为空） POST（使用该实体体） HEAD 等</li>
+</ol>
+</li>
+</ol>
+<h2 id="HTTP响应报文"><a href="#HTTP响应报文" class="headerlink" title="HTTP响应报文"></a>HTTP响应报文</h2><ul>
+<li>响应报文分为三部分：1个初始状态行（三部分：协议版本字段，状态码，相应的状态信息），6个首部行，实体体<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line">Connection :close     <span class="comment">//发送完报文后将关闭TCP连接</span></span><br><span class="line">Date: Tue, <span class="number">18</span> Aug <span class="number">2015</span> <span class="number">15</span>:<span class="number">44</span>:<span class="number">04</span> GMT     <span class="comment">//Date表示服务器产生并发送报文的日期和时间</span></span><br><span class="line">Server :Apache/<span class="number">2.2</span><span class="number">.3</span> (Centos)     <span class="comment">//该报文是由一台Apache web服务器产生。类似于User-agent</span></span><br><span class="line">Last-Modified: Tue, <span class="number">18</span> Aug <span class="number">2015</span> <span class="number">15</span>:<span class="number">11</span>:<span class="number">03</span> GMT    <span class="comment">//对象最后创建或者修改的时间</span></span><br><span class="line">Content-Length:<span class="number">6821</span>     <span class="comment">//被发送对象的字节数</span></span><br><span class="line">Content-Type:TECT/html      实体体中的对象是HTML文本。</span><br><span class="line">&#123;  date   date   date  .....&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Date:表示时间为<strong>服务器发送报文的时间</strong>，而不是对象创建或者修改的时间。</li>
+<li>Last-Modified:对即可能在本地客户有可能在网络缓存服务器上的对象缓存非常重要。</li>
+<li></li>
+</ul>
+<h1 id="7-Emile"><a href="#7-Emile" class="headerlink" title="7.Emile"></a>7.Emile</h1><ul>
+<li>电子邮件系统主要组成部分：用户代理，邮件服务器（核心），简单邮件传输协议</li>
+</ul>
+<h2 id="SMTP"><a href="#SMTP" class="headerlink" title="SMTP"></a>SMTP</h2><ul>
+<li>SMTP是因特网电子邮件的主要<strong>应用层协议</strong>和<strong>核心</strong></li>
+<li>依靠TCP可靠的数据连接</li>
+<li>组成部分：1.客户端（运行在发送方邮件服务器上）2.服务器端（运行在接收方邮件服务器上）</li>
+<li>SMTP一般不使用中间的服务器发送文件，</li>
+<li>与服务器的25号端口建立TCP连接</li>
+</ul>
+<h3 id="SMTP连接的建立"><a href="#SMTP连接的建立" class="headerlink" title="SMTP连接的建立"></a>SMTP连接的建立</h3><ol>
+<li>客户SMTP与服务器SMTP建立TCP连接（在服务器25号端口、若服务器关机，客户会稍后再次尝试）</li>
+<li>建立连接后，客户服务器捂手（通知发送地址）、</li>
+<li>客户发送报文</li>
+<li>如果还有报文要发送，重复上述步骤</li>
+<li>无报文传输后，关闭TCP连接</li>
+</ol>
+<h2 id="邮件报文格式"><a href="#邮件报文格式" class="headerlink" title="邮件报文格式"></a>邮件报文格式</h2><ul>
+<li>每一个首部必须包含一个（Form：首部行）和一个（To：首部行）</li>
+<li>也许还包含一个（Subject：首部行），及其他首行。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">From: alice@crepes.fr</span><br><span class="line">To:bob@hamburger.edu</span><br><span class="line">Subject:searching <span class="keyword">for</span> the meaning fo life</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="POP3"><a href="#POP3" class="headerlink" title="POP3"></a>POP3</h2><ul>
+<li>极其简单的邮件访问协议</li>
+<li>作用将邮件从<strong>接收方服务器</strong>传送到<strong>接收方的用户代理(浏览器、搜索引擎等)</strong><h3 id="POP3工作过程分3个阶段"><a href="#POP3工作过程分3个阶段" class="headerlink" title="POP3工作过程分3个阶段"></a>POP3工作过程分3个阶段</h3></li>
+</ul>
+<ol>
+<li>特许阶段：用户代理发送用户名口令，以鉴别用户。</li>
+<li>事务处理：用户代理取回报文，同时对报文做删除标记的标记，获得统计信息</li>
+<li>更新阶段：客户发出quite命令后，结束POP3回话，邮件服务器会删除第二阶段被标记删除的报文。</li>
+</ol>
+<h2 id="IMAP"><a href="#IMAP" class="headerlink" title="IMAP"></a>IMAP</h2><ul>
+<li>是一个邮件访问协议，比POP3跟复杂，更有特色。</li>
+<li></li>
+</ul>
+<h1 id="SMTP与HTTP对比"><a href="#SMTP与HTTP对比" class="headerlink" title="SMTP与HTTP对比"></a>SMTP与HTTP对比</h1><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">传输对象</th>
+<th align="center">协议模式</th>
+<th align="center">报文格式</th>
+<th align="center">处理一个文件包含不同类型的数据（文字、图片）</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">TTTP</td>
+<td align="center">web服务器向web客户</td>
+<td align="center">拉协议（用户用HTTP从服务器拉取信息）</td>
+<td align="center">不限制数据形式</td>
+<td align="center">把每个对象封装到他自己的报文当中</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">SMTP</td>
+<td align="center">邮件服务器向邮件服务器</td>
+<td align="center">推协议（邮件服务器把信息推给另一个邮件服务器）</td>
+<td align="center">必须7比特ASCII码</td>
+<td align="center">把所有报文放到一个报文当中</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="视频流和内容分发"><a href="#视频流和内容分发" class="headerlink" title="视频流和内容分发"></a>视频流和内容分发</h1><h2 id="视频流"><a href="#视频流" class="headerlink" title="视频流"></a>视频流</h2><ul>
+<li>用户观看互联网上的视频，这些视频都是提前录制好放置在服务器上，用户按需向服务器发出请求。</li>
+<li>视频可以被压缩，，如今压缩算法可以把一个视频压缩成任何比特率，比特率越高，画质越好。</li>
+</ul>
+<ol>
+<li>对流视频影响最大的是平均端到端的<strong>吞吐量</strong></li>
+<li>网络必须为流视频提供平均吞吐量，这个流式应用至少与压缩视频的比特率一样大</li>
+</ol>
+<h3 id="HTTP流"><a href="#HTTP流" class="headerlink" title="HTTP流"></a>HTTP流</h3><ol>
+<li>HTTP流中，视频只是储存在HTTP服务器中作为一个普通文件，每个文件有一个特定的URL(同一资源定位系统)</li>
+</ol>
+<h3 id="DASH"><a href="#DASH" class="headerlink" title="DASH"></a>DASH</h3><h2 id="内容分发"><a href="#内容分发" class="headerlink" title="内容分发"></a>内容分发</h2><h1 id="7-动态主机配置协议DHCP"><a href="#7-动态主机配置协议DHCP" class="headerlink" title="7.动态主机配置协议DHCP"></a>7.动态主机配置协议DHCP</h1><h1 id="简单网络管理协议SNMP"><a href="#简单网络管理协议SNMP" class="headerlink" title="简单网络管理协议SNMP"></a>简单网络管理协议SNMP</h1><h1 id="应用进程跨越网络的通信"><a href="#应用进程跨越网络的通信" class="headerlink" title="应用进程跨越网络的通信"></a>应用进程跨越网络的通信</h1>
       
 
       
@@ -695,6 +1161,14 @@
 <h2 id="3-2-IP地址"><a href="#3-2-IP地址" class="headerlink" title="3.2 IP地址"></a>3.2 IP地址</h2><ul>
 <li>给每一个连接在互联网上的主机分配一个全球唯一个的地址（32位的2进制数）</li>
 <li>IP地址按某<strong>固定长度</strong>分成连段，（前面）网号段（net-id）+（后面）主机号段（host-id）</li>
+<li>IP地址是一种分层的结构：<ul>
+<li>优点：<ol>
+<li>方便IP地址的管理（IP地址管理机构指<strong>分配网络号</strong>，主机号由得到网络号的单位执行分配）</li>
+<li>减小了路由表所占的存储空间（路由器仅根据网络号转发分组不考虑主机号，使得路由表中的项目减小了）</li>
+</ol>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="3-2-1-IP地址表示方法"><a href="#3-2-1-IP地址表示方法" class="headerlink" title="3.2.1 IP地址表示方法"></a>3.2.1 IP地址表示方法</h3><ul>
 <li>A类地址：[(开头为0)共8位net-id]+[24位host-id]</li>
@@ -706,10 +1180,22 @@
 <li>优点：写成十进制后，方便书写。<br>缺点：无法表示二进制时所展示的更多信息。（可根据开头二进制数区分地址的类）</li>
 </ul>
 <h3 id="物联网中的IP地址"><a href="#物联网中的IP地址" class="headerlink" title="物联网中的IP地址"></a>物联网中的IP地址</h3><ul>
-<li>同一局域网或路由器的IP地址中网络号必须是一样的。</li>
-<li>路由器的每一个接口上都有一个网络号的IP地址。<h3 id="IP地址与硬件地址"><a href="#IP地址与硬件地址" class="headerlink" title="IP地址与硬件地址"></a>IP地址与硬件地址</h3></li>
-<li>IP地址与硬件地址不同</li>
-<li>硬件地址：物理地址，是数据链路层与物理层<br>IP地址：是网络层以上的地址，是一种逻辑地址（可以改变） </li>
+<li><p>同一局域网或路由器的IP地址中网络号必须是一样的。</p>
+</li>
+<li><p>路由器的每一个接口上都有一个网络号的IP地址。</p>
+<h3 id="IP地址与硬件地址"><a href="#IP地址与硬件地址" class="headerlink" title="IP地址与硬件地址"></a>IP地址与硬件地址</h3></li>
+<li><p>IP地址与硬件地址不同</p>
+</li>
+<li><p>硬件地址：物理地址，是数据链路层与物理层<br>IP地址：是网络层以上的地址，是一种逻辑地址（可以改变）</p>
+</li>
+<li><p>主机与主机之间的通信为什么不用硬件地址</p>
+<ol>
+<li>硬件地址用于找到局域网中的主机。</li>
+<li>不同局域网可能是<strong>异构</strong>的，相互通信需要<strong>复杂的地址转换</strong>。</li>
+<li>连接到互联网上的主机都有唯一的IP地址</li>
+<li>硬件地址与物理位置无关，IP地址与物理位置有关</li>
+</ol>
+</li>
 </ul>
 <h2 id="3-3-ARP-地址解析协议"><a href="#3-3-ARP-地址解析协议" class="headerlink" title="3.3 ARP 地址解析协议"></a>3.3 ARP 地址解析协议</h2><ul>
 <li><p>通信时用到两个地址：<br>IP地址：网络层地址<br>MAC地址：数据链路层地址</p>
@@ -738,12 +1224,18 @@
 </li>
 </ul>
 <h2 id="3-4-IP数据报的格式"><a href="#3-4-IP数据报的格式" class="headerlink" title="3.4 IP数据报的格式"></a>3.4 IP数据报的格式</h2><ul>
-<li>IP数据包的组成：首部+数据</li>
+<li>IP数据包的组成：首部（20字节）+数据（最多1480字节）</li>
+<li>每个IP分片最大1500个字节</li>
 </ul>
 <h3 id="首部："><a href="#首部：" class="headerlink" title="首部："></a>首部：</h3><ul>
 <li>前一部分是固定的长度，固定长度为20个字节，是所有IP数据报必须既有的。</li>
-<li>首部固定部分之后是一些可选的字段，其长度不固定（最大40个字节(0~40)）。</li>
-<li>首部最短20和字节，最长60个字节，由于固定长度20个字节，可选字段最长不能超过40个字节。</li>
+<li>首部固定部分之后是一些<strong>可选的字段</strong>，其长度不固定（最大40个字节(0~40)）。<ul>
+<li>首部的可变部分，用来支持排错、测量等功能</li>
+<li>增加首部可变部分<strong>增加了IP数据报的功能</strong></li>
+<li>同时使首部长度成为可变，<strong>增加了</strong>路由器处理数据报的<strong>开销</strong></li>
+</ul>
+</li>
+<li>首部最短20个字节，最长60个字节，由于固定长度20个字节，可选字段最长不能超过40个字节。</li>
 <li>首部长度一个单位是4个字节，所有长度为4的整数倍，</li>
 <li>区分服务：只有在使用区分服务时，这个字段才被使用，一般情况下不被使用。</li>
 <li>IP数据报首部没有用来指明“下一跳路由器”的IP地址</li>
@@ -755,6 +1247,7 @@
 <li>他是一个<strong>计数器</strong>，产生IP数据报的标识</li>
 </ul>
 <h4 id="标志："><a href="#标志：" class="headerlink" title="标志："></a>标志：</h4><ul>
+<li></li>
 <li>站3位，目前只有前2位有意义。 </li>
 <li>3位：MF+DF+MF<ul>
 <li>MF=1:表示后面还有分片</li>
@@ -768,9 +1261,10 @@
 <li>表示分片距离原始分片偏移了多少。（针对第一个分片的距离。如第一个分片有40个字节，第二个分片的偏移了（5各单位）40个字节。第三个分片偏移了（10各单位）80个字节，表示前两个分片一共80个字节）</li>
 <li>为什么分片：把较长的数据分成，可以被发送的长度。</li>
 </ul>
-<h4 id="生存时间"><a href="#生存时间" class="headerlink" title="生存时间"></a>生存时间</h4><ul>
+<h4 id="生存时间-TTL"><a href="#生存时间-TTL" class="headerlink" title="生存时间 TTL"></a>生存时间 TTL</h4><ul>
 <li>占8位</li>
 <li>数据包在网络中通过的路由器的最大数值。</li>
+<li>路由器在接收到IP数据报后将TTL减一，当TTL为0后，路由器将抛弃IP数据报。</li>
 </ul>
 <h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><ul>
 <li>占8位</li>
@@ -781,6 +1275,7 @@
 <li>只检验数据报首部，不检验数据部分。</li>
 </ul>
 <h2 id="3-5-IP层转发分组的流程"><a href="#3-5-IP层转发分组的流程" class="headerlink" title="3.5 IP层转发分组的流程"></a>3.5 IP层转发分组的流程</h2><h3 id="路由表"><a href="#路由表" class="headerlink" title="路由表"></a>路由表</h3><ul>
+<li>IP数据报首部没有指明<strong>下一跳路由器的IP地址</strong>，当路由器收到带转发数据报的时候，不把下一跳IP地址填入，而是交给<strong>下一层的网络接口软件</strong></li>
 <li>路由表中最重要的是：目的网络地址、下一跳地址</li>
 <li>经过多个路由器的跳跃（<strong>间接交付</strong>），只有到达最后一个路由器向目的主机交付时，才为<strong>直接交付</strong>。</li>
 </ul>
@@ -1436,531 +1931,6 @@
 
 
   
-    <article id="C语言笔记-C语言笔记" class="article article-type-C语言笔记  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">C语言笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3><table>
-<thead>
-<tr>
-<th align="center">转义字符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\a</td>
-<td>报警(警报声)</td>
-</tr>
-<tr>
-<td align="center">\b</td>
-<td>退格</td>
-</tr>
-<tr>
-<td align="center">\f</td>
-<td>换页</td>
-</tr>
-<tr>
-<td align="center">\n</td>
-<td>回车换行</td>
-</tr>
-<tr>
-<td align="center">\r</td>
-<td>回车不换行</td>
-</tr>
-<tr>
-<td align="center">\t</td>
-<td>水平制表符</td>
-</tr>
-<tr>
-<td align="center">\v</td>
-<td>垂直制表符</td>
-</tr>
-<tr>
-<td align="center">\\</td>
-<td>\</td>
-</tr>
-<tr>
-<td align="center">\‘</td>
-<td>‘</td>
-</tr>
-<tr>
-<td align="center">\“</td>
-<td>“</td>
-</tr>
-<tr>
-<td align="center">\?</td>
-<td>?</td>
-</tr>
-<tr>
-<td align="center">\0oo</td>
-<td>八进制值</td>
-</tr>
-<tr>
-<td align="center">\xhh</td>
-<td>十六进制值</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td></td>
-</tr>
-<tr>
-<td align="center">### 转换说明</td>
-<td></td>
-</tr>
-<tr>
-<td align="center">转换说明</td>
-<td>输出</td>
-</tr>
-<tr>
-<td align="center">:—:</td>
-<td>—–</td>
-</tr>
-<tr>
-<td align="center">%a</td>
-<td>浮点数、十六进制和p记数法</td>
-</tr>
-<tr>
-<td align="center">%A</td>
-<td>浮点数、十六进制和P记数法</td>
-</tr>
-<tr>
-<td align="center">%c</td>
-<td>点个字符</td>
-</tr>
-<tr>
-<td align="center">%d</td>
-<td>有符号十进制整数</td>
-</tr>
-<tr>
-<td align="center">%i</td>
-<td>有符号十进制整数，与%d相同</td>
-</tr>
-<tr>
-<td align="center">%u</td>
-<td>有符号十进制整数</td>
-</tr>
-<tr>
-<td align="center">%e</td>
-<td>浮点数，e记数法</td>
-</tr>
-<tr>
-<td align="center">%E</td>
-<td>浮点数,E记数法</td>
-</tr>
-<tr>
-<td align="center">%f</td>
-<td>浮点数,十进制记数法</td>
-</tr>
-<tr>
-<td align="center">%g</td>
-<td>根据值的不同自动转化</td>
-</tr>
-<tr>
-<td align="center">%G</td>
-<td>根据值的不同自动转化</td>
-</tr>
-<tr>
-<td align="center">%o</td>
-<td>无符号八进制整数</td>
-</tr>
-<tr>
-<td align="center">%#o</td>
-<td>有符号八进制整数</td>
-</tr>
-<tr>
-<td align="center">%p</td>
-<td>指针</td>
-</tr>
-<tr>
-<td align="center">%s</td>
-<td>字符串</td>
-</tr>
-<tr>
-<td align="center">%x</td>
-<td>无符号十六进制整数使用十六进制数0f</td>
-</tr>
-<tr>
-<td align="center">%X</td>
-<td>无符号十六进制整数使用十六进制数0F</td>
-</tr>
-<tr>
-<td align="center">%#x</td>
-<td>有符号十六进制整数使用十六进制数ox</td>
-</tr>
-<tr>
-<td align="center">%#X</td>
-<td>有符号十六进制整数使用十六进制数oX</td>
-</tr>
-<tr>
-<td align="center">%%</td>
-<td>打印一个%</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="二、语法"><a href="#二、语法" class="headerlink" title="二、语法"></a>二、语法</h1><h3 id="1-switch-语法"><a href="#1-switch-语法" class="headerlink" title="1.switch 语法"></a>1.switch 语法</h3><p>格式：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(number)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: statement <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: statement <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: statement <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:statement <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*如果number与case1相同，则执行statement 1，如果不相同与case2 比较以此类推，如果都不一样执行default的statement 4*/</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-goto-语法"><a href="#2-goto-语法" class="headerlink" title="2.goto 语法"></a>2.goto 语法</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">size</span>&gt;<span class="number">12</span>)</span><br><span class="line"><span class="keyword">goto</span> a ;        <span class="comment">//先引入一个a在在后面进行解释。</span></span><br><span class="line">a:cost =cost*<span class="number">1.3</span>;     <span class="comment">//解释a是什么语句。</span></span><br></pre></td></tr></table></figure>
-<p>1.break、continue和goto都有跳出循环的的意思，continue是跳到下一次循环，break跳出当前循环，goto可以跳出一组循环。</p>
-<h3 id="3-const语法"><a href="#3-const语法" class="headerlink" title="3.const语法"></a>3.const语法</h3><p>作用：保护数组在被调用时，数组的数据部被改变，不会被以外修改原始数据。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> ar[],<span class="keyword">int</span> as[])</span></span>;</span><br><span class="line"><span class="comment">//定义了一个函数，形参ar[]不会被修改，形参as可以被修改。</span></span><br></pre></td></tr></table></figure>
-<p>const保护数组</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> days&#123;<span class="number">12</span>&#125;=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;;</span><br><span class="line">days[<span class="number">3</span>]=<span class="number">44</span>;<span class="comment">//编译错误</span></span><br></pre></td></tr></table></figure>
-<p>如果自行改变数组的值，急救术出现编译错误的消息。</p>
-<h4 id="const其他用法"><a href="#const其他用法" class="headerlink" title="const其他用法"></a>const其他用法</h4><p>1.定义常量</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cons <span class="keyword">double</span> PI =<span class="number">3.14159</span>;</span><br><span class="line"><span class="comment">//虽然#definde指令也能见了类似功能的符号常量，但是const的用法更加灵活，可以创建const数组，指针，指向const的指针。</span></span><br></pre></td></tr></table></figure>
-<p>2.const指针<br>const的指针不能被改变数值</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> rates[<span class="number">5</span>] = &#123;<span class="number">88.99</span>,<span class="number">100</span>,<span class="number">133</span>,<span class="number">123.5</span>,<span class="number">66.6</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *pt = rates;  <span class="comment">//pt指向数组首元素88.99。</span></span><br><span class="line">*pt = <span class="number">29.78</span>;  <span class="comment">//不允许</span></span><br><span class="line">*pt[<span class="number">2</span>] = <span class="number">77.88</span> ;  <span class="comment">//不允许</span></span><br><span class="line">rates[<span class="number">0</span>] = <span class="number">10.11</span>;  <span class="comment">//允许你因为rates未被const限定。</span></span><br><span class="line">pt++; <span class="comment">//让pt指向别处，指向rates[1].没问题</span></span><br></pre></td></tr></table></figure>
-<h1 id="三、函数"><a href="#三、函数" class="headerlink" title="三、函数"></a>三、函数</h1><p>如果程序要多次完成，某项任务，那么就可以之编写一个函数，重复调用一个函数来实现。</p>
-<h3 id="1-不带参数的函数"><a href="#1-不带参数的函数" class="headerlink" title="1.不带参数的函数"></a>1.不带参数的函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void starbar (void);</span><br></pre></td></tr></table></figure>
-<p>//starbar为一个函数名，第1个void表示函数没有返回值，第2个void表示函数不带参数</p>
-<h3 id="2-带形式参数的函数"><a href="#2-带形式参数的函数" class="headerlink" title="2.带形式参数的函数"></a>2.带形式参数的函数</h3><h4 id="2-1无返回值有参数"><a href="#2-1无返回值有参数" class="headerlink" title="2.1无返回值有参数"></a>2.1无返回值有参数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void show (char ch,int mun)</span><br></pre></td></tr></table></figure>
-<p>//该行告诉编译器，show()函数带有两个参数，一个是char类型的ch，一个是int类型的mun，这两个被称为形式参数，（在main函数中show()中的被称为实际参数。）每一次调用函数都会给形式参数赋值。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dibs</span><span class="params">(<span class="keyword">int</span> x,y,z)</span></span>;  <span class="comment">//无效的函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dibs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z)</span></span>;  <span class="comment">//有效的函数</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-2有返回值有参数"><a href="#2-2有返回值有参数" class="headerlink" title="2.2有返回值有参数"></a>2.2有返回值有参数</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">imin</span> <span class="params">(<span class="keyword">int</span> <span class="keyword">int</span>)</span></span></span><br></pre></td></tr></table></figure>
-<p>//imin()函数有两个int类型的形式参数，返回值为float.</p>
-<h1 id="四、指针"><a href="#四、指针" class="headerlink" title="四、指针"></a>四、指针</h1><h3 id="1-指针的基本用法"><a href="#1-指针的基本用法" class="headerlink" title="1.指针的基本用法"></a>1.指针的基本用法</h3><p>1.指针：是一个职位内存地址的变量。（指针的只是一个地址）</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ptr=&amp;pooh;  <span class="comment">//把pooh的地址给ptr</span></span><br></pre></td></tr></table></figure>
-<p>2.声明一个变量</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *pi;   <span class="comment">//pi是指向int类型的指针变量</span></span><br><span class="line"><span class="keyword">char</span> * pc;    <span class="comment">//pc是指向char类型的指针变量</span></span><br><span class="line"><span class="keyword">float</span> *pf,*pg;  <span class="comment">//pf和pg都是指向float类型的指针变量</span></span><br></pre></td></tr></table></figure>
-<p>3.<em>与指针名称之间的空格可有可无。<br>4.指针所存储的是地址，地址是16进制，指针+1，是增加一个储蓄单元，如int型指针+1，就增加4个字节，doucle型指针加以就增加8个字节。<br>5.指针前加</em>可以得到该指针所指向对象的值。<br>6.</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dates+<span class="number">2</span>==&amp;dates[<span class="number">2</span>]  <span class="comment">//相同的地址</span></span><br><span class="line">*(dates+<span class="number">2</span>)==sates[<span class="number">2</span>]  <span class="comment">//相同的值</span></span><br></pre></td></tr></table></figure>
-<p><em>dates+2由于<em>优先级比较高，就相当于(</em>dates)+2.<br>7.指针的递增递减<br><em>str++   // 由于</em>与++运算符优先级相同。所以从右到左。<br>建议写成</em>(str++)这样更清晰。<br>(*str)++:这是使str所指向的值+1，而不是是指针+1.这样指针的位置一直不变，但在位置上的值发生变化。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> data[<span class="number">2</span>]=&#123;<span class="number">100</span>,<span class="number">200</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> moredara[<span class="number">2</span>]=&#123;<span class="number">300</span>,<span class="number">400</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *p1,*p2,*p3;</span><br><span class="line">    p1=p2=data;</span><br><span class="line">    p3=moredara;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*p1=%d   ,*p2=%d   ,*p3=%d\n"</span>,*p1,*p2,*p3);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*p1++=%d   ,*++p2=%d   ,(*p3)++=%d\n"</span>,*p1++,*++p2,(*p3)++);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*p1=%d   ,*p2=%d   ,*p3=%d\n"</span>,*p1,*p2,*p3);</span><br><span class="line">&#125;</span><br><span class="line">输出结果</span><br><span class="line">*p1=<span class="number">100</span>     *p2=<span class="number">100</span>     *p3=<span class="number">300</span></span><br><span class="line">*p1++=<span class="number">100</span>   *++p2=<span class="number">200</span>   (*p3)++=<span class="number">300</span></span><br><span class="line">*p1=<span class="number">200</span>     *p2=<span class="number">200</span>     *p3=<span class="number">301</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-指针与多维数组"><a href="#2-指针与多维数组" class="headerlink" title="2.指针与多维数组"></a>2.指针与多维数组</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> zippo[<span class="number">4</span>][<span class="number">3</span>];</span><br><span class="line">zippo;  <span class="comment">//二维数组首元素的地址；</span></span><br><span class="line">*Zippo; <span class="comment">//zippo[0][0]的值</span></span><br><span class="line">*(*zippo+<span class="number">2</span>); <span class="comment">//zippo[0][2]的值</span></span><br><span class="line">*(*(zippo+<span class="number">2</span>)+<span class="number">1</span>);  <span class="comment">//zippo[2][1]的值</span></span><br></pre></td></tr></table></figure>
-<h1 id="五、结构体"><a href="#五、结构体" class="headerlink" title="五、结构体"></a>五、结构体</h1><h3 id="1-创建结构体"><a href="#1-创建结构体" class="headerlink" title="1.创建结构体"></a>1.创建结构体</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">float</span> value ;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>⑴关键字struct,表明后面是一个结构体。<br>⑵该结构体包含两个char类型数组和一个float类型变量，该结构体并未创建实际数据对象。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>;</span>  <span class="comment">//把library声明成一个使用book结构布局的结构体。</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">doyle</span>,<span class="title">panshin</span>;</span> <span class="comment">//定义了两个struct book类型的结构体。</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> *<span class="title">ptbook</span>;</span>  <span class="comment">//定义了一个指向struct book类型的结构体指针。</span></span><br></pre></td></tr></table></figure>
-<p>可以就简化声明</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">40</span>];</span><br><span class="line">    <span class="keyword">float</span> value ;</span><br><span class="line">&#125; library;<span class="comment">//花括号后可以直接跟变量名，就可省去struct book library;</span></span><br></pre></td></tr></table></figure>
-<p>1.1如果把结构体声明在一个函数内部，他的标记只能限于该函数与内部，如果把这个结构体至于函数外部，该声明能被所有函数标记。</p>
-<h3 id="2-结构体初始化"><a href="#2-结构体初始化" class="headerlink" title="2.结构体初始化"></a>2.结构体初始化</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="string">"the Pinous Pirate and the Sevious "</span>;</span><br><span class="line">    <span class="string">"Reee Vivotte"</span>;                                   </span><br><span class="line">    <span class="number">1.95</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//结构体可以这样初始化，但是一定要按顺序。</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    .title = <span class="string">"the Pinous Pirate and the Sevious "</span>;</span><br><span class="line">    .author = <span class="string">"ReeeVivotte"</span>;                                   </span><br><span class="line">    .value = <span class="number">1.95</span>;</span><br><span class="line">    .value = <span class="number">2.56</span>;</span><br><span class="line">&#125;;   <span class="comment">//可以任意顺序要赋值。但是如果对一个变量付了两次之，以最后一次赋值为最终结果。例如library.value=2.56。</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-访问结构体成员"><a href="#3-访问结构体成员" class="headerlink" title="3.访问结构体成员"></a>3.访问结构体成员</h3><p>⑴使用结构体成员运算符点(.)来访问结构体成员。例如library.title来访问library的title部分。<br>⑵注library是一个结构体，但是library.title是一个char类型的数组。</p>
-<h3 id="4-结构数组"><a href="#4-结构数组" class="headerlink" title="4.结构数组"></a>4.结构数组</h3><p>1.声明结构数组</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>[100];</span></span><br><span class="line"><span class="comment">//以上代码表明library是内涵100个元素的数组，每一个数组元素都是一个book类型的结构体。library[0]是第一个book类型的结构体变量。</span></span><br></pre></td></tr></table></figure>
-<p>2.结构体数组成员</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library[<span class="number">0</span>].author;  <span class="comment">//第一个数组元素的author相关联。     </span></span><br><span class="line">library[<span class="number">2</span>].author[<span class="number">4</span>];  <span class="comment">//第三个结构体变量中author的第五个字符。</span></span><br></pre></td></tr></table></figure>
-<p>总结</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library              <span class="comment">//一个book结构的结构体数组</span></span><br><span class="line">library[<span class="number">2</span>]           <span class="comment">//一个数组元素，该元素为book结构</span></span><br><span class="line">library[<span class="number">2</span>].title     <span class="comment">//一个char类型的数组，(library[2]的title成员)</span></span><br><span class="line">library[<span class="number">2</span>].title[<span class="number">4</span>]  <span class="comment">//library[2]的title成员的一个字符</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java笔记三" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">java语法笔记（三）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/" class="archive-article-date">
-  	<time datetime="2020-09-06T06:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、面向对象与面向过程"><a href="#一、面向对象与面向过程" class="headerlink" title="一、面向对象与面向过程"></a>一、面向对象与面向过程</h2><ul>
-<li>面向对象：自己干活泼。<br>对象：客观存在的事物，万物皆对象</li>
-<li>面向过程：找别人干活。<h2 id="二、类与对象"><a href="#二、类与对象" class="headerlink" title="二、类与对象"></a>二、类与对象</h2><h3 id="1-类"><a href="#1-类" class="headerlink" title="1.类"></a>1.类</h3></li>
-<li>java程序主要就是各种各样的类，类是对<strong>对象</strong>的一种<strong>描述</strong>（类是对像的描述，对象是类的实体），它表明对象的<strong>属性和行为</strong>。</li>
-<li>类 = 行为 + 属性</li>
-<li>类是用class来表示的，对象的<strong>属性</strong>则用<strong>变量</strong>来表示，对象的<strong>行为</strong>则用<strong>函数</strong>来表示。</li>
-<li>类中的<strong>变量</strong>称为<strong>字段</strong>（也称为域），类中的<strong>函数</strong>称为<strong>方法</strong></li>
-<li>类的组成：属性和行为。<br>⑴属性：在代码中通过<strong>成员变量</strong>来实现（类中方法外的变量）<br>⑵行为：在代码中通过<strong>成员方法</strong>来实现（和前面的方法相比去点了static关键字）public void 方法名 () {}</li>
-</ul>
-<p>1.1 定义类：public class 类名 {}</p>
-<ul>
-<li><p>注：没有主方法的类不能使用</p>
-<h3 id="2-对象"><a href="#2-对象" class="headerlink" title="2.对象"></a>2.对象</h3></li>
-<li><p>创建对象<br>格式：类名 对象名=new 类名（）;<br>例：Student a = new Students();</p>
-</li>
-<li><p>使用对象<br>① 使用成员变量<br>格式：对象名.变量名<br>例：a.name<br>② 使用成员方法<br>格式：对象名.方法名();<br>例：a.name();</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//类=属性+行为</span></span><br><span class="line"><span class="comment">//属性-&gt;成员变量：(和之前定义变量一样，只不过位置在类中方法外。)</span></span><br><span class="line"><span class="comment">//创建一个类,类名为Student</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name; <span class="comment">//属性：姓名 </span></span><br><span class="line">    <span class="keyword">int</span> age;     <span class="comment">//属性：年龄</span></span><br><span class="line">                 <span class="comment">/*行为：在代码中通过成员方法来实现,（和前面的方法相比去点了static关键字,普通方法： public static void study()&#123;&#125;*/</span></span><br><span class="line">                 </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> <span class="comment">// 建立一个成员方法,方法名为study</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"加油"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       <span class="comment">//类名 对象名 = new 类名();  ——创建对象格式</span></span><br><span class="line">        Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">        <span class="comment">//对象名.变量名——调用成员变量格式</span></span><br><span class="line">        stu.name=<span class="string">"奔波霸"</span>;</span><br><span class="line">        stu.age=<span class="number">99</span>;</span><br><span class="line">        System.out.println(stu.name);  <span class="comment">// 控制台打印：奔波霸</span></span><br><span class="line">        System.out.println(stu.age);   <span class="comment">// 控制台打印：99</span></span><br><span class="line">        <span class="comment">// 调用成员方法，对象名.方法名();</span></span><br><span class="line">        stu.study();     <span class="comment">// 控制台打印：加油！</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-1-两个对象的内存"><a href="#2-1-两个对象的内存" class="headerlink" title="2.1 两个对象的内存"></a>2.1 两个对象的内存</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"加油"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student();  <span class="comment">//声明一个对象 stu1</span></span><br><span class="line">        stu1.name=<span class="string">"奔波儿霸"</span>;<span class="comment">//对象名.变量名——调用成员变量格式</span></span><br><span class="line">        stu1.age=<span class="number">99</span>;</span><br><span class="line">        System.out.println(stu1.name+<span class="string">"---"</span>+stu1.age);  <span class="comment">// 控制台打印：奔波儿霸---99</span></span><br><span class="line">        <span class="comment">// 对象名.方法名();</span></span><br><span class="line">        stu1.study();   <span class="comment">//调用了一个成员方法  // 控制台打印：加油！</span></span><br><span class="line">        Student stu2 = <span class="keyword">new</span> Student();  <span class="comment">//声明了另一个对象stu2</span></span><br><span class="line">        stu2.name=<span class="string">"霸波儿奔"</span>;</span><br><span class="line">        stu2.age=<span class="number">100</span>;</span><br><span class="line">        System.out.println(stu2.name+<span class="string">"---"</span>+stu2.age);   <span class="comment">// 控制台打印：霸波儿奔---100</span></span><br><span class="line">        stu2.study(); <span class="comment">// 再一次调用方法，该方法与stu1调用的是同一个方法，同样会打印 加油</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注：多个对象使用的是同一个字节码文件，即多个对象使用的是同一个成员方法，但是成员变量不是同一份，因为你每new一次，在堆内存中都是一份新的内存空间，他们每个空间都有各自的成员变量，所以对象的成员变量都有对应的存储空间，但是成员方法用的是同一份。</p>
-</li>
-</ul>
-<h4 id="2-2-两个引用指向同一个对象"><a href="#2-2-两个引用指向同一个对象" class="headerlink" title="2.2 两个引用指向同一个对象"></a>2.2 两个引用指向同一个对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"加油"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student();  <span class="comment">//声明一个对象 stu1 如果stu1记录的位置是001</span></span><br><span class="line">        stu1.name = <span class="string">"奔波儿灞"</span>;</span><br><span class="line">        Student stu2 = stu1;  <span class="comment">//声明另一个对象stu2=stu1，也就是把stu1记录的位置是001也给了stu2一次</span></span><br><span class="line">        <span class="comment">//这时stu1和stu2记录的是同一个位置</span></span><br><span class="line">        stu2.name = <span class="string">"霸波儿奔"</span>;</span><br><span class="line">        <span class="comment">//这时对stu2进行赋值时，就会把001位置的“奔波儿灞”改成“霸波儿奔”，原来的奔波儿灞就被覆盖掉了。</span></span><br><span class="line">        System.out.println( stu1.name+<span class="string">"---"</span>+ stu2.name); <span class="comment">//控制台就会打印：霸波儿奔---霸波儿奔</span></span><br><span class="line">         stu1=<span class="keyword">null</span>; <span class="comment">//当stu1=null是就意味着stu1与堆内存的地址切断了，stu1找不到对应的地址了,</span></span><br><span class="line">        System.out.println(stu1.name);<span class="comment">//在打印stu1时就会出现NullPointerException,当把该注释掉在打印stu2时，还会出现霸啵儿奔。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、垃圾回收"><a href="#三、垃圾回收" class="headerlink" title="三、垃圾回收"></a>三、垃圾回收</h2><p>当堆内存中，对象或者数组产生的地址，通过任何方法都找不到时，就会被判定为垃圾，垃圾会被java垃圾回收器，在空闲时候进行自动清理。</p>
-<h2 id="四、成员变量与局部变量"><a href="#四、成员变量与局部变量" class="headerlink" title="四、成员变量与局部变量"></a>四、成员变量与局部变量</h2><p>1.成员变量：看他是否在类中方法外<br>2.局部变量：方法中的变量<br>|区别|成员变量|局部变量|<br>|—|—|—|<br>|类中位置|类中方法外|方法内或者方法声明上|<br>|内存中位置|堆内存|栈内存|<br>|生命周期|随着对象的存在而存在|随着方法调用而存在|<br>|初始化值|有默认初始化值|没有默认初始化值，必须先定义，赋值才能使用|</p>
-<h2 id="五、封装"><a href="#五、封装" class="headerlink" title="五、封装"></a>五、封装</h2><h3 id="1、封装"><a href="#1、封装" class="headerlink" title="1、封装"></a>1、封装</h3><ul>
-<li>面向对象三大特点（<strong>封装、继承、多态</strong>）</li>
-<li>隐藏显示细节、仅暴露公共访问方式。</li>
-<li>封装常见的体现:<br>1、私有成员变量，提供setXxx和getXxx方法<br>2、将代码抽取到方法中,这是对代码的一种封装<br>3、将属性抽取到类当中，这是对数据的种封装</li>
-<li>封装的好处:<br>1、提高了代码的安全性<br>2、提高了代码的复用性<h4 id="1-private-关键字"><a href="#1-private-关键字" class="headerlink" title="1.private 关键字"></a>1.private 关键字</h4>:是一个权限修饰符，可用来修饰成员变量和方法，修饰后只能在本类中使用。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(name+<span class="string">"---"</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>↓</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        School han = <span class="keyword">new</span> School();</span><br><span class="line">        han.name=<span class="string">"奔波儿灞"</span>;</span><br><span class="line">        han.age =<span class="number">23</span>; <span class="comment">//由于School类里面对age变量private处理，所以在Student类里面不能访问。</span></span><br><span class="line">        han.show();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-可以在建一个方法对Student类中的方法进行审查。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> a)</span><span class="comment">// 建一个set方法对Student类中的方法进行审查。</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(a&gt;=<span class="number">0</span>&amp;&amp;a&lt;=<span class="number">150</span>)</span><br><span class="line">        &#123;age=a;&#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(<span class="string">"您输入的年龄有问题"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(name+<span class="string">"---"</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-↑<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        School han = <span class="keyword">new</span> School();</span><br><span class="line">        han.name=<span class="string">"奔波儿灞"</span>;</span><br><span class="line">       han.set(-<span class="number">23</span>);  <span class="comment">//把年龄值传递给School类中的set方法。</span></span><br><span class="line">       han.show();  <span class="comment">// 执行School类中的show方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-this-关键字"><a href="#2-this-关键字" class="headerlink" title="2.this 关键字"></a>2.this 关键字</h4>作用：</li>
-</ul>
-<p>1.<br>⑴可以调用本类中的成员变量，成员方法，解决局部变量与成员变量重名的问题。<br>⑵当局部变量(方法中的变量)与成员变量(类中方法外)重名时，想让局部变量给成员变量赋值，name=name;把=左边的name标示为成员变量，this.name = name;这样=左边的就变成了成员变量。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age = <span class="number">18</span>; <span class="comment">//成员变量(类中方法外)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> age = <span class="number">19</span>;   <span class="comment">//局部变量(方法中的变量)</span></span><br><span class="line">        System.out.println(<span class="string">"age"</span>); <span class="comment">//控制台打印19</span></span><br><span class="line">        <span class="comment">/*局部变量与成员变量重名时,java会使用就近原则，打印19，*/</span></span><br><span class="line">        System.out.println(<span class="string">"this.age"</span>);<span class="comment">//控制台打印18</span></span><br><span class="line">        <span class="comment">/*this.一下，这样成员变量的age，打印18*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.代表所在类的对象引用。<br>注意：方法被那个对象调用，this就代表那个对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">schoolName</span><span class="params">(String name)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="keyword">this</span>);<span class="comment">/*直接打印this关键字，控制台直接打印一个内存地址,schoolName这个方法之han去调用的，方法中的this就是han这个对象，打印的地址就是han这个变量的地址*/</span></span><br><span class="line">        <span class="keyword">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>↓</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        School han=<span class="keyword">new</span> School();</span><br><span class="line">        han.schoolName(<span class="string">"奔波儿灞"</span>);  <span class="comment">//han调用了schoolName这个方法 </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-构造方法"><a href="#1-构造方法" class="headerlink" title="1.构造方法"></a>1.构造方法</h3><ul>
-<li>构造，创建对象的时候所调用的方法</li>
-<li>格式：<br>1.方法名与类名完全相同<br>2.没有返回值类型，连void都没有<br>3.没有具体的返回值（不能由return带回结构数据）</li>
-<li>执行时机<br>1，创建对象时候调用，每创建一次就会执行一次构造方法<br>2，不能手动调用构造方法。</li>
-</ul>
-<h4 id="2-构造方法："><a href="#2-构造方法：" class="headerlink" title="2. 构造方法："></a>2. 构造方法：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> 类名()&#123;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">     <span class="comment">//构造方法：public 类名()&#123;&#125;</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">School</span><span class="params">()</span></span>&#123;</span><br><span class="line">       System.out.println(<span class="string">"遇事淡定脸小三分"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  ↓                              </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        School han=<span class="keyword">new</span> School();  <span class="comment">//只创建了一个对象</span></span><br><span class="line">        <span class="comment">//在此处运行的话控制台会打印：遇事淡定脸小三分</span></span><br><span class="line">        School han2=<span class="keyword">new</span> School();  <span class="comment">//又创建了一个对象</span></span><br><span class="line">         <span class="comment">//在此处运行的话控制台会又打印一遍：遇事淡定脸小三分</span></span><br><span class="line">        han.School();<span class="comment">//就不行，不能手动调用构造方法。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-构造方法的作用"><a href="#3-构造方法的作用" class="headerlink" title="3. 构造方法的作用"></a>3. 构造方法的作用</h4><p>作用：本质作用就是创建对象，但是我们也可以用于给对象的数据进行初始化。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(<span class="keyword">int</span> age)</span><span class="comment">//有了构造方法小括号中加形式参数之后，我们就可在创建对象的时候，给成员变量赋值</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Student s1 = <span class="keyword">new</span> Student(<span class="number">23</span>);</span><br><span class="line">Student s1 = <span class="keyword">new</span> Student(<span class="number">24</span>);</span><br><span class="line"><span class="comment">//有了 public Student(int age)构造方法小括号中加形式参数之后，我们就可在创建对象的时候，在构造方法的小括号里面传入实际参数，比如给了23,age接收到了23，就会给成员变量age赋值。</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-默认的无参数构造方法"><a href="#4-默认的无参数构造方法" class="headerlink" title="4.默认的无参数构造方法"></a>4.默认的无参数构造方法</h4><p>1,构造方法的创建</p>
-<ul>
-<li>注.如果一个类中没有编写任何构造方法，系统将会提供一个默认的无参数构造方法。</li>
-<li>但是如果你定义了一个构造方法，系统就不会提供一个默认的无参数构造方法了。</li>
-</ul>
-<p>2,构造方法的创载</p>
-<ul>
-<li>如果自定义了才参数的构造方法，还要使用无参数的构造方法，那就必须再写一个无参数构造方法。</li>
-</ul>
-<p>3,无论是否使用，手动写一个无参数构造方法，和带参数构造方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">School</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> String name;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(name+<span class="string">"---"</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>↓</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hanmu.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       School stu = <span class="keyword">new</span> School();</span><br><span class="line">       stu.show(); <span class="comment">//控制台会打印 null---0</span></span><br><span class="line">       <span class="comment">/* 原因：如果一个类中没有编写任何构造方法，系统将会提供一个默认的无参数构造方法。默认的无参数构造方法为public 类名()&#123;&#125;*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="构造方法案例"><a href="#构造方法案例" class="headerlink" title="构造方法案例"></a>构造方法案例</h4><p>要求：<br>1、成员变量</p>
-<ul>
-<li>用private修饰<br>2、构造方法</li>
-<li>提供一个无参数构造方法</li>
-<li>一个带多个参数的构造方法<br>3、成员方法</li>
-<li>提供每一个成员方法变量对应的setXxx()/getXxx()</li>
-<li>提供每一个现实对象信息的show()</li>
-</ul>
-<p>4.创建对象并为其成员变量赋值的两种方式</p>
-<ul>
-<li>无参数构造方法创建对象后使用setXxx()赋值</li>
-<li>使用带参数构造方法直接创建带属值得对象<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="comment">//无参数构造方法</span></span><br><span class="line">    <span class="keyword">public</span> Student</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//有参数构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> age)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name=name;</span><br><span class="line">        <span class="keyword">this</span>.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//name的setXxx()/getXxx()</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//age的setXxx()/getXxx()</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//show()</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(name+<span class="string">"---"</span>+age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestStudent</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    <span class="comment">//1.无参数构造方法创建对象后使用setXxx()赋值</span></span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student();</span><br><span class="line">        stu1.setName(<span class="string">"奔波儿灞"</span>)；</span><br><span class="line">        stu1.setAge(<span class="number">99</span>);</span><br><span class="line">        stu1.show();</span><br><span class="line">    <span class="comment">//2.使用带参数构造方法直接创建带属值得对象</span></span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student(<span class="string">"奔波儿霸"</span>,<span class="number">99</span>);</span><br><span class="line">        stu2.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<h3 id="StringBuilder-构造方法"><a href="#StringBuilder-构造方法" class="headerlink" title="StringBuilder 构造方法"></a>StringBuilder 构造方法</h3><table>
-<thead>
-<tr>
-<th>方法名</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>public StringBuilder()</td>
-<td>创建一个空白可变字符串对象，不含任何内容</td>
-</tr>
-<tr>
-<td>public StringBuilder(String str)</td>
-<td>根据字符串的内容来创建可变字符串对象</td>
-</tr>
-</tbody></table>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder sb1 = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">System.out.println(sb1);</span><br><span class="line">StringBuilder sb2 = <span class="keyword">new</span> StringBuilder(<span class="string">"abc"</span>);</span><br><span class="line">System.out.println(sb2);</span><br></pre></td></tr></table></figure>
-
-<h2 id="六、字符串"><a href="#六、字符串" class="headerlink" title="六、字符串"></a>六、字符串</h2><ul>
-<li>API ：应用程序接口</li>
-<li>java API ：是指JDK中提供各种各样功能的java类，这些类将底层的现实封装起来，我们只需要学习如何使用即可。<h3 id="1-String类"><a href="#1-String类" class="headerlink" title="1.String类"></a>1.String类</h3></li>
-<li>String类在java.lang包里，<strong>lang包</strong>是java的<strong>核心包</strong>，如果一个类在这个包里，使用时<strong>不需要导包</strong>。</li>
-<li>String类代表字符串（java程序中所用的双引号字符串都是String类的对象）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// length() 返回此字符串的长度。 </span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        String s = <span class="string">"abcd"</span>;</span><br><span class="line">        <span class="keyword">int</span> length = s.length();</span><br><span class="line">        System.out.println(length);<span class="comment">//控制台会打印：4</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//打出s.length()后光标放在他上面，(Ctrl+Alt+v)就会自动有一个值来接收它的返回值，int length = s.length();length这个量来接受它的返回值。</span></span><br></pre></td></tr></table></figure></li>
-<li>字符串是一个<strong>常量</strong>，纪录之后<strong>不能被更改</strong>。（只能是整个字符串的替换）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        String s = <span class="string">"1234"</span>;</span><br><span class="line">        System.out.println(s);  <span class="comment">//控制台会打印：1234</span></span><br><span class="line">         s = <span class="string">"abd"</span>; <span class="comment">//这一步不并不是对象内容的更改，是让s这个字符串类型的变量，记录了另一个对象。</span></span><br><span class="line">        System.out.println(s);  <span class="comment">//控制台会打印：abd</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="1-String-常见的构造方法"><a href="#1-String-常见的构造方法" class="headerlink" title="1.String 常见的构造方法"></a>1.String 常见的构造方法</h4><table>
-<thead>
-<tr>
-<th align="left">方法名</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">public String()</td>
-<td>创建一个空白的字符串对象</td>
-</tr>
-<tr>
-<td align="left">public String(char[] chs)</td>
-<td>根据<strong>字符数组</strong>内容，创建字符串对象</td>
-</tr>
-<tr>
-<td align="left">public String(String original)</td>
-<td>根据传入的<strong>字符串</strong>内容，创建字符串对象</td>
-</tr>
-<tr>
-<td align="left">String s=”abc”</td>
-<td>直接赋值给字符串创建对象，内容为abc</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h5 id="public-String"><a href="#public-String" class="headerlink" title="public String()"></a>public String()</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//public String()创建一个空白的字符串对象</span></span><br><span class="line">        String s = <span class="keyword">new</span> String();</span><br><span class="line">        System.out.println(s);  <span class="comment">//控制台会打印空白</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>String类比较特殊，打印其对象名，<strong>不会出现他的内存地址</strong>，而是她对象所纪录的<strong>真实值</strong>。(面向对象的继承和Object类)</p>
-<h5 id="public-String-char-chs"><a href="#public-String-char-chs" class="headerlink" title="public String(char[] chs)"></a>public String(char[] chs)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">      <span class="comment">//根据字符数组内容，创建字符串对象</span></span><br><span class="line">      <span class="keyword">char</span>[] chs = &#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>&#125;;</span><br><span class="line">      String st = <span class="keyword">new</span> String(chs);</span><br><span class="line">      System.out.println(st);<span class="comment">//控制台会打印abc，把字符数组中的内容穿成串。</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-创建字符串对象的区别"><a href="#2-创建字符串对象的区别" class="headerlink" title="2.创建字符串对象的区别"></a>2.创建字符串对象的区别</h4></li>
-<li><p><strong>双引号</strong>创建字符创对象储存在<strong>字符串池</strong>中，构造方法（new）创建字符串储存在<strong>栈内存</strong>中</p>
-</li>
-<li><p>字符串常量池：当使用””创建字符串对象时系统会检测字符串是否在字符串常量池中存在，<strong>若不存在：创建，如存在：不会从新创建，直接复用</strong>。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">      String s1 = <span class="string">"abc"</span>;</span><br><span class="line">      String s2 = <span class="string">"abc"</span>;</span><br><span class="line">      System.out.println(s1 == s2);<span class="comment">//控制台打印：true</span></span><br><span class="line">      <span class="keyword">char</span>[] chs = &#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>&#125;;</span><br><span class="line">      String s3 = <span class="keyword">new</span> String(chs);</span><br><span class="line">      String s4 = <span class="keyword">new</span> String(chs);</span><br><span class="line">      System.out.println(s3 == s4); <span class="comment">//控制台打印：false</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-字符串的比较"><a href="#3-字符串的比较" class="headerlink" title="3.字符串的比较"></a>3.字符串的比较</h4></li>
-<li><p>使用 == 作比较</p>
-</li>
-<li><p>基本类型：比较<strong>数据值</strong></p>
-</li>
-<li><p>引用类型：比较<strong>地址值</strong></p>
-<h5 id="equals-方法"><a href="#equals-方法" class="headerlink" title="equals()方法"></a>equals()方法</h5><p>作用：比较字符串的内容是否相同</p>
-</li>
-<li><p>字符串1.equals(字符串2);  //字符串1和字符串2作比较</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  String s1=<span class="string">"abc"</span>; </span><br><span class="line">  String s2=<span class="string">"ABC"</span>;</span><br><span class="line">  String s3=<span class="string">"abc"</span>;</span><br><span class="line">  <span class="keyword">boolean</span> equals = s1.equals(s2);  <span class="comment">//s1.equals(s2)该方法是有返回值的。可(Ctrl+Alt+V)创建一个量来接受它。</span></span><br><span class="line">  System.out.println(equals);        <span class="comment">//返回false</span></span><br><span class="line">  System.out.println(s1.equals(s2)); <span class="comment">//返回false</span></span><br><span class="line">  System.out.println(s1.equals(s3)); <span class="comment">//返回true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>可以使用<strong>equalsIgnoreCase()</strong>|方法来<strong>不区分大小写</strong>的比较</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">方法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">封装</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -2062,15 +2032,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>应用层笔记 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.域名系统DNS 许多应用软件直接使用域名系统，而有些用户只能间接的使用域名系统 互联网采用层次结构的命名树作文书记得名字，比采用分布式的域名系统DNS 若干个服务器远程完成对名字到IP地址的解析 域名服务器在专设的节点上运行，运行程序的机器叫域名服务器  域名结构 层次树状结构的命名方法 任何一个连接在互联网上的主机或路由器都有唯一一个域名 域名的结构有符号序列组成：…三级域名.二级域名.顶级">
+  <meta name="description" content="1.应用层原理 网络核心设备并不在应用层上起作用，尽在较低层上起作用，特别是在网络层及一下的层，该设计是将然健限制在端系统，从而促进大量的网络应用层程序快速的研发和部署。  2.网络应用的体系结构 客户&#x2F;服务器模式 C&#x2F;S 对等模式P2P 混合体（ C&#x2F;S + P2P）  客户&#x2F;服务器模型 客户之间不能直接通信（web两个浏览器之间不能直接通信） 服务器是在固定（固定IP）的端口上，先于客户端跑起">
 <meta property="og:type" content="article">
 <meta property="og:title" content="应用层笔记">
 <meta property="og:url" content="http://yoursite.com/2021/03/24/%E5%BA%94%E7%94%A8%E5%B1%82%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="塔台">
-<meta property="og:description" content="1.域名系统DNS 许多应用软件直接使用域名系统，而有些用户只能间接的使用域名系统 互联网采用层次结构的命名树作文书记得名字，比采用分布式的域名系统DNS 若干个服务器远程完成对名字到IP地址的解析 域名服务器在专设的节点上运行，运行程序的机器叫域名服务器  域名结构 层次树状结构的命名方法 任何一个连接在互联网上的主机或路由器都有唯一一个域名 域名的结构有符号序列组成：…三级域名.二级域名.顶级">
+<meta property="og:description" content="1.应用层原理 网络核心设备并不在应用层上起作用，尽在较低层上起作用，特别是在网络层及一下的层，该设计是将然健限制在端系统，从而促进大量的网络应用层程序快速的研发和部署。  2.网络应用的体系结构 客户&#x2F;服务器模式 C&#x2F;S 对等模式P2P 混合体（ C&#x2F;S + P2P）  客户&#x2F;服务器模型 客户之间不能直接通信（web两个浏览器之间不能直接通信） 服务器是在固定（固定IP）的端口上，先于客户端跑起">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-24T01:32:41.000Z">
-<meta property="article:modified_time" content="2021-03-31T12:31:25.142Z">
+<meta property="article:modified_time" content="2021-04-25T13:15:10.600Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -68,7 +68,7 @@
 			</ul>
 		</nav>
 		<nav>
-			文章总数 15
+			文章总数 17
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -179,7 +179,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-域名系统DNS"><a href="#1-域名系统DNS" class="headerlink" title="1.域名系统DNS"></a>1.域名系统DNS</h1><ul>
+        <h1 id="1-应用层原理"><a href="#1-应用层原理" class="headerlink" title="1.应用层原理"></a>1.应用层原理</h1><ul>
+<li>网络核心设备并不在应用层上起作用，尽在较低层上起作用，特别是在网络层及一下的层，该设计是将然健限制在端系统，从而促进大量的网络应用层程序快速的研发和部署。</li>
+</ul>
+<h1 id="2-网络应用的体系结构"><a href="#2-网络应用的体系结构" class="headerlink" title="2.网络应用的体系结构"></a>2.网络应用的体系结构</h1><ol>
+<li>客户/服务器模式 C/S</li>
+<li>对等模式P2P</li>
+<li>混合体（ C/S + P2P）</li>
+</ol>
+<h2 id="客户-服务器模型"><a href="#客户-服务器模型" class="headerlink" title="客户/服务器模型"></a>客户/服务器模型</h2><ul>
+<li>客户之间不能直接通信（web两个浏览器之间不能直接通信）</li>
+<li>服务器是在<strong>固定（固定IP）</strong>的端口上，先于客户端跑起来</li>
+<li>客户端可以运行在运动的或固定的IP上，请求资源，服务器相应资源</li>
+<li>可扩展性比较差（随着用户数量的增加，服务能力是<strong>断崖似的下降</strong>）</li>
+</ul>
+<h3 id="传输速度瓶颈"><a href="#传输速度瓶颈" class="headerlink" title="传输速度瓶颈"></a>传输速度瓶颈</h3><ol>
+<li>C/S模式<ul>
+<li>主机个数少时：主机的下载带宽为瓶颈</li>
+<li>主机个数多时：服务器的上载带宽为瓶颈</li>
+<li>下载时间随着用户数量的增加为<strong>线性增加</strong></li>
+</ul>
+</li>
+<li>P2P模式<ul>
+<li></li>
+</ul>
+</li>
+</ol>
+<h2 id="对等模式P2P"><a href="#对等模式P2P" class="headerlink" title="对等模式P2P"></a>对等模式P2P</h2><ul>
+<li>每个结点既可以是客户又可以是服务器</li>
+<li>可扩展性（结点增加，请求节点和服务节点都增加，随着用户数量的增加，服务能力<strong>缓慢的降低</strong>）</li>
+<li>管理困难</li>
+</ul>
+<ol>
+<li>P2P分类：非结构化P2P、结构化P2P(DHT)</li>
+<li></li>
+</ol>
+<h3 id="BitTorrent（bit洪流）"><a href="#BitTorrent（bit洪流）" class="headerlink" title="BitTorrent（bit洪流）"></a>BitTorrent（bit洪流）</h3><ul>
+<li>一种用于文件分发的流行P2P协议</li>
+<li></li>
+</ul>
+<h2 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h2><p>在TCP/IP协议上寻址包括但部分</p>
+<ol>
+<li>你在哪个终端设备（IP）上</li>
+<li>在终端上的TCP上还是UDP上</li>
+<li>在TCP上有好多应用进程，在那个端口上</li>
+</ol>
+<ul>
+<li><p>有端口号还区分不同的应用进程</p>
+</li>
+<li><p>标识应用进程做起码两个信息1主机IP，2应用进程的端口号</p>
+<h2 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h2></li>
+<li><p>每次发送接收消息都要传输谁收谁接和信息，为减少每次发送的信息量</p>
+</li>
+<li><p>socket是在面向连接当中本地连接的本地端口的本地标识，对方连接的对方端口的本地标识</p>
+</li>
+<li><p>使得发送消息穿过的层间最少</p>
+</li>
+<li><p>一个进程用IP地址和端口号来标识 </p>
+</li>
+</ul>
+<h1 id="3-域名系统DNS"><a href="#3-域名系统DNS" class="headerlink" title="3.域名系统DNS"></a>3.域名系统DNS</h1><ul>
+<li>实现域名到IP地址的转化</li>
 <li>许多应用软件直接使用域名系统，而有些用户只能间接的使用域名系统</li>
 <li>互联网采用<strong>层次结构</strong>的命名树作文书记得名字，比采用<strong>分布式</strong>的域名系统DNS</li>
 <li>若干个服务器远程完成对名字到IP地址的解析</li>
@@ -199,8 +259,8 @@
 <li>.org：非营利性组织</li>
 <li>.int：国际组织</li>
 </ul>
-<h2 id="迭代查询"><a href="#迭代查询" class="headerlink" title="迭代查询"></a>迭代查询</h2><h2 id="递归查询"><a href="#递归查询" class="headerlink" title="递归查询"></a>递归查询</h2><h1 id="2-文件传送协议"><a href="#2-文件传送协议" class="headerlink" title="2.文件传送协议"></a>2.文件传送协议</h1><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
-<li>允许提供交互的访问，允许客户之间文件的类型和格式，并允许</li>
+<h2 id="迭代查询"><a href="#迭代查询" class="headerlink" title="迭代查询"></a>迭代查询</h2><h2 id="递归查询"><a href="#递归查询" class="headerlink" title="递归查询"></a>递归查询</h2><h1 id="4-文件传送协议"><a href="#4-文件传送协议" class="headerlink" title="4.文件传送协议"></a>4.文件传送协议</h1><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
+<li>允许提供交互的访问，允许客户之间文件的类型和格式，并允许 </li>
 <li>主要功能是较少或消除不同操作系统之间处理不同文件的不兼容性</li>
 </ul>
 <h2 id="TFTP协议"><a href="#TFTP协议" class="headerlink" title="TFTP协议"></a>TFTP协议</h2><ul>
@@ -213,7 +273,7 @@
 <li>TELNET是一个简单的远程终端协议，也是互联网的正式协议</li>
 <li>用户用TELNET就可以通过TCP连接注册连接到另一个主机上</li>
 </ul>
-<h1 id="4-万维网WWW"><a href="#4-万维网WWW" class="headerlink" title="4.万维网WWW"></a>4.万维网WWW</h1><ul>
+<h1 id="5-万维网WWW"><a href="#5-万维网WWW" class="headerlink" title="5.万维网WWW"></a>5.万维网WWW</h1><ul>
 <li>万维网并不是一种网络，而是一种大规模、联机式的<strong>信息储存方式</strong>。</li>
 <li>万维网用连接的方法从一个站访问另一个站</li>
 <li>以<strong>客户-服务器</strong>的方式工作</li>
@@ -224,13 +284,129 @@
 </li>
 <li>页面：客户程序主窗口上显示的万维网文档</li>
 </ul>
-<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ul>
-<li><strong>万维网客户端程序</strong>与<strong>万维网服务器程序</strong>之间进行的交互所使用的协议<ul>
-<li>HTTP协议是一个应用层协议，使用T<strong>CP连接</strong>进行可靠传输</li>
+<h1 id="6-HTTP协议"><a href="#6-HTTP协议" class="headerlink" title="6.HTTP协议"></a>6.HTTP协议</h1><ul>
+<li><strong>万维网客户端程序</strong>与<strong>万维网服务器程序</strong>之间进行的交互所使用的协议（HTTP是web的核心）<ol>
+<li>HTTP定义了web客户向web服务器请求web网页的方式 </li>
+</ol>
+</li>
+<li>HTTP协议是一个应用层协议，使用<strong>TCP连接</strong>进行可靠传输</li>
+<li>无状态的协议</li>
+</ul>
+<h2 id="URL格式"><a href="#URL格式" class="headerlink" title="URL格式"></a>URL格式</h2><ul>
+<li>协议名://用户名:口令+主机名+路径名+端口</li>
+<li>Port://user:<a href="mailto:pew@www.someSchool.edu">pew@www.someSchool.edu</a>/someDept/pic.gif:prot<ul>
+<li>Port:协议名</li>
+<li>user:pew 用户名:口令</li>
+<li><a href="http://www.someSchool.edu" target="_blank" rel="noopener">www.someSchool.edu</a>  主机名</li>
+<li>someDept/pic.gif  路径名</li>
+<li>prot 端口</li>
 </ul>
 </li>
 </ul>
-<h1 id="5-电子邮件"><a href="#5-电子邮件" class="headerlink" title="5.电子邮件"></a>5.电子邮件</h1><h1 id="6-动态主机配置协议DHCP"><a href="#6-动态主机配置协议DHCP" class="headerlink" title="6.动态主机配置协议DHCP"></a>6.动态主机配置协议DHCP</h1><h1 id="简单网络管理协议SNMP"><a href="#简单网络管理协议SNMP" class="headerlink" title="简单网络管理协议SNMP"></a>简单网络管理协议SNMP</h1><h1 id="应用进程跨越网络的通信"><a href="#应用进程跨越网络的通信" class="headerlink" title="应用进程跨越网络的通信"></a>应用进程跨越网络的通信</h1><h1 id="P2P"><a href="#P2P" class="headerlink" title="P2P"></a>P2P</h1>
+<h2 id="持续连接与非持续连接"><a href="#持续连接与非持续连接" class="headerlink" title="持续连接与非持续连接"></a>持续连接与非持续连接</h2><ol>
+<li>非持续连接：每一个请求响应都经一个单股的TCP连接发送请求。<ul>
+<li>响应时间为两个RTT</li>
+</ul>
+</li>
+<li>持续连接：请求响应经相同的TCP连接发送请求</li>
+</ol>
+<h3 id="HTTP的交付过程"><a href="#HTTP的交付过程" class="headerlink" title="HTTP的交付过程"></a>HTTP的交付过程</h3><ol>
+<li>1.0版本（<strong>非持续</strong>）：客户向服务器发送<strong>TCP连接建立请求</strong>，服务器传回<strong>连接确认</strong>，客户发送<strong>HTTP连接请求</strong>，服务器传回<strong>连接确认</strong>，服务器接着传回<strong>相应报文</strong>，最后服务器发出<strong>连接拆除请求</strong>，客户传回<strong>连接拆除的确认</strong>。</li>
+<li>2.0版本（<strong>持续</strong>）：客户向服务器发送TCP连接建立请求，服务器传回连接确认，客户发送HTTP连接请求，服务器传回连接确认，服务器接着传回相应报文，<strong>最后连接不关闭</strong>（持久性连接），如果还有其他的请求会在这个连接上继续发送</li>
+</ol>
+<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><ul>
+<li>HTTP协议是无状态的协议，cookies可以记录一下HTTP的状态，下次发在使用HTTP的时候可以调用使用，。</li>
+<li>cookie允许站点对用户进行跟踪，（可以限制用户的访问，把内容与用户身份联系起来）</li>
+</ul>
+<h2 id="HTTP报文格式"><a href="#HTTP报文格式" class="headerlink" title="HTTP报文格式"></a>HTTP报文格式</h2><h2 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h2><ol>
+<li>HTTP请求报文第一行为请求行后续的首部行<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET / somedir/page.htme THHP/<span class="number">1.1</span> <span class="comment">//请求行三个字段：方法字段/URL字段/HTTP版本字段</span></span><br><span class="line"><span class="comment">/*余下都为首部行*/</span></span><br><span class="line">Host:www.someschool.edu  <span class="comment">// 指明对象所在主机</span></span><br><span class="line">connection： close       <span class="comment">//告诉服务器不要使用持续连接       </span></span><br><span class="line">User-agent: Mozilla/<span class="number">5.0</span>  <span class="comment">//用于指明用户代理（浏览器类型），该浏览器型为Mozilla/5.0</span></span><br><span class="line">Acceptplanguage:fr       <span class="comment">//用户想得到的语言版本（fr表示法语）</span></span><br></pre></td></tr></table></figure></li>
+<li>请求行有三个字段：方法字段，URL字段，HTTP版本字段<ol>
+<li>方法字段例如 GET（实体为空） POST（使用该实体体） HEAD 等</li>
+</ol>
+</li>
+</ol>
+<h2 id="HTTP响应报文"><a href="#HTTP响应报文" class="headerlink" title="HTTP响应报文"></a>HTTP响应报文</h2><ul>
+<li>响应报文分为三部分：1个初始状态行（三部分：协议版本字段，状态码，相应的状态信息），6个首部行，实体体<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line">Connection :close     <span class="comment">//发送完报文后将关闭TCP连接</span></span><br><span class="line">Date: Tue, <span class="number">18</span> Aug <span class="number">2015</span> <span class="number">15</span>:<span class="number">44</span>:<span class="number">04</span> GMT     <span class="comment">//Date表示服务器产生并发送报文的日期和时间</span></span><br><span class="line">Server :Apache/<span class="number">2.2</span><span class="number">.3</span> (Centos)     <span class="comment">//该报文是由一台Apache web服务器产生。类似于User-agent</span></span><br><span class="line">Last-Modified: Tue, <span class="number">18</span> Aug <span class="number">2015</span> <span class="number">15</span>:<span class="number">11</span>:<span class="number">03</span> GMT    <span class="comment">//对象最后创建或者修改的时间</span></span><br><span class="line">Content-Length:<span class="number">6821</span>     <span class="comment">//被发送对象的字节数</span></span><br><span class="line">Content-Type:TECT/html      实体体中的对象是HTML文本。</span><br><span class="line">&#123;  date   date   date  .....&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Date:表示时间为<strong>服务器发送报文的时间</strong>，而不是对象创建或者修改的时间。</li>
+<li>Last-Modified:对即可能在本地客户有可能在网络缓存服务器上的对象缓存非常重要。</li>
+<li></li>
+</ul>
+<h1 id="7-Emile"><a href="#7-Emile" class="headerlink" title="7.Emile"></a>7.Emile</h1><ul>
+<li>电子邮件系统主要组成部分：用户代理，邮件服务器（核心），简单邮件传输协议</li>
+</ul>
+<h2 id="SMTP"><a href="#SMTP" class="headerlink" title="SMTP"></a>SMTP</h2><ul>
+<li>SMTP是因特网电子邮件的主要<strong>应用层协议</strong>和<strong>核心</strong></li>
+<li>依靠TCP可靠的数据连接</li>
+<li>组成部分：1.客户端（运行在发送方邮件服务器上）2.服务器端（运行在接收方邮件服务器上）</li>
+<li>SMTP一般不使用中间的服务器发送文件，</li>
+<li>与服务器的25号端口建立TCP连接</li>
+</ul>
+<h3 id="SMTP连接的建立"><a href="#SMTP连接的建立" class="headerlink" title="SMTP连接的建立"></a>SMTP连接的建立</h3><ol>
+<li>客户SMTP与服务器SMTP建立TCP连接（在服务器25号端口、若服务器关机，客户会稍后再次尝试）</li>
+<li>建立连接后，客户服务器捂手（通知发送地址）、</li>
+<li>客户发送报文</li>
+<li>如果还有报文要发送，重复上述步骤</li>
+<li>无报文传输后，关闭TCP连接</li>
+</ol>
+<h2 id="邮件报文格式"><a href="#邮件报文格式" class="headerlink" title="邮件报文格式"></a>邮件报文格式</h2><ul>
+<li>每一个首部必须包含一个（Form：首部行）和一个（To：首部行）</li>
+<li>也许还包含一个（Subject：首部行），及其他首行。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">From: alice@crepes.fr</span><br><span class="line">To:bob@hamburger.edu</span><br><span class="line">Subject:searching <span class="keyword">for</span> the meaning fo life</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="POP3"><a href="#POP3" class="headerlink" title="POP3"></a>POP3</h2><ul>
+<li>极其简单的邮件访问协议</li>
+<li>作用将邮件从<strong>接收方服务器</strong>传送到<strong>接收方的用户代理(浏览器、搜索引擎等)</strong><h3 id="POP3工作过程分3个阶段"><a href="#POP3工作过程分3个阶段" class="headerlink" title="POP3工作过程分3个阶段"></a>POP3工作过程分3个阶段</h3></li>
+</ul>
+<ol>
+<li>特许阶段：用户代理发送用户名口令，以鉴别用户。</li>
+<li>事务处理：用户代理取回报文，同时对报文做删除标记的标记，获得统计信息</li>
+<li>更新阶段：客户发出quite命令后，结束POP3回话，邮件服务器会删除第二阶段被标记删除的报文。</li>
+</ol>
+<h2 id="IMAP"><a href="#IMAP" class="headerlink" title="IMAP"></a>IMAP</h2><ul>
+<li>是一个邮件访问协议，比POP3跟复杂，更有特色。</li>
+<li></li>
+</ul>
+<h1 id="SMTP与HTTP对比"><a href="#SMTP与HTTP对比" class="headerlink" title="SMTP与HTTP对比"></a>SMTP与HTTP对比</h1><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">传输对象</th>
+<th align="center">协议模式</th>
+<th align="center">报文格式</th>
+<th align="center">处理一个文件包含不同类型的数据（文字、图片）</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">TTTP</td>
+<td align="center">web服务器向web客户</td>
+<td align="center">拉协议（用户用HTTP从服务器拉取信息）</td>
+<td align="center">不限制数据形式</td>
+<td align="center">把每个对象封装到他自己的报文当中</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">SMTP</td>
+<td align="center">邮件服务器向邮件服务器</td>
+<td align="center">推协议（邮件服务器把信息推给另一个邮件服务器）</td>
+<td align="center">必须7比特ASCII码</td>
+<td align="center">把所有报文放到一个报文当中</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="视频流和内容分发"><a href="#视频流和内容分发" class="headerlink" title="视频流和内容分发"></a>视频流和内容分发</h1><h2 id="视频流"><a href="#视频流" class="headerlink" title="视频流"></a>视频流</h2><ul>
+<li>用户观看互联网上的视频，这些视频都是提前录制好放置在服务器上，用户按需向服务器发出请求。</li>
+<li>视频可以被压缩，，如今压缩算法可以把一个视频压缩成任何比特率，比特率越高，画质越好。</li>
+</ul>
+<ol>
+<li>对流视频影响最大的是平均端到端的<strong>吞吐量</strong></li>
+<li>网络必须为流视频提供平均吞吐量，这个流式应用至少与压缩视频的比特率一样大</li>
+</ol>
+<h3 id="HTTP流"><a href="#HTTP流" class="headerlink" title="HTTP流"></a>HTTP流</h3><ol>
+<li>HTTP流中，视频只是储存在HTTP服务器中作为一个普通文件，每个文件有一个特定的URL(同一资源定位系统)</li>
+</ol>
+<h3 id="DASH"><a href="#DASH" class="headerlink" title="DASH"></a>DASH</h3><h2 id="内容分发"><a href="#内容分发" class="headerlink" title="内容分发"></a>内容分发</h2><h1 id="7-动态主机配置协议DHCP"><a href="#7-动态主机配置协议DHCP" class="headerlink" title="7.动态主机配置协议DHCP"></a>7.动态主机配置协议DHCP</h1><h1 id="简单网络管理协议SNMP"><a href="#简单网络管理协议SNMP" class="headerlink" title="简单网络管理协议SNMP"></a>简单网络管理协议SNMP</h1><h1 id="应用进程跨越网络的通信"><a href="#应用进程跨越网络的通信" class="headerlink" title="应用进程跨越网络的通信"></a>应用进程跨越网络的通信</h1>
       
 
       
@@ -371,7 +547,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-域名系统DNS"><span class="toc-number">1.</span> <span class="toc-text">1.域名系统DNS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#域名结构"><span class="toc-number">1.1.</span> <span class="toc-text">域名结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#顶级域名TLD"><span class="toc-number">1.1.1.</span> <span class="toc-text">顶级域名TLD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#通用的顶级域名gTLD"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">通用的顶级域名gTLD</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迭代查询"><span class="toc-number">1.2.</span> <span class="toc-text">迭代查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归查询"><span class="toc-number">1.3.</span> <span class="toc-text">递归查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-文件传送协议"><span class="toc-number">2.</span> <span class="toc-text">2.文件传送协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#FTP"><span class="toc-number">2.1.</span> <span class="toc-text">FTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TFTP协议"><span class="toc-number">2.2.</span> <span class="toc-text">TFTP协议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-远程终端协议TELNET"><span class="toc-number">3.</span> <span class="toc-text">3.远程终端协议TELNET</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-万维网WWW"><span class="toc-number">4.</span> <span class="toc-text">4.万维网WWW</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP协议"><span class="toc-number">4.1.</span> <span class="toc-text">HTTP协议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-电子邮件"><span class="toc-number">5.</span> <span class="toc-text">5.电子邮件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-动态主机配置协议DHCP"><span class="toc-number">6.</span> <span class="toc-text">6.动态主机配置协议DHCP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简单网络管理协议SNMP"><span class="toc-number">7.</span> <span class="toc-text">简单网络管理协议SNMP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#应用进程跨越网络的通信"><span class="toc-number">8.</span> <span class="toc-text">应用进程跨越网络的通信</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P2P"><span class="toc-number">9.</span> <span class="toc-text">P2P</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-应用层原理"><span class="toc-number">1.</span> <span class="toc-text">1.应用层原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-网络应用的体系结构"><span class="toc-number">2.</span> <span class="toc-text">2.网络应用的体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#客户-服务器模型"><span class="toc-number">2.1.</span> <span class="toc-text">客户&#x2F;服务器模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传输速度瓶颈"><span class="toc-number">2.1.1.</span> <span class="toc-text">传输速度瓶颈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对等模式P2P"><span class="toc-number">2.2.</span> <span class="toc-text">对等模式P2P</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BitTorrent（bit洪流）"><span class="toc-number">2.2.1.</span> <span class="toc-text">BitTorrent（bit洪流）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#端口号"><span class="toc-number">2.3.</span> <span class="toc-text">端口号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socket"><span class="toc-number">2.4.</span> <span class="toc-text">socket</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-域名系统DNS"><span class="toc-number">3.</span> <span class="toc-text">3.域名系统DNS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#域名结构"><span class="toc-number">3.1.</span> <span class="toc-text">域名结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#顶级域名TLD"><span class="toc-number">3.1.1.</span> <span class="toc-text">顶级域名TLD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#通用的顶级域名gTLD"><span class="toc-number">3.1.1.1.</span> <span class="toc-text">通用的顶级域名gTLD</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迭代查询"><span class="toc-number">3.2.</span> <span class="toc-text">迭代查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归查询"><span class="toc-number">3.3.</span> <span class="toc-text">递归查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-文件传送协议"><span class="toc-number">4.</span> <span class="toc-text">4.文件传送协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#FTP"><span class="toc-number">4.1.</span> <span class="toc-text">FTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TFTP协议"><span class="toc-number">4.2.</span> <span class="toc-text">TFTP协议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-远程终端协议TELNET"><span class="toc-number">5.</span> <span class="toc-text">3.远程终端协议TELNET</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-万维网WWW"><span class="toc-number">6.</span> <span class="toc-text">5.万维网WWW</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-HTTP协议"><span class="toc-number">7.</span> <span class="toc-text">6.HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#URL格式"><span class="toc-number">7.1.</span> <span class="toc-text">URL格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持续连接与非持续连接"><span class="toc-number">7.2.</span> <span class="toc-text">持续连接与非持续连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP的交付过程"><span class="toc-number">7.2.1.</span> <span class="toc-text">HTTP的交付过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie"><span class="toc-number">7.3.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP报文格式"><span class="toc-number">7.4.</span> <span class="toc-text">HTTP报文格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP请求报文"><span class="toc-number">7.5.</span> <span class="toc-text">HTTP请求报文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP响应报文"><span class="toc-number">7.6.</span> <span class="toc-text">HTTP响应报文</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Emile"><span class="toc-number">8.</span> <span class="toc-text">7.Emile</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SMTP"><span class="toc-number">8.1.</span> <span class="toc-text">SMTP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SMTP连接的建立"><span class="toc-number">8.1.1.</span> <span class="toc-text">SMTP连接的建立</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮件报文格式"><span class="toc-number">8.2.</span> <span class="toc-text">邮件报文格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POP3"><span class="toc-number">8.3.</span> <span class="toc-text">POP3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#POP3工作过程分3个阶段"><span class="toc-number">8.3.1.</span> <span class="toc-text">POP3工作过程分3个阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IMAP"><span class="toc-number">8.4.</span> <span class="toc-text">IMAP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SMTP与HTTP对比"><span class="toc-number">9.</span> <span class="toc-text">SMTP与HTTP对比</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#视频流和内容分发"><span class="toc-number">10.</span> <span class="toc-text">视频流和内容分发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#视频流"><span class="toc-number">10.1.</span> <span class="toc-text">视频流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP流"><span class="toc-number">10.1.1.</span> <span class="toc-text">HTTP流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DASH"><span class="toc-number">10.1.2.</span> <span class="toc-text">DASH</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内容分发"><span class="toc-number">10.2.</span> <span class="toc-text">内容分发</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-动态主机配置协议DHCP"><span class="toc-number">11.</span> <span class="toc-text">7.动态主机配置协议DHCP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简单网络管理协议SNMP"><span class="toc-number">12.</span> <span class="toc-text">简单网络管理协议SNMP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#应用进程跨越网络的通信"><span class="toc-number">13.</span> <span class="toc-text">应用进程跨越网络的通信</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -487,15 +663,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">

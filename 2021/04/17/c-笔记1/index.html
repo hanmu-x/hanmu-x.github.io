@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 塔台</title>
+  <title>c++笔记1 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="塔台">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="1.基础main函数 C++的标准主函数形式 1234int main()&amp;#123;&amp;#125; C语言标准主函数 1234int main(void)&amp;#123;&amp;#125;  c++标准 12# include &lt;iostream&gt;using namespace std;      2.常量作用：记录不可更改的数据  #define 宏定义：123456789   #define">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++笔记1">
+<meta property="og:url" content="http://yoursite.com/2021/04/17/c-%E7%AC%94%E8%AE%B01/index.html">
 <meta property="og:site_name" content="塔台">
+<meta property="og:description" content="1.基础main函数 C++的标准主函数形式 1234int main()&amp;#123;&amp;#125; C语言标准主函数 1234int main(void)&amp;#123;&amp;#125;  c++标准 12# include &lt;iostream&gt;using namespace std;      2.常量作用：记录不可更改的数据  #define 宏定义：123456789   #define">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-17T07:54:19.000Z">
+<meta property="article:modified_time" content="2021-04-25T13:23:13.857Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -155,305 +159,246 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-c-笔记1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      c++笔记1
+    </h1>
+  
+
+        
+        <a href="/2021/04/17/c-%E7%AC%94%E8%AE%B01/" class="archive-article-date">
+  	<time datetime="2021-04-17T07:54:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-17</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><h2 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h2><ul>
+<li><p>C++的标准主函数形式</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>C语言标准主函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>c++标准</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h1 id="2-常量"><a href="#2-常量" class="headerlink" title="2.常量"></a>2.常量</h1><p>作用：记录不可更改的数据</p>
+<ol>
+<li>#define 宏定义：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> 常量名 常量值</span></span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> week 7</span></span><br><span class="line">   ``` </span><br><span class="line"><span class="number">2.</span> <span class="keyword">const</span> 修饰的变量</span><br><span class="line">+ <span class="keyword">const</span>作用是保护被定义的值不被改变。</span><br><span class="line">   ```cpp</span><br><span class="line">   <span class="keyword">const</span> 数据类型 常量名=常量值</span><br><span class="line">   <span class="keyword">const</span> <span class="keyword">int</span> week=<span class="number">7</span>; <span class="comment">// 是week的值一直为7</span></span><br><span class="line">   week=<span class="number">2</span>;  <span class="comment">//就会报错</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="3-关键字"><a href="#3-关键字" class="headerlink" title="3.关键字"></a>3.关键字</h1><h2 id="sizeof关键子"><a href="#sizeof关键子" class="headerlink" title="sizeof关键子"></a>sizeof关键子</h2><ul>
+<li>作用：统计数据类型所占内存大小</li>
+<li>语法：sizeof(数据类型或者变量名)<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"long型所占内存大小："</span>&lt;&lt; <span class="keyword">sizeof</span>(<span class="keyword">long</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="endl"><a href="#endl" class="headerlink" title="endl"></a>endl</h2></li>
+<li>作用：换行</li>
+<li>endl：屏幕光标移到下一行开头，重启一行，<strong>刷新缓冲区</strong></li>
+<li>/n：重启一行</li>
+</ul>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><ul>
+<li>C++ 有两种风格的字符串</li>
+<li>字符串都要放在””中</li>
+</ul>
+<ol>
+<li>C语言风格的字符串<br>char 变量名[]=”字符串值”</li>
+<li>C++ 风格的字符串<br>string 变量名=”字符串” <ul>
+<li>要用string型的字符串要添加一个#include&lt;<string>&gt;的头文件</li>
+</ul>
+</li>
+</ol>
+<h1 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4.输入输出"></a>4.输入输出</h1><h2 id="输入cin"><a href="#输入cin" class="headerlink" title="输入cin"></a>输入cin</h2><p>语法：cin &gt;&gt; 变量名</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line"></span><br><span class="line">floar f;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;f;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> ch;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt;ch;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> str=<span class="string">"hello"</span>;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; str;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> c;</span><br><span class="line"><span class="keyword">double</span> d;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; c &gt;&gt; d; <span class="comment">// 连续命名</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当给布尔类型赋值<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; flag;</span><br><span class="line">只要赋值不是<span class="number">0</span>，<span class="keyword">bool</span>类型的值都是真</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="输出cout"><a href="#输出cout" class="headerlink" title="输出cout"></a>输出cout</h2><ul>
+<li>语法 cout &lt;&lt;””;</li>
+<li>连续输出 cout &lt;&lt;内容&lt;&lt;内容&lt;&lt;内容； <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span> &lt;&lt;<span class="string">"hello word"</span>;   <span class="comment">//输出字符串</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="number">12.12</span>;         <span class="comment">//输出数字</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">'d'</span>;             <span class="comment">//输出字符</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"hello word"</span>&lt;&lt;<span class="number">12.12</span> &lt;&lt; <span class="string">'d'</span>; <span class="comment">// 连续输出</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="5-命名空间-namespace"><a href="#5-命名空间-namespace" class="headerlink" title="5.命名空间 namespace"></a>5.命名空间 namespace</h1><ul>
+<li>作用： 区别相同的变量和函数</li>
+<li>放在main函数外</li>
+<li>定义格式：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> 空间名</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">// 最后这里有无;都可以</span></span><br></pre></td></tr></table></figure></li>
+<li>调用格式<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">空间名::空间中的函数(变量)名；</span><br></pre></td></tr></table></figure>
+当一个程序中有两个相同的变量、函数或其他的什么，可以定义两个不同的命名空间，不两个相同的变量分别放在两个命名空间里</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">namespace</span> pace1  </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">namespace</span> pace2  <span class="comment">//定义</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">pace1::sort();  <span class="comment">//调用</span></span><br><span class="line">pace2::sort();  <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
+<p>6.结构体</p>
+<ul>
+<li>与C语言结构体大致相同，细节上有些区别</li>
+</ul>
+<ol>
+<li>声明变量可以不用struct关键字<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>  //  定义一个<span class="title">node</span>类型的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  node a;         <span class="comment">// 定义了一个node类型结构体，结构体名字为a.</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">node</span> <span class="title">a</span>;</span>  <span class="comment">//C语言需要用在node前要加一个struct关键字</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>C++可以再结构体里面放函数，C不可以，不过C可以放函数地址</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>  //  定义一个<span class="title">node</span>类型的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">int</span> m;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span>   <span class="comment">//C++允许在结构体里面放函数</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"hahaha"</span>;</span><br><span class="line">  &#125;     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="new和delete"><a href="#new和delete" class="headerlink" title="new和delete"></a>new和delete</h1>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-C语言笔记">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">C语言笔记</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/04/17/c-%E7%AC%94%E8%AE%B01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/" class="archive-article-date">
-  	<time datetime="2020-09-06T06:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/15/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言复习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/06/java%E7%AC%94%E8%AE%B0%E4%B8%89/">java语法笔记（三）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">方法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">封装</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基础"><span class="toc-number">1.</span> <span class="toc-text">1.基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#main函数"><span class="toc-number">1.1.</span> <span class="toc-text">main函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-常量"><span class="toc-number">2.</span> <span class="toc-text">2.常量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-关键字"><span class="toc-number">3.</span> <span class="toc-text">3.关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sizeof关键子"><span class="toc-number">3.1.</span> <span class="toc-text">sizeof关键子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#endl"><span class="toc-number">3.2.</span> <span class="toc-text">endl</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符串"><span class="toc-number">4.</span> <span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-输入输出"><span class="toc-number">5.</span> <span class="toc-text">4.输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入cin"><span class="toc-number">5.1.</span> <span class="toc-text">输入cin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出cout"><span class="toc-number">5.2.</span> <span class="toc-text">输出cout</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-命名空间-namespace"><span class="toc-number">6.</span> <span class="toc-text">5.命名空间 namespace</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new和delete"><span class="toc-number">7.</span> <span class="toc-text">new和delete</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/07/java%E7%AC%94%E8%AE%B0%E4%BA%8C/" class="archive-article-date">
-  	<time datetime="2020-08-07T08:11:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/07/java%E7%AC%94%E8%AE%B0%E4%BA%8C/">java语法笔记（二）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">键盘录入</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">输出字符串</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java命名</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">逻辑</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">位移</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/" class="archive-article-date">
-  	<time datetime="2020-08-02T05:54:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/02/java%E7%AC%94%E8%AE%B0%E4%B8%80/">java语法笔记（一）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/02/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2020-08-02T04:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/02/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">IDEA常用快捷键</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">快捷键</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/26/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-07-26T01:34:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/26/C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0/">C语言输入输出函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">输入输出</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/21/DOS/" class="archive-article-date">
-  	<time datetime="2020-07-21T06:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/21/DOS/">DOS常用命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">dos</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -477,8 +422,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

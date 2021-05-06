@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>传输层笔记 | 塔台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 传输层协议概述传输层基本概念 传输层位于通信部分的最高层，也是用户功能的最底层 只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。  传输层的作用 传输层的两个主要协议 用户数据包协议UDP  传输控制协议TCP   UDP 一种无连接协议 提供无连接服务 在传送数据之前不需要家里连接 传送的数据单位协议是UDP报文或用户数据包 对方收到UDP报文后不需要给出">
+  <meta name="description" content="1. 传输层概述1.1 传输层基本概念 传输层位于通信部分的最高层，也是用户功能的最底层 只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。 传输层协议运行在端系统上 为运行在不同主机上的应用进程之间提供逻辑通信（）  传输成的关键功能 将网络层在两个端系统之间的交付服务扩展到运行在两个不同端系统上的应用层进程之间的交互服务传输成的面对基础问题 两个实体怎样才能在一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="传输层笔记">
 <meta property="og:url" content="http://yoursite.com/2021/03/19/%E4%BC%A0%E8%BE%93%E5%B1%82%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="塔台">
-<meta property="og:description" content="1. 传输层协议概述传输层基本概念 传输层位于通信部分的最高层，也是用户功能的最底层 只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。  传输层的作用 传输层的两个主要协议 用户数据包协议UDP  传输控制协议TCP   UDP 一种无连接协议 提供无连接服务 在传送数据之前不需要家里连接 传送的数据单位协议是UDP报文或用户数据包 对方收到UDP报文后不需要给出">
+<meta property="og:description" content="1. 传输层概述1.1 传输层基本概念 传输层位于通信部分的最高层，也是用户功能的最底层 只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。 传输层协议运行在端系统上 为运行在不同主机上的应用进程之间提供逻辑通信（）  传输成的关键功能 将网络层在两个端系统之间的交付服务扩展到运行在两个不同端系统上的应用层进程之间的交互服务传输成的面对基础问题 两个实体怎样才能在一">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-19T04:12:44.000Z">
-<meta property="article:modified_time" content="2021-04-06T13:38:47.215Z">
+<meta property="article:modified_time" content="2021-05-05T13:19:40.948Z">
 <meta property="article:author" content="韩牧">
 <meta name="twitter:card" content="summary">
   
@@ -179,18 +179,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-传输层协议概述"><a href="#1-传输层协议概述" class="headerlink" title="1. 传输层协议概述"></a>1. 传输层协议概述</h1><h2 id="传输层基本概念"><a href="#传输层基本概念" class="headerlink" title="传输层基本概念"></a>传输层基本概念</h2><ul>
+        <h1 id="1-传输层概述"><a href="#1-传输层概述" class="headerlink" title="1. 传输层概述"></a>1. 传输层概述</h1><h2 id="1-1-传输层基本概念"><a href="#1-1-传输层基本概念" class="headerlink" title="1.1 传输层基本概念"></a>1.1 传输层基本概念</h2><ul>
 <li>传输层位于通信部分的最高层，也是用户功能的最底层</li>
 <li>只有位于网络边缘的主机的协议栈才有运输层，位于网络核心的路由器在转发时只用下三层。</li>
+<li>传输层协议运行在端系统上</li>
+<li>为运行在不同主机上的应用进程之间提供逻辑通信（）</li>
 </ul>
-<h2 id="传输层的作用"><a href="#传输层的作用" class="headerlink" title="传输层的作用"></a>传输层的作用</h2><ul>
-<li><h2 id="传输层的两个主要协议"><a href="#传输层的两个主要协议" class="headerlink" title="传输层的两个主要协议"></a>传输层的两个主要协议</h2></li>
-<li><p>用户数据包协议UDP</p>
+<h3 id="传输成的关键功能"><a href="#传输成的关键功能" class="headerlink" title="传输成的关键功能"></a>传输成的关键功能</h3><ol>
+<li>将网络层在<strong>两个端系统之间</strong>的交付服务扩展到运行在<strong>两个不同端系统上的应用层进程之间</strong>的交互服务<h3 id="传输成的面对基础问题"><a href="#传输成的面对基础问题" class="headerlink" title="传输成的面对基础问题"></a>传输成的面对基础问题</h3><ol>
+<li>两个实体怎样才能在一种会丢失的媒体上可靠地通信</li>
+<li>如何控制传输层实体的传输速率以避免网络拥塞，或从拥塞中恢复回来。 </li>
+</ol>
 </li>
-<li><p>传输控制协议TCP</p>
+</ol>
+<h2 id="1-2-传输层的作用"><a href="#1-2-传输层的作用" class="headerlink" title="1.2 传输层的作用"></a>1.2 传输层的作用</h2><ul>
+<li>向上层提供服务：以报文为单位远程的进程与进程之间逻辑通信（不是主机之间的，而是不同主机上的应用进程的） <ul>
+<li>通过逻辑通信使运行在不同进程之间的主机，通过<strong>很多的路由器及各种类型的链路</strong>连接在一起</li>
+</ul>
+</li>
+<li>将报文(发送应用进程的数据)转换为报文段(传输层分组)</li>
+<li><ul>
+<li>运输层：为运行在不同主机上的进程之间提供逻辑通信</li>
+<li>网络层：为主机之间提供逻辑通信</li>
+</ul>
 </li>
 </ul>
-<h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><ul>
+<h2 id="1-3-传输层不同概念的区分"><a href="#1-3-传输层不同概念的区分" class="headerlink" title="1.3 传输层不同概念的区分"></a>1.3 传输层不同概念的区分</h2><ul>
+<li>应用层报文 = 信封上的字符</li>
+<li>进程 = 堂兄弟姐妹</li>
+<li>主机(端系统) = 家庭</li>
+<li>运输层协议 = Ann和Bii</li>
+<li>网络层协议 = 邮政服务</li>
+</ul>
+<h2 id="传输层的两个主要协议"><a href="#传输层的两个主要协议" class="headerlink" title="传输层的两个主要协议"></a>传输层的两个主要协议</h2><ul>
+<li>用户数据包协议UDP</li>
+<li>传输控制协议TCP</li>
+<li>传输层协议是在端系统中而不是在路由器中实现。</li>
+</ul>
+<ol>
+<li>在端系统中，传输层协议将来自应用进程的报文移动到网络边缘(网络层)反过来也一样</li>
+<li>中间路由器及不处理也不识别运输层加在网络层报文上的任何信息。</li>
+<li>传输层协议还有很多，每种此而已为应用程序提供不同服务。</li>
+<li>传输层协议常常受限于底层网络层协议服务模型</li>
+</ol>
+<h2 id="UDP与TCP概述"><a href="#UDP与TCP概述" class="headerlink" title="UDP与TCP概述"></a>UDP与TCP概述</h2><ul>
+<li>UDP与TCP最基本的责任是将<strong>两个端系统间IP</strong>的[交付服务]扩展到运行在端系统上的<strong>两个进程</strong>之间的[交付服务]<h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3></li>
 <li>一种无连接协议<ul>
 <li>提供无连接服务</li>
 <li>在传送数据之前不需要家里连接</li>
@@ -208,7 +241,11 @@
 </ul>
 </li>
 </ul>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
+<h4 id="TCP提供的两种服务"><a href="#TCP提供的两种服务" class="headerlink" title="TCP提供的两种服务"></a>TCP提供的两种服务</h4><ol>
+<li>可靠传输服务<br>通过流量控制、序号、确认、定时器，使数据正确的、按序的发送</li>
+<li>拥塞控制</li>
+</ol>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><ul>
 <li><p>传输层UDP用户数据报与网络层IP数据报有很大区别</p>
 <ul>
 <li>IP数据报要经过互联网中很多路由器的转发</li>
@@ -226,9 +263,42 @@
 </ul>
 </li>
 </ul>
-<h3 id="服务器端口号"><a href="#服务器端口号" class="headerlink" title="服务器端口号"></a>服务器端口号</h3><h3 id="客户端口号"><a href="#客户端口号" class="headerlink" title="客户端口号"></a>客户端口号</h3><h1 id="2-用户数据包协议UDP"><a href="#2-用户数据包协议UDP" class="headerlink" title="2. 用户数据包协议UDP"></a>2. 用户数据包协议UDP</h1><h2 id="UDP-概述"><a href="#UDP-概述" class="headerlink" title="UDP 概述"></a>UDP 概述</h2><ul>
+<h2 id="服务器端口号"><a href="#服务器端口号" class="headerlink" title="服务器端口号"></a>服务器端口号</h2><h2 id="客户端口号"><a href="#客户端口号" class="headerlink" title="客户端口号"></a>客户端口号</h2><h1 id="2-多路复用与多路分解"><a href="#2-多路复用与多路分解" class="headerlink" title="2.多路复用与多路分解"></a>2.多路复用与多路分解</h1><ul>
+<li>将网络层提供的<strong>主机到主机</strong>的交付服务<strong>延伸到</strong>运行在主机上的应用进程提供<strong>进程到进程</strong>的交付服务。</li>
+</ul>
+<h2 id="多路分解"><a href="#多路分解" class="headerlink" title="多路分解"></a>多路分解</h2><ul>
+<li>作用：将传输层报文段中的数据交付到正确的套接字。（每个报文段都有几个字段，传输层会检测这些字段，表示出套接字）</li>
+</ul>
+<ol>
+<li>Bill把信从邮递员手里接过，分发到兄弟姐妹手里，就完成了分解操作</li>
+</ol>
+<h2 id="多路复用"><a href="#多路复用" class="headerlink" title="多路复用"></a>多路复用</h2><ol>
+<li>收集：在源主机不同套接字接收数据块</li>
+<li>封装：为每个数据块封装首部信息。</li>
+<li>生成：分装上首部信息后就成为报文段</li>
+<li>传递：将报文段传递给网络层</li>
+</ol>
+<ul>
+<li>Ann把信从兄弟姐妹手里收集，并交给邮递员，他就执行了一个多路复用</li>
+</ul>
+<h3 id="传输层多路复用的要求"><a href="#传输层多路复用的要求" class="headerlink" title="传输层多路复用的要求"></a>传输层多路复用的要求</h3><ol>
+<li>套接字有唯一的标识符</li>
+<li>每个报文段有<strong>特殊的字段</strong>来只是该报文段所要交付给的套接字<br>这些特殊字段是源端口字段和目的端口字段</li>
+</ol>
+<p>端口号：是一个16比特的数，大小在0 ~ 65535之间，0 ~ 1023为<strong>周知端口号</strong>，时受限制的，他们报留给应能用层协议使用（HTTP：80号端口）</p>
+<h2 id="无连接的多路复用与多路分解"><a href="#无连接的多路复用与多路分解" class="headerlink" title="无连接的多路复用与多路分解"></a>无连接的多路复用与多路分解</h2><ul>
+<li>A主机一个进程具有UDP端口19157，发送数据块给主机B中的进程UDP端口号46428<ol>
+<li>创建：A主机创建报文段（包含数据、源端口号、目的端口号）</li>
+<li>传递：传输层将报文段传递给网络层</li>
+<li>封装：网络层将报文段封装到IP数据报中，并尽力交付到主机</li>
+<li>检查：B主机接收到后，传输层检查目的端口号（46428）</li>
+<li>交付：根据目的端口号交付给端口号（46428）所对应的套接字</li>
+</ol>
+</li>
+</ul>
+<h2 id="面向连接的多路复用与多路分解"><a href="#面向连接的多路复用与多路分解" class="headerlink" title="面向连接的多路复用与多路分解"></a>面向连接的多路复用与多路分解</h2><h1 id="3-UDP用户数据包协议"><a href="#3-UDP用户数据包协议" class="headerlink" title="3. UDP用户数据包协议"></a>3. UDP用户数据包协议</h1><h2 id="UDP-概述"><a href="#UDP-概述" class="headerlink" title="UDP 概述"></a>UDP 概述</h2><ul>
 <li>UDP只在IP数据报服务之上增加了很少的一点功能<ul>
-<li>复用和分用</li>
+<li>多路复用与多路分解</li>
 <li><strong>差错检验</strong></li>
 </ul>
 </li>
@@ -236,10 +306,13 @@
 </ul>
 <h2 id="UDP特点"><a href="#UDP特点" class="headerlink" title="UDP特点"></a>UDP特点</h2><ul>
 <li><strong>UDP是无连接的</strong>（发送数据前不需要连接，因此<strong>减少了开销和发送数据之前的延迟</strong>）</li>
-<li><strong>UDP使用尽可能最大努力交付</strong>。（不保证可靠交付，因此主机<strong>不需要维持复杂的连接状态</strong>）</li>
+<li><strong>无连接状态</strong>。（UDP使用尽可能<strong>最大努力交付</strong>，不保证可靠交付，因此主机<strong>不需要维持复杂的连接状态</strong>）</li>
 <li><strong>UDP是面向报文的</strong>。（对应用层交下来的报文不做处理，<strong>保留了报文的大小</strong>）</li>
 <li><strong>UDP没有拥塞控制</strong>（网络出现阻塞不会是源主机的发送速率下降）</li>
+<li>如果应用程序选择UDP，该应用程序差不多直接和IP打交道</li>
+<li><strong>分组首部开销小</strong>（TCP首部要20个字节，UDP首部8个字节）</li>
 </ul>
+<p>使用UDP的应用也是可以通过<strong>应用程序本身</strong>建立可靠型机制来完成<strong>可靠数据传输</strong></p>
 <h2 id="面向报文UDP"><a href="#面向报文UDP" class="headerlink" title="面向报文UDP"></a>面向报文UDP</h2><ul>
 <li>由于UDP对IP层数据报文去除首部后原封不动的交付给应用层</li>
 <li><strong>应用程序</strong>必须选择大小合适的报文<ul>
@@ -248,7 +321,118 @@
 </ul>
 </li>
 </ul>
-<h2 id="UDP首部格式"><a href="#UDP首部格式" class="headerlink" title="UDP首部格式"></a>UDP首部格式</h2><h1 id="3-传输控制协议TCP概述"><a href="#3-传输控制协议TCP概述" class="headerlink" title="3. 传输控制协议TCP概述"></a>3. 传输控制协议TCP概述</h1><h2 id="TCP最主要的特点"><a href="#TCP最主要的特点" class="headerlink" title="TCP最主要的特点"></a>TCP最主要的特点</h2><ul>
+<h2 id="UDP报文段格式"><a href="#UDP报文段格式" class="headerlink" title="UDP报文段格式"></a>UDP报文段格式</h2><h2 id="UDP检验和"><a href="#UDP检验和" class="headerlink" title="UDP检验和"></a>UDP检验和</h2><ul>
+<li>作用：提供了差错检验功能，检验报文段在传输过程当中<strong>比特</strong>是否发生改变</li>
+<li></li>
+</ul>
+<h1 id="4-可靠传输的工作原理"><a href="#4-可靠传输的工作原理" class="headerlink" title="4. 可靠传输的工作原理"></a>4. 可靠传输的工作原理</h1><ul>
+<li>可靠传输协议：rdt</li>
+<li>面临的问题：可靠传输协议的下一层协议可能不可靠，但是上一层要求要可靠的传输。</li>
+<li>不可靠因素：1. 出现比特损坏、2. 丢失分组</li>
+</ul>
+<h2 id="rdt函数"><a href="#rdt函数" class="headerlink" title="rdt函数"></a>rdt函数</h2><ol>
+<li>rdt_send():由应用层调用，功能是将数据直接交付给接收点的上层应用。</li>
+<li>rdt_rcv():</li>
+<li>deliver_data():由rdt调用，功能是将数据交付给上一层</li>
+<li>udt_send():由rdt调用，将数据包通过不可靠传输信道传输给接收端</li>
+<li>rdt_rcv():当数据报到达接收端后被调用</li>
+<li>make_pkt():</li>
+</ol>
+<h2 id="rdt1-0-（经完全可靠的信道）"><a href="#rdt1-0-（经完全可靠的信道）" class="headerlink" title="rdt1.0 （经完全可靠的信道）"></a>rdt1.0 （经完全可靠的信道）</h2><ul>
+<li>假设底层信道是完全可靠的（<strong>前提假设</strong>）</li>
+<li>FSM：有限状态机</li>
+</ul>
+<ol>
+<li>发送端：rdt通过<strong>rdt_send(data)</strong>事件，<strong>接收</strong>来自较高层的数据，<strong>产生</strong>一个包含数据的分组，并将分组<strong>发送</strong>到信道中。</li>
+<li>接收端：rdt通过<strong>rdt_rcv(packet)</strong>事件，从底层<strong>接受</strong>一个分组，从分组中<strong>取出</strong>数据，并把数据<strong>上传</strong>给较高层。</li>
+</ol>
+<h2 id="rdt2-0-经具有比特差错的"><a href="#rdt2-0-经具有比特差错的" class="headerlink" title="rdt2.0 (经具有比特差错的)"></a>rdt2.0 (经具有比特差错的)</h2><ul>
+<li>所有发送分组虽然有比特可能受损，但是按期发送的顺醋接收</li>
+</ul>
+<h3 id="ARQ协议"><a href="#ARQ协议" class="headerlink" title="ARQ协议"></a>ARQ协议</h3><p>报文的接受者在接收报文后，会反馈一个<strong>肯定确认ACK或否定确认NAK</strong>，这样发送方可以知道那些内容需要重传，基于这种重传机制的可靠传输协议称为<strong>自动重传请求协议</strong>ARQ</p>
+<ul>
+<li>滑动窗口协议较为复杂，是TCP协议的精华所在。</li>
+<li>发送方维持窗口是为了，<strong>位于发送窗口内的分组可以连续发送而不需要等待对方确认</strong>，提高了利用率。</li>
+<li>连续的ARQ协议规定，发送方收到一个确认就可以把发送窗口向前移动一分组。</li>
+</ul>
+<p>ARQ协议还需要另外三种协议辅助来处理比特差错</p>
+<ol>
+<li>差错检验</li>
+<li>接收方反馈</li>
+<li>重传</li>
+</ol>
+<h3 id="rdt2-0-发送端的两种状态"><a href="#rdt2-0-发送端的两种状态" class="headerlink" title="rdt2.0 发送端的两种状态"></a>rdt2.0 发送端的两种状态</h3><ol>
+<li>当发送给收到来自接收方的ACK分组，发送方知道发送分组也被正确接收，则分组回到<strong>等待来自上层的数据</strong>状态</li>
+<li>当发送给收到来自接收方的NAK分组，则发送方重传上一个分组，并等待来自接收方的ACK、NAK。</li>
+</ol>
+<ul>
+<li>注意：当发送方处于停等状态时，发送方不能从上层在获得新的数据，只能等着，所以rdt2.0被称为<strong>停等协议</strong></li>
+</ul>
+<h3 id="rdt2-0的缺陷"><a href="#rdt2-0的缺陷" class="headerlink" title="rdt2.0的缺陷"></a>rdt2.0的缺陷</h3><p>经上述描述看似rdt2.0已经能正常运行传输数据了，但是它还存在致命的缺陷</p>
+<ol>
+<li>ACK与NAK可能受损（需要在ACK与NAK中添加检验机制）</li>
+<li>更难得是如何纠正ACK与NAK中的错误</li>
+</ol>
+<h3 id="解决rdt2-0的缺陷的方法"><a href="#解决rdt2-0的缺陷的方法" class="headerlink" title="解决rdt2.0的缺陷的方法"></a>解决rdt2.0的缺陷的方法</h3><p>rdt2.1<br>当接收方收到不确定的ACK或NAK时，就重新传送当前分组，发方法会造成冗余分组，冗余分组的根本困难在于接收方无法知道上次的ACK或NAK是否被正确收到，所以无法知道该分组是新的还是重传。<br>解决放过：</p>
+<ul>
+<li>发送方给发送分组编号，接收方只检验序号即刻知道该分组是新的还是重传（建立在ACK或NAK只相应最近发送的分组）</li>
+</ul>
+<ol>
+<li>当收到失续的分组，接收方发送一个肯定确认</li>
+<li>当收到受损的分组，接收方发送一个否定确认</li>
+</ol>
+<p>rdt2.2<br>是在有比特差错的信道上实现的一个无NAK的可靠数据传输协议。</p>
+<h2 id="rdt3-0-（经具有比特差错的丢包信道的可靠传输）"><a href="#rdt3-0-（经具有比特差错的丢包信道的可靠传输）" class="headerlink" title="rdt3.0 （经具有比特差错的丢包信道的可靠传输）"></a>rdt3.0 （经具有比特差错的丢包信道的可靠传输）</h2><h3 id="丢包"><a href="#丢包" class="headerlink" title="丢包"></a>丢包</h3><ul>
+<li>发送方等待一定的时间，如果没有收到ACK,就重传分组。<ul>
+<li>为实现重传功能，需要一个<strong>倒技术定时器</strong>。</li>
+<li>发送方只需要做到，1.每次发送一个分组时，便启动一个定时器。2.响应中断定时器。3.终止定时器</li>
+</ul>
+</li>
+</ul>
+<h2 id="流水线可靠数据传输协议"><a href="#流水线可靠数据传输协议" class="headerlink" title="流水线可靠数据传输协议"></a>流水线可靠数据传输协议</h2><ul>
+<li>rtd3.0是一个停等协议，迫切的需要改变</li>
+<li>流水线技术：不以停等方式运行，允许发送方发送多个分组而无需等待确认。</li>
+</ul>
+<p>发送发同时发送多个分组，但每一个分组到达后，会反馈发送ACK，发送方接收发到ACK后，会发送下一份分组，一次同时多分分组在同时发送</p>
+<ol>
+<li>必须增加序号分为，每个分组必须有唯一一个序号。</li>
+<li>协议的发送接收方可能会缓存多个分组</li>
+<li>所需序号的范围和对缓冲的要求取决于数据传输协议如何处理丢失、损坏和延时过大的分组。解决错恢复的两种基本方法为：<strong>回退N步</strong>和<strong>选择重传</strong></li>
+</ol>
+<h3 id="回退N步协议"><a href="#回退N步协议" class="headerlink" title="回退N步协议"></a>回退N步协议</h3><ul>
+<li>允许发送方发送多个分组，而<strong>不需等待确认</strong>，但是未确定分组数也不能超多最大数N<ol>
+<li>N被称作窗口长度</li>
+<li>GBN又被称作滑动窗口协议</li>
+</ol>
+</li>
+</ul>
+<h4 id="GBN响应的三种类型"><a href="#GBN响应的三种类型" class="headerlink" title="GBN响应的三种类型"></a>GBN响应的三种类型</h4><ol>
+<li>上层调用：当上层调用rdt_send()时，发送方首先检验发送窗口是否已满，未满则发送，已满则将数据返回上一层，等一会再发；或者接收方缓存</li>
+<li>接受一个ACK：在GBN协议中，对N个分组的确认，再去<strong>累积确认</strong>的方式</li>
+<li>超时重传：但计时器超时，发送方再次发送已发送但是未被确认的信息，如果发送多分分组也只我用一个定时器。</li>
+</ol>
+<h3 id="选择重传-SR"><a href="#选择重传-SR" class="headerlink" title="选择重传 SR"></a>选择重传 SR</h3><p>在GBN中，发送反可以流水线的发送，但是缺点在于，当发送分组很多时，当有一个分组错误，就会导致大量分组重传，造成不必要的浪费</p>
+<ul>
+<li>选择重传（SR）只重传他怀疑的分组，但是避免不了需要逐个的确认分组，再次用窗口长度N来限制流水线中分组的长度。</li>
+<li>SR接收方确定一份分组的正确，不管是否时序，时序的分组，将缓存，知道所有分组到齐，才将一批分组交付</li>
+</ul>
+<ol>
+<li>从上一层接收数据。SR检查序号，如果序号在发送分组内，打包发送；如果不在，就像GBN一样要么缓存，要么返回给上一层。</li>
+</ol>
+<h2 id="累计确认"><a href="#累计确认" class="headerlink" title="累计确认"></a>累计确认</h2><ul>
+<li>按顺序发送的分组<strong>最后一个分组发送确认</strong>，表示这个分组前所有分组都以确认收到。<ul>
+<li>当前5个分组发送完，而中间第三个分组丢失，这时发送方会把从第3个分组往后的所有分组从新传输一次。叫做（Go-back-N）</li>
+<li>可见通信链路质量不好时，连续的ARQ协议会带来负面影响。</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP可靠传输的具体实现"><a href="#TCP可靠传输的具体实现" class="headerlink" title="TCP可靠传输的具体实现"></a>TCP可靠传输的具体实现</h3><ul>
+<li>一个发送窗口和一个接收窗口</li>
+<li>依靠<strong>字节的序号</strong>进行控制，而不是基于报文段（TCP所有序号都是基于序号）</li>
+<li>TCP两端的四个窗口处于动态变化中</li>
+<li>TCP连接的往返时间RTT也是不固定的，需要使用特定的算法估算<strong>较为合理的重传时间</strong></li>
+</ul>
+<h1 id="5-传输控制协议TCP概述"><a href="#5-传输控制协议TCP概述" class="headerlink" title="5. 传输控制协议TCP概述"></a>5. 传输控制协议TCP概述</h1><h2 id="TCP最主要的特点"><a href="#TCP最主要的特点" class="headerlink" title="TCP最主要的特点"></a>TCP最主要的特点</h2><ul>
 <li>TCP是<strong>面向连接</strong>的传输层协议</li>
 <li>TCP连接只能点对点，<strong>一对一</strong></li>
 <li><strong>TCP提供可靠交付的服务</strong></li>
@@ -275,24 +459,6 @@
 <li>套接字：IP地址和端口号的组合，通过IP地址确定唯一主机，又通过端口来确定确定唯一主机的唯一端口唯一进程</li>
 </ul>
 </li>
-</ul>
-<h1 id="4-可靠传输的工作原理"><a href="#4-可靠传输的工作原理" class="headerlink" title="4. 可靠传输的工作原理"></a>4. 可靠传输的工作原理</h1><h2 id="连续的ARQ协议"><a href="#连续的ARQ协议" class="headerlink" title="连续的ARQ协议"></a>连续的ARQ协议</h2><ul>
-<li>滑动窗口协议较为复杂，是TCP协议的精华所在。</li>
-<li>发送方维持窗口是为了，<strong>位于发送窗口内的分组可以连续发送而不需要等待对方确认</strong>，提高了利用率。</li>
-<li>连续的ARQ协议规定，发送方收到一个确认就可以把发送窗口向前移动一分组。</li>
-</ul>
-<h2 id="累计确认"><a href="#累计确认" class="headerlink" title="累计确认"></a>累计确认</h2><ul>
-<li>按顺序发送的分组<strong>最后一个分组发送确认</strong>，表示这个分组前所有分组都以确认收到。<ul>
-<li>当前5个分组发送完，而中间第三个分组丢失，这时发送方会把从第3个分组往后的所有分组从新传输一次。叫做（Go-back-N）</li>
-<li>可见通信链路质量不好时，连续的ARQ协议会带来负面影响。</li>
-</ul>
-</li>
-</ul>
-<h3 id="TCP可靠传输的具体实现"><a href="#TCP可靠传输的具体实现" class="headerlink" title="TCP可靠传输的具体实现"></a>TCP可靠传输的具体实现</h3><ul>
-<li>一个发送窗口和一个接收窗口</li>
-<li>依靠<strong>字节的序号</strong>进行控制，而不是基于报文段（TCP所有序号都是基于序号）</li>
-<li>TCP两端的四个窗口处于动态变化中</li>
-<li>TCP连接的往返时间RTT也是不固定的，需要使用特定的算法估算<strong>较为合理的重传时间</strong></li>
 </ul>
 <h1 id="5-TCP报文段的首部格式"><a href="#5-TCP报文段的首部格式" class="headerlink" title="5. TCP报文段的首部格式"></a>5. TCP报文段的首部格式</h1><ul>
 <li>TCP面向字节流，</li>
@@ -479,7 +645,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-传输层协议概述"><span class="toc-number">1.</span> <span class="toc-text">1. 传输层协议概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">传输层基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的作用"><span class="toc-number">1.2.</span> <span class="toc-text">传输层的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的两个主要协议"><span class="toc-number">1.3.</span> <span class="toc-text">传输层的两个主要协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP"><span class="toc-number">1.3.1.</span> <span class="toc-text">UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP"><span class="toc-number">1.3.2.</span> <span class="toc-text">TCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-number">1.3.3.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的端口"><span class="toc-number">1.4.</span> <span class="toc-text">传输层的端口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器端口号"><span class="toc-number">1.4.1.</span> <span class="toc-text">服务器端口号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#客户端口号"><span class="toc-number">1.4.2.</span> <span class="toc-text">客户端口号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-用户数据包协议UDP"><span class="toc-number">2.</span> <span class="toc-text">2. 用户数据包协议UDP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP-概述"><span class="toc-number">2.1.</span> <span class="toc-text">UDP 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP特点"><span class="toc-number">2.2.</span> <span class="toc-text">UDP特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向报文UDP"><span class="toc-number">2.3.</span> <span class="toc-text">面向报文UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP首部格式"><span class="toc-number">2.4.</span> <span class="toc-text">UDP首部格式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-传输控制协议TCP概述"><span class="toc-number">3.</span> <span class="toc-text">3. 传输控制协议TCP概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP最主要的特点"><span class="toc-number">3.1.</span> <span class="toc-text">TCP最主要的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP面向流的概念"><span class="toc-number">3.2.</span> <span class="toc-text">TCP面向流的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP的连接"><span class="toc-number">3.3.</span> <span class="toc-text">TCP的连接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-可靠传输的工作原理"><span class="toc-number">4.</span> <span class="toc-text">4. 可靠传输的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#连续的ARQ协议"><span class="toc-number">4.1.</span> <span class="toc-text">连续的ARQ协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#累计确认"><span class="toc-number">4.2.</span> <span class="toc-text">累计确认</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP可靠传输的具体实现"><span class="toc-number">4.2.1.</span> <span class="toc-text">TCP可靠传输的具体实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-TCP报文段的首部格式"><span class="toc-number">5.</span> <span class="toc-text">5. TCP报文段的首部格式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#源端口"><span class="toc-number">5.1.</span> <span class="toc-text">源端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目的端口"><span class="toc-number">5.2.</span> <span class="toc-text">目的端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序号"><span class="toc-number">5.3.</span> <span class="toc-text">序号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#确认号"><span class="toc-number">5.4.</span> <span class="toc-text">确认号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-number">5.5.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-TCP可靠传输的实现"><span class="toc-number">6.</span> <span class="toc-text">6. TCP可靠传输的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#以字节为单位的的滑动窗口"><span class="toc-number">6.1.</span> <span class="toc-text">以字节为单位的的滑动窗口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超时重传时间的选择"><span class="toc-number">6.2.</span> <span class="toc-text">超时重传时间的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择确认的SACK"><span class="toc-number">6.3.</span> <span class="toc-text">选择确认的SACK</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-TCP的流量控制"><span class="toc-number">7.</span> <span class="toc-text">7. TCP的流量控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#利用滑动窗口控制流量"><span class="toc-number">7.1.</span> <span class="toc-text">利用滑动窗口控制流量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持续计时器"><span class="toc-number">7.2.</span> <span class="toc-text">持续计时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输效率"><span class="toc-number">7.3.</span> <span class="toc-text">传输效率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-TCP的拥塞控制"><span class="toc-number">8.</span> <span class="toc-text">8. TCP的拥塞控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-TCP的运输连接管理"><span class="toc-number">9.</span> <span class="toc-text">9.TCP的运输连接管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP连接建立要解决的三个问题"><span class="toc-number">9.1.</span> <span class="toc-text">TCP连接建立要解决的三个问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三报文握手"><span class="toc-number">9.1.1.</span> <span class="toc-text">三报文握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的间接释放"><span class="toc-number">9.1.2.</span> <span class="toc-text">TCP的间接释放</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-传输层概述"><span class="toc-number">1.</span> <span class="toc-text">1. 传输层概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-传输层基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 传输层基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传输成的关键功能"><span class="toc-number">1.1.1.</span> <span class="toc-text">传输成的关键功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传输成的面对基础问题"><span class="toc-number">1.1.2.</span> <span class="toc-text">传输成的面对基础问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-传输层的作用"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 传输层的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-传输层不同概念的区分"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 传输层不同概念的区分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的两个主要协议"><span class="toc-number">1.4.</span> <span class="toc-text">传输层的两个主要协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP与TCP概述"><span class="toc-number">1.5.</span> <span class="toc-text">UDP与TCP概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP"><span class="toc-number">1.5.1.</span> <span class="toc-text">UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP"><span class="toc-number">1.5.2.</span> <span class="toc-text">TCP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP提供的两种服务"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">TCP提供的两种服务</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.6.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的端口"><span class="toc-number">1.7.</span> <span class="toc-text">传输层的端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器端口号"><span class="toc-number">1.8.</span> <span class="toc-text">服务器端口号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#客户端口号"><span class="toc-number">1.9.</span> <span class="toc-text">客户端口号</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-多路复用与多路分解"><span class="toc-number">2.</span> <span class="toc-text">2.多路复用与多路分解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#多路分解"><span class="toc-number">2.1.</span> <span class="toc-text">多路分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多路复用"><span class="toc-number">2.2.</span> <span class="toc-text">多路复用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传输层多路复用的要求"><span class="toc-number">2.2.1.</span> <span class="toc-text">传输层多路复用的要求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#无连接的多路复用与多路分解"><span class="toc-number">2.3.</span> <span class="toc-text">无连接的多路复用与多路分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向连接的多路复用与多路分解"><span class="toc-number">2.4.</span> <span class="toc-text">面向连接的多路复用与多路分解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-UDP用户数据包协议"><span class="toc-number">3.</span> <span class="toc-text">3. UDP用户数据包协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP-概述"><span class="toc-number">3.1.</span> <span class="toc-text">UDP 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP特点"><span class="toc-number">3.2.</span> <span class="toc-text">UDP特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向报文UDP"><span class="toc-number">3.3.</span> <span class="toc-text">面向报文UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP报文段格式"><span class="toc-number">3.4.</span> <span class="toc-text">UDP报文段格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP检验和"><span class="toc-number">3.5.</span> <span class="toc-text">UDP检验和</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-可靠传输的工作原理"><span class="toc-number">4.</span> <span class="toc-text">4. 可靠传输的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#rdt函数"><span class="toc-number">4.1.</span> <span class="toc-text">rdt函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rdt1-0-（经完全可靠的信道）"><span class="toc-number">4.2.</span> <span class="toc-text">rdt1.0 （经完全可靠的信道）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rdt2-0-经具有比特差错的"><span class="toc-number">4.3.</span> <span class="toc-text">rdt2.0 (经具有比特差错的)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ARQ协议"><span class="toc-number">4.3.1.</span> <span class="toc-text">ARQ协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rdt2-0-发送端的两种状态"><span class="toc-number">4.3.2.</span> <span class="toc-text">rdt2.0 发送端的两种状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rdt2-0的缺陷"><span class="toc-number">4.3.3.</span> <span class="toc-text">rdt2.0的缺陷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决rdt2-0的缺陷的方法"><span class="toc-number">4.3.4.</span> <span class="toc-text">解决rdt2.0的缺陷的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rdt3-0-（经具有比特差错的丢包信道的可靠传输）"><span class="toc-number">4.4.</span> <span class="toc-text">rdt3.0 （经具有比特差错的丢包信道的可靠传输）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#丢包"><span class="toc-number">4.4.1.</span> <span class="toc-text">丢包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流水线可靠数据传输协议"><span class="toc-number">4.5.</span> <span class="toc-text">流水线可靠数据传输协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#回退N步协议"><span class="toc-number">4.5.1.</span> <span class="toc-text">回退N步协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GBN响应的三种类型"><span class="toc-number">4.5.1.1.</span> <span class="toc-text">GBN响应的三种类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择重传-SR"><span class="toc-number">4.5.2.</span> <span class="toc-text">选择重传 SR</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#累计确认"><span class="toc-number">4.6.</span> <span class="toc-text">累计确认</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP可靠传输的具体实现"><span class="toc-number">4.6.1.</span> <span class="toc-text">TCP可靠传输的具体实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-传输控制协议TCP概述"><span class="toc-number">5.</span> <span class="toc-text">5. 传输控制协议TCP概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP最主要的特点"><span class="toc-number">5.1.</span> <span class="toc-text">TCP最主要的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP面向流的概念"><span class="toc-number">5.2.</span> <span class="toc-text">TCP面向流的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP的连接"><span class="toc-number">5.3.</span> <span class="toc-text">TCP的连接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-TCP报文段的首部格式"><span class="toc-number">6.</span> <span class="toc-text">5. TCP报文段的首部格式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#源端口"><span class="toc-number">6.1.</span> <span class="toc-text">源端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目的端口"><span class="toc-number">6.2.</span> <span class="toc-text">目的端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序号"><span class="toc-number">6.3.</span> <span class="toc-text">序号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#确认号"><span class="toc-number">6.4.</span> <span class="toc-text">确认号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-number">6.5.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-TCP可靠传输的实现"><span class="toc-number">7.</span> <span class="toc-text">6. TCP可靠传输的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#以字节为单位的的滑动窗口"><span class="toc-number">7.1.</span> <span class="toc-text">以字节为单位的的滑动窗口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超时重传时间的选择"><span class="toc-number">7.2.</span> <span class="toc-text">超时重传时间的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择确认的SACK"><span class="toc-number">7.3.</span> <span class="toc-text">选择确认的SACK</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-TCP的流量控制"><span class="toc-number">8.</span> <span class="toc-text">7. TCP的流量控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#利用滑动窗口控制流量"><span class="toc-number">8.1.</span> <span class="toc-text">利用滑动窗口控制流量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持续计时器"><span class="toc-number">8.2.</span> <span class="toc-text">持续计时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传输效率"><span class="toc-number">8.3.</span> <span class="toc-text">传输效率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-TCP的拥塞控制"><span class="toc-number">9.</span> <span class="toc-text">8. TCP的拥塞控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-TCP的运输连接管理"><span class="toc-number">10.</span> <span class="toc-text">9.TCP的运输连接管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP连接建立要解决的三个问题"><span class="toc-number">10.1.</span> <span class="toc-text">TCP连接建立要解决的三个问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三报文握手"><span class="toc-number">10.1.1.</span> <span class="toc-text">三报文握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP的间接释放"><span class="toc-number">10.1.2.</span> <span class="toc-text">TCP的间接释放</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -591,10 +757,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
               </li>
              
@@ -607,23 +769,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">键盘录入</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">输出字符串</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java命名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">逻辑</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">位移</a>
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,6 +790,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">键盘录入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">输出字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java命名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">逻辑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">位移</a>
               </li>
             
             <div class="clearfix"></div>

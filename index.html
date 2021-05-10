@@ -1238,13 +1238,15 @@
 <ul>
 <li>UDP并不提供流量控制，报文段由于缓存溢出可能在接收方丢失</li>
 </ul>
-<h2 id="TCP连接管理（TCP建立与拆除）"><a href="#TCP连接管理（TCP建立与拆除）" class="headerlink" title="TCP连接管理（TCP建立与拆除）"></a>TCP连接管理（TCP建立与拆除）</h2><h3 id="TCP的建立"><a href="#TCP的建立" class="headerlink" title="TCP的建立"></a>TCP的建立</h3><p>第一步： 客户端TCP首先向服务器的TCP发送一个<strong>特殊的TCP报文段</strong>SYN报文段</p>
+<h2 id="TCP连接管理（TCP建立与拆除）"><a href="#TCP连接管理（TCP建立与拆除）" class="headerlink" title="TCP连接管理（TCP建立与拆除）"></a>TCP连接管理（TCP建立与拆除）</h2><h3 id="TCP的建立"><a href="#TCP的建立" class="headerlink" title="TCP的建立"></a>TCP的建立</h3><ul>
+<li><p>第一步： 客户端TCP首先向服务器的TCP发送一个<strong>特殊的TCP报文段</strong>SYN报文段</p>
 <ol>
 <li>该报文段不包含应用层数据，但是报文段首部有一个标志位SYN比特被置为1。</li>
 <li>客户选择一个初始序号并放在TCP SYN 报文段的序号字段中</li>
 <li>该报文段会被分装在IP数据报中，发送给服务器</li>
 </ol>
-<p>第二步：一旦包含TCP SYN 报文段的IP数据报到达服务器，服务器会将数据报中TCP SYN 报文段<strong>提取出来</strong>，为TCP<strong>分配TCP缓存和变量</strong>，并向客户TCP发送<strong>允许连接的报文</strong></p>
+</li>
+<li><p>第二步：一旦包含TCP SYN 报文段的IP数据报到达服务器，服务器会将数据报中TCP SYN 报文段<strong>提取出来</strong>，为TCP<strong>分配TCP缓存和变量</strong>，并向客户TCP发送<strong>允许连接的报文</strong></p>
 <ul>
 <li>这个允许连接的报文，不包含应用层信息，但包含3个重要信息。<ol>
 <li>SYN被置为1</li>
@@ -1253,12 +1255,36 @@
 </ol>
 </li>
 </ul>
-<p>该报文表明我收到你建立的SYN分组，该分组初始序号为client_isn.我同意连接。我的初始序号为swever_isn.他允许连接的报文段为被称为SYNACK报文段。</p>
-<p>第三步：接收到SYNACK报文段后客户也要给连接分配内存和变量。客户则向主机发送另外一个报文段，该报文段对服务器的允许连接的报文进行确认。（连接建立SYN报文段被置为0，三次握手的第三个阶段可以再报文端负载中携带客户到服务器的数据信息）</p>
-<h2 id="以字节为单位的的滑动窗口"><a href="#以字节为单位的的滑动窗口" class="headerlink" title="以字节为单位的的滑动窗口"></a>以字节为单位的的滑动窗口</h2><ul>
-<li>TCP的滑动窗口是以字节为单位的</li>
-<li></li>
+</li>
 </ul>
+<p>该报文表明我收到你建立的SYN分组，该分组初始序号为client_isn.我同意连接。我的初始序号为swever_isn.他允许连接的报文段为被称为SYNACK报文段。</p>
+<ul>
+<li>第三步：接收到SYNACK报文段后客户也要给连接分配内存和变量。客户则向主机发送另外一个报文段，该报文段对服务器的允许连接的报文进行确认。（连接建立SYN报文段被置为0，三次握手的第三个阶段可以再报文端负载中携带客户到服务器的数据信息）</li>
+</ul>
+<p>经历这三步后客户服务器之间就可以发送数据了，由于在三步中二者之间发送了3个分组，这种连接也被称为<strong>三次握手</strong></p>
+<h3 id="TCP连接的拆除"><a href="#TCP连接的拆除" class="headerlink" title="TCP连接的拆除"></a>TCP连接的拆除</h3><ul>
+<li>双方任何一方都可以终止连接</li>
+</ul>
+<h4 id="当客户要结束连接时"><a href="#当客户要结束连接时" class="headerlink" title="当客户要结束连接时"></a>当客户要结束连接时</h4><ol>
+<li>客户TCP发出特殊的TCP报文段，该报文段让其首部FIN比特置为1，、。</li>
+<li>服务器接收到该报文，响应一个去人报文ACK</li>
+<li>服务器发送一个终止报文，其FIN比特被设置为1.</li>
+<li>客户对这个终止报文确认，此时两者之间所有资源被释放。</li>
+</ol>
+<ul>
+<li>TCP连接声明周期中的状态<ol>
+<li>CLSDED状态：关闭状态——【开始时】</li>
+<li>SYN_SENT状态：等待来自服务器TCP发送来的SYN被置为1的报文——【客户向向服务器发送一个SYN报文段后进入该状态】</li>
+<li>ESTABLISHFED状态：TCP客户就能发送和接收TCP报文段了——【收到SYN被置为1的报文后进入该状态】</li>
+</ol>
+</li>
+</ul>
+<h4 id="服务器要结束连接时"><a href="#服务器要结束连接时" class="headerlink" title="服务器要结束连接时"></a>服务器要结束连接时</h4><ol>
+<li>TCP发送一个带有FIN被置为1的TCP报文</li>
+<li>FIN_WAIT_1状态：客户TCP等待来自服务器带有确认的TCP报文段——【TCP发送一个带有FIN被置为1的TCP报文进入该状态】</li>
+<li>FIN_WAIT_2状态：客户等待来自服务器的另一个报文，当客户收到报文，客户TCP对服务器报文进行确认，并进入下一状态【收到确认报文后进入该状态】</li>
+<li>TIME_WAIT状态：若ACK丢失，该状态会使TCP客户重传确认报文（该状态所消耗的时间因具体情况而定）</li>
+</ol>
 <h1 id="7-TCP的流量控制"><a href="#7-TCP的流量控制" class="headerlink" title="7. TCP的流量控制"></a>7. TCP的流量控制</h1><h2 id="利用滑动窗口控制流量"><a href="#利用滑动窗口控制流量" class="headerlink" title="利用滑动窗口控制流量"></a>利用滑动窗口控制流量</h2><ul>
 <li>当我们希望发送数据很快的时候，若接收方接收速度跟不上就会造成数据丢失。</li>
 <li>流量控制：让发送方以合适速度发送，让接收方来得及接收，同时不要使网络发生拥塞。</li>
@@ -1279,9 +1305,11 @@
 </ul>
 </li>
 </ul>
-<h1 id="8-TCP的拥塞控制"><a href="#8-TCP的拥塞控制" class="headerlink" title="8. TCP的拥塞控制"></a>8. TCP的拥塞控制</h1><ul>
-<li>TCP采用基于窗口的方法今次那个拥塞控制。该方法属于闭环控制方法。</li>
-</ul>
+<h1 id="8-TCP的拥塞控制"><a href="#8-TCP的拥塞控制" class="headerlink" title="8. TCP的拥塞控制"></a>8. TCP的拥塞控制</h1><h2 id="1-拥塞控制原理"><a href="#1-拥塞控制原理" class="headerlink" title="1. 拥塞控制原理"></a>1. 拥塞控制原理</h2><ol>
+<li>情况1：两个发送方与一台具有无穷缓存的路由器</li>
+</ol>
+<p>2.情况2：两个发送方与一台具有有限缓存的路由器 </p>
+<p>3.情况3：4个发送方与具有有限缓存的多台路由器及多条路径</p>
 <h1 id="9-TCP的运输连接管理"><a href="#9-TCP的运输连接管理" class="headerlink" title="9.TCP的运输连接管理"></a>9.TCP的运输连接管理</h1><h2 id="TCP连接建立要解决的三个问题"><a href="#TCP连接建立要解决的三个问题" class="headerlink" title="TCP连接建立要解决的三个问题"></a>TCP连接建立要解决的三个问题</h2><ul>
 <li>双方能够确定对方的存在</li>
 <li>允许双方协商一些参数</li>
@@ -2335,7 +2363,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dos</a>
+                <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2343,11 +2375,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">输入输出</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color4">dos</a>
               </li>
              
               <li class="article-tag-list-item">
